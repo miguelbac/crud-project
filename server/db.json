@@ -1,0 +1,29 @@
+{
+  "libros": [
+    {
+      "id": "1",
+      "nombre": "Cien años de soledad",
+      "autor": "Gabriel García Márquez"
+    },
+    {
+      "id": "2",
+      "nombre": "Rayuela",
+      "autor": "Julio Cortázar"
+    },
+    {
+      "id": "3",
+      "nombre": "Pedro Páramo",
+      "autor": "Juan Rulfo"
+    },
+    {
+      "nombre": "Don Quijote de la Mancha",
+      "autor": "Miguel de Cervantes",
+      "id": "5"
+    },
+    {
+      "nombre": "Inhumano",
+      "autor": "Lin Carbajales",
+      "id": "a86e"
+    }
+  ]
+}

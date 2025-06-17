@@ -1,0 +1,1 @@
+// Utilidad para formatear precios según moneda

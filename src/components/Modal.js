@@ -1,0 +1,1 @@
+//Componente de ventana modal (usado para confirmaciones o formularios)

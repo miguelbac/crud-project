@@ -1,0 +1,1 @@
+// Componente reutilizable para mostrar un producto

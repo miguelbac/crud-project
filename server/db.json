@@ -1,11 +1,6 @@
 {
   "libros": [
     {
-      "id": "1",
-      "nombre": "Cien años de soledad",
-      "autor": "Gabriel García Márquez"
-    },
-    {
       "id": "2",
       "nombre": "Rayuela",
       "autor": "Julio Cortázar"

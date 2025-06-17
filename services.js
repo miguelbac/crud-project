@@ -8,7 +8,16 @@ const tituloFormulario = document.getElementById("tituloFormulario");
 
 // Inputs del formulario
 const nombre = document.getElementById("nombre");
-const autor = document.getElementById("autor");
+const descripcion = document.getElementById("descripcion");
+const imagen = document.getElementById("imagen");
+const precio = document.getElementById("precio");
+const descuento = document.getElementById("descuento");
+const color = document.getElementById("color");
+const genero = document.getElementById("genero");
+const temporada = document.getElementById("temporada");
+const tipo = document.getElementById("tipo");
+const fecha_lanzamiento = document.getElementById("fecha_lanzamiento");
+const estilo = document.getElementById("estilo");
 
 // Estado de edición
 let modoEdicion = false;
@@ -25,7 +34,12 @@ async function cargarPrendas() {
     prendas.forEach((prenda) => {
       const li = document.createElement("li");
       li.innerHTML = `
-        <strong>${prenda.nombre}</strong> | ${prenda.descripcion || "Sin descripción"}
+        <strong>${prenda.nombre}</strong><br>
+        ${prenda.descripcion || "Sin descripción"}<br>
+        Precio: $${prenda.precio} (-${prenda.descuento}%)<br>
+        Color: ${prenda.color} | Género: ${prenda.genero}<br>
+        Temporada: ${prenda.temporada} | Tipo: ${prenda.tipo}<br>
+        Estilo: ${prenda.estilo}
       `;
 
       const btnEditar = document.createElement("button");
@@ -54,7 +68,16 @@ formulario.addEventListener("submit", async (e) => {
 
   const datosPrenda = {
     nombre: nombre.value,
-    autor: autor.value,
+    descripcion: descripcion.value,
+    imagen: imagen.value,
+    precio: parseFloat(precio.value),
+    descuento: parseInt(descuento.value),
+    color: color.value,
+    genero: genero.value,
+    temporada: temporada.value,
+    tipo: tipo.value,
+    fecha_lanzamiento: fecha_lanzamiento.value,
+    estilo: estilo.value,
   };
 
   try {
@@ -89,7 +112,16 @@ async function cargarPrendaEnFormulario(id) {
     const prenda = await res.json();
 
     nombre.value = prenda.nombre;
-    autor.value = prenda.autor;
+    descripcion.value = prenda.descripcion;
+    imagen.value = prenda.imagen;
+    precio.value = prenda.precio;
+    descuento.value = prenda.descuento;
+    color.value = prenda.color;
+    genero.value = prenda.genero;
+    temporada.value = prenda.temporada;
+    tipo.value = prenda.tipo;
+    fecha_lanzamiento.value = prenda.fecha_lanzamiento;
+    estilo.value = prenda.estilo;
 
     modoEdicion = true;
     idEditando = id;

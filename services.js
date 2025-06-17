@@ -60,7 +60,7 @@ async function cargarPrendas() {
     alert("Error al cargar las prendas 😢");
     console.error(error);
   }
-}
+} 
 
 // Enviar formulario (POST o PUT)
 formulario.addEventListener("submit", async (e) => {
@@ -162,3 +162,7 @@ btnCancelar.addEventListener("click", resetearFormulario);
 
 // Iniciar app
 cargarPrendas();
+
+{
+  
+}

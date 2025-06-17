@@ -1,24 +1,142 @@
-{
-  "libros": [
-    {
-      "id": "2",
-      "nombre": "Rayuela",
-      "autor": "Julio Cortázar"
-    },
-    {
-      "id": "3",
-      "nombre": "Pedro Páramo",
-      "autor": "Juan Rulfo"
-    },
-    {
-      "nombre": "Don Quijote de la Mancha",
-      "autor": "Miguel de Cervantes",
-      "id": "5"
-    },
-    {
-      "nombre": "Inhumano",
-      "autor": "Lin Carbajales",
-      "id": "a86e"
-    }
-  ]
-}
+[
+  {
+    "id": 21,
+    "nombre": "Chaqueta de Jean",
+    "descripcion": "Clásica chaqueta de mezclilla azul.",
+    "imagen": "jean1.jpg",
+    "precio": 45.99,
+    "descuento": 10,
+    "color": "Azul Claro",
+    "genero": "Unisex",
+    "temporada": "Primavera",
+    "tipo": "Top",
+    "fecha_lanzamiento": "2025-03-01",
+    "estilo": "Casual"
+  },
+  {
+    "id": 22,
+    "nombre": "Zapatillas Running",
+    "descripcion": "Zapatillas cómodas y transpirables.",
+    "imagen": "zapatillas1.jpg",
+    "precio": 59.99,
+    "descuento": 5,
+    "color": "Negro con rojo",
+    "genero": "Unisex",
+    "temporada": "Todo el año",
+    "tipo": "Accesorios",
+    "fecha_lanzamiento": "2025-02-10",
+    "estilo": "Deportivo"
+  },
+  {
+    "id": 23,
+    "nombre": "Pijama Infantil",
+    "descripcion": "Pijama suave con estampado de estrellas.",
+    "imagen": "pijama1.jpg",
+    "precio": 19.99,
+    "descuento": 0,
+    "color": "Celeste",
+    "genero": "Niño",
+    "temporada": "Invierno",
+    "tipo": "Top",
+    "fecha_lanzamiento": "2024-11-05",
+    "estilo": "Casual"
+  },
+  {
+    "id": 24,
+    "nombre": "Camiseta Estampada",
+    "descripcion": "Camiseta con diseño gráfico moderno.",
+    "imagen": "camiseta2.jpg",
+    "precio": 17.99,
+    "descuento": 0,
+    "color": "Negro",
+    "genero": "Hombre",
+    "temporada": "Verano",
+    "tipo": "Top",
+    "fecha_lanzamiento": "2025-06-10",
+    "estilo": "Casual"
+  },
+  {
+    "id": 25,
+    "nombre": "Falda vaquera",
+    "descripcion": "Mini falda de mezclilla con botones frontales.",
+    "imagen": "falda2.jpg",
+    "precio": 29.99,
+    "descuento": 5,
+    "color": "Azul Oscuro",
+    "genero": "Mujer",
+    "temporada": "Primavera",
+    "tipo": "Bottom",
+    "fecha_lanzamiento": "2025-04-15",
+    "estilo": "Casual"
+  },
+  {
+    "id": 26,
+    "nombre": "Abrigo largo",
+    "descripcion": "Abrigo de paño ideal para el frío.",
+    "imagen": "abrigo1.jpg",
+    "precio": 89.99,
+    "descuento": 20,
+    "color": "Gris",
+    "genero": "Mujer",
+    "temporada": "Invierno",
+    "tipo": "Top",
+    "fecha_lanzamiento": "2024-12-05",
+    "estilo": "Formal"
+  },
+  {
+    "id": 27,
+    "nombre": "Pantalón Jogger",
+    "descripcion": "Pantalón tipo jogger con puño elástico.",
+    "imagen": "jogger1.jpg",
+    "precio": 25.99,
+    "descuento": 0,
+    "color": "Negro",
+    "genero": "Unisex",
+    "temporada": "Todo el año",
+    "tipo": "Bottom",
+    "fecha_lanzamiento": "2025-01-15",
+    "estilo": "Deportivo"
+  },
+  {
+    "id": 28,
+    "nombre": "Blusa con Volantes",
+    "descripcion": "Blusa elegante con detalles en las mangas.",
+    "imagen": "blusa1.jpg",
+    "precio": 33.99,
+    "descuento": 5,
+    "color": "Rosa",
+    "genero": "Mujer",
+    "temporada": "Primavera",
+    "tipo": "Top",
+    "fecha_lanzamiento": "2025-03-25",
+    "estilo": "Formal"
+  },
+  {
+    "id": 29,
+    "nombre": "Calcetines deportivos",
+    "descripcion": "Pack de 3 pares de calcetines cómodos.",
+    "imagen": "calcetines1.jpg",
+    "precio": 8.99,
+    "descuento": 0,
+    "color": "Blanco",
+    "genero": "Unisex",
+    "temporada": "Todo el año",
+    "tipo": "Accesorios",
+    "fecha_lanzamiento": "2025-02-01",
+    "estilo": "Deportivo"
+  },
+  {
+    "id": 30,
+    "nombre": "Camiseta Polo Niño",
+    "descripcion": "Polo de algodón para niños.",
+    "imagen": "polo_nino.jpg",
+    "precio": 15.99,
+    "descuento": 10,
+    "color": "Verde",
+    "genero": "Niño",
+    "temporada": "Verano",
+    "tipo": "Top",
+    "fecha_lanzamiento": "2025-05-25",
+    "estilo": "Casual"
+  }
+]

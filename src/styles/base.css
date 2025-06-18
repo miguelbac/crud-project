@@ -1,1 +1,12 @@
 /* Estilos base: tipografías, colores, variables, reset CSS */
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 1rem;
+  background: #f9f9f9;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+}

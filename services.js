@@ -1,132 +1,132 @@
-const API_URL = "http://localhost:3000/prendas";
+const API_URL = "http://localhost:3000/clothes";
 
-// Elementos del DOM
-const lista = document.getElementById("listaLibros");
-const formulario = document.getElementById("formulario");
-const btnCancelar = document.getElementById("btnCancelar");
-const tituloFormulario = document.getElementById("tituloFormulario");
+// DOM Elements
+const list = document.getElementById("bookList");
+const form = document.getElementById("form");
+const btnCancel = document.getElementById("btnCancel");
+const formTitle = document.getElementById("formTitle");
 
-// Inputs del formulario
-const nombre = document.getElementById("nombre");
-const autor = document.getElementById("autor");
+// Form inputs
+const nameInput = document.getElementById("name");
+const authorInput = document.getElementById("author");
 
-// Estado de edición
-let modoEdicion = false;
-let idEditando = null;
+// Edit state
+let editMode = false;
+let editingId = null;
 
-// Obtener prendas y mostrarlas (GET)
-async function cargarPrendas() {
-  lista.innerHTML = "";
+// Get clothes and display them (GET)
+async function loadClothes() {
+  list.innerHTML = "";
 
   try {
     const res = await fetch(API_URL);
-    const prendas = await res.json();
+    const clothes = await res.json();
 
-    prendas.forEach((prenda) => {
+    clothes.forEach((item) => {
       const li = document.createElement("li");
       li.innerHTML = `
-        <strong>${prenda.nombre}</strong> | ${prenda.descripcion || "Sin descripción"}
+        <strong>${item.name}</strong> | ${item.description || "No description"}
       `;
 
-      const btnEditar = document.createElement("button");
-      btnEditar.textContent = "✏️";
-      btnEditar.addEventListener("click", () =>
-        cargarPrendaEnFormulario(prenda.id)
+      const btnEdit = document.createElement("button");
+      btnEdit.textContent = "✏️";
+      btnEdit.addEventListener("click", () =>
+        loadClothingToForm(item.id)
       );
 
-      const btnBorrar = document.createElement("button");
-      btnBorrar.textContent = "🗑️";
-      btnBorrar.addEventListener("click", () => borrarPrenda(prenda.id));
+      const btnDelete = document.createElement("button");
+      btnDelete.textContent = "🗑️";
+      btnDelete.addEventListener("click", () => deleteClothing(item.id));
 
-      li.appendChild(btnEditar);
-      li.appendChild(btnBorrar);
-      lista.appendChild(li);
+      li.appendChild(btnEdit);
+      li.appendChild(btnDelete);
+      list.appendChild(li);
     });
   } catch (error) {
-    alert("Error al cargar las prendas 😢");
+    alert("Error loading clothes 😢");
     console.error(error);
   }
 }
 
-// Enviar formulario (POST o PUT)
-formulario.addEventListener("submit", async (e) => {
+// Submit form (POST or PUT)
+form.addEventListener("submit", async (e) => {
   e.preventDefault();
 
-  const datosPrenda = {
-    nombre: nombre.value,
-    autor: autor.value,
+  const clothingData = {
+    name: nameInput.value,
+    author: authorInput.value,
   };
 
   try {
-    if (modoEdicion) {
-      await fetch(`${API_URL}/${idEditando}`, {
+    if (editMode) {
+      await fetch(`${API_URL}/${editingId}`, {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(datosPrenda),
+        body: JSON.stringify(clothingData),
       });
-      alert("Prenda actualizada con éxito");
+      alert("Clothing updated successfully");
     } else {
       await fetch(API_URL, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(datosPrenda),
+        body: JSON.stringify(clothingData),
       });
-      alert("Prenda agregada con éxito");
+      alert("Clothing added successfully");
     }
 
-    resetearFormulario();
-    cargarPrendas();
+    resetForm();
+    loadClothes();
   } catch (error) {
-    alert("❌ Error al guardar los datos");
+    alert("❌ Error saving data");
     console.error(error);
   }
 });
 
-// Cargar prenda en el formulario para editar
-async function cargarPrendaEnFormulario(id) {
+// Load clothing into form for editing
+async function loadClothingToForm(id) {
   try {
     const res = await fetch(`${API_URL}/${id}`);
-    const prenda = await res.json();
+    const item = await res.json();
 
-    nombre.value = prenda.nombre;
-    autor.value = prenda.autor;
+    nameInput.value = item.name;
+    authorInput.value = item.author;
 
-    modoEdicion = true;
-    idEditando = id;
-    tituloFormulario.textContent = "Editar prenda";
+    editMode = true;
+    editingId = id;
+    formTitle.textContent = "Edit clothing";
   } catch (error) {
-    alert("⚠️ Error al cargar la prenda");
+    alert("⚠️ Error loading clothing");
     console.error(error);
   }
 }
 
-// Borrar prenda (DELETE)
-async function borrarPrenda(id) {
-  const confirmacion = confirm(
-    "¿Estás seguro de que quieres eliminar esta prenda?"
+// Delete clothing (DELETE)
+async function deleteClothing(id) {
+  const confirmation = confirm(
+    "Are you sure you want to delete this clothing item?"
   );
-  if (!confirmacion) return;
+  if (!confirmation) return;
 
   try {
     await fetch(`${API_URL}/${id}`, { method: "DELETE" });
-    alert("Prenda eliminada");
-    cargarPrendas();
+    alert("Clothing deleted");
+    loadClothes();
   } catch (error) {
-    alert("❌ No se pudo eliminar");
+    alert("❌ Could not delete");
     console.error(error);
   }
 }
 
-// Resetear formulario
-function resetearFormulario() {
-  formulario.reset();
-  modoEdicion = false;
-  idEditando = null;
-  tituloFormulario.textContent = "Agregar prenda";
+// Reset form
+function resetForm() {
+  form.reset();
+  editMode = false;
+  editingId = null;
+  formTitle.textContent = "Add clothing";
 }
 
-// Botón cancelar
-btnCancelar.addEventListener("click", resetearFormulario);
+// Cancel button
+btnCancel.addEventListener("click", resetForm);
 
-// Iniciar app
-cargarPrendas();
+// Start app
+loadClothes();

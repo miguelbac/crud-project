@@ -1,103 +1,103 @@
 const API_URL = "http://localhost:3000/prendas";
 
 // Elementos del DOM
-const lista = document.getElementById("listaLibros");
-const formulario = document.getElementById("formulario");
-const btnCancelar = document.getElementById("btnCancelar");
-const tituloFormulario = document.getElementById("tituloFormulario");
+const list = document.getElementById("listaLibros");
+const form = document.getElementById("formulario");
+const btnCancel = document.getElementById("btnCancelar");
+const formTitle = document.getElementById("tituloFormulario");
 
 // Inputs del formulario
-const nombre = document.getElementById("nombre");
-const descripcion = document.getElementById("descripcion");
-const imagen = document.getElementById("imagen");
-const precio = document.getElementById("precio");
-const descuento = document.getElementById("descuento");
-const color = document.getElementById("color");
-const genero = document.getElementById("genero");
-const temporada = document.getElementById("temporada");
-const tipo = document.getElementById("tipo");
-const fecha_lanzamiento = document.getElementById("fecha_lanzamiento");
-const estilo = document.getElementById("estilo");
+const nameInput = document.getElementById("nombre");
+const descriptionInput = document.getElementById("descripcion");
+const imageInput = document.getElementById("imagen");
+const priceInput = document.getElementById("precio");
+const discountInput = document.getElementById("descuento");
+const colorInput = document.getElementById("color");
+const genderInput = document.getElementById("genero");
+const seasonInput = document.getElementById("temporada");
+const typeInput = document.getElementById("tipo");
+const releaseDateInput = document.getElementById("fecha_lanzamiento");
+const styleInput = document.getElementById("estilo");
 
 // Estado de edición
-let modoEdicion = false;
-let idEditando = null;
+let editMode = false;
+let editingId = null;
 
 // Obtener prendas y mostrarlas (GET)
 async function cargarPrendas() {
-  lista.innerHTML = "";
+  list.innerHTML = "";
 
   try {
     const res = await fetch(API_URL);
-    const prendas = await res.json();
+    const items = await res.json();
 
-    prendas.forEach((prenda) => {
+    items.forEach((item) => {
       const li = document.createElement("li");
       li.innerHTML = `
-        <strong>${prenda.nombre}</strong><br>
-        ${prenda.descripcion || "Sin descripción"}<br>
-        Precio: $${prenda.precio} (-${prenda.descuento}%)<br>
-        Color: ${prenda.color} | Género: ${prenda.genero}<br>
-        Temporada: ${prenda.temporada} | Tipo: ${prenda.tipo}<br>
-        Estilo: ${prenda.estilo}
+        <strong>${item.nombre}</strong><br>
+        ${item.descripcion || "Sin descripción"}<br>
+        Precio: $${item.precio} (-${item.descuento}%)<br>
+        Color: ${item.color} | Género: ${item.genero}<br>
+        Temporada: ${item.temporada} | Tipo: ${item.tipo}<br>
+        Estilo: ${item.estilo}
       `;
 
-      const btnEditar = document.createElement("button");
-      btnEditar.textContent = "✏️";
-      btnEditar.addEventListener("click", () =>
-        cargarPrendaEnFormulario(prenda.id)
+      const btnEdit = document.createElement("button");
+      btnEdit.textContent = "✏️";
+      btnEdit.addEventListener("click", () =>
+        cargarPrendaEnFormulario(item.id)
       );
 
-      const btnBorrar = document.createElement("button");
-      btnBorrar.textContent = "🗑️";
-      btnBorrar.addEventListener("click", () => borrarPrenda(prenda.id));
+      const btnDelete = document.createElement("button");
+      btnDelete.textContent = "🗑️";
+      btnDelete.addEventListener("click", () => borrarPrenda(item.id));
 
-      li.appendChild(btnEditar);
-      li.appendChild(btnBorrar);
-      lista.appendChild(li);
+      li.appendChild(btnEdit);
+      li.appendChild(btnDelete);
+      list.appendChild(li);
     });
   } catch (error) {
     alert("Error al cargar las prendas 😢");
     console.error(error);
   }
-} 
+}
 
 // Enviar formulario (POST o PUT)
-formulario.addEventListener("submit", async (e) => {
+form.addEventListener("submit", async (e) => {
   e.preventDefault();
 
-  const datosPrenda = {
-    nombre: nombre.value,
-    descripcion: descripcion.value,
-    imagen: imagen.value,
-    precio: parseFloat(precio.value),
-    descuento: parseInt(descuento.value),
-    color: color.value,
-    genero: genero.value,
-    temporada: temporada.value,
-    tipo: tipo.value,
-    fecha_lanzamiento: fecha_lanzamiento.value,
-    estilo: estilo.value,
+  const itemData = {
+    nombre: nameInput.value,
+    descripcion: descriptionInput.value,
+    imagen: imageInput.value,
+    precio: parseFloat(priceInput.value),
+    descuento: parseInt(discountInput.value),
+    color: colorInput.value,
+    genero: genderInput.value,
+    temporada: seasonInput.value,
+    tipo: typeInput.value,
+    fecha_lanzamiento: releaseDateInput.value,
+    estilo: styleInput.value,
   };
 
   try {
-    if (modoEdicion) {
-      await fetch(`${API_URL}/${idEditando}`, {
+    if (editMode) {
+      await fetch(`${API_URL}/${editingId}`, {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(datosPrenda),
+        body: JSON.stringify(itemData),
       });
       alert("Prenda actualizada con éxito");
     } else {
       await fetch(API_URL, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(datosPrenda),
+        body: JSON.stringify(itemData),
       });
       alert("Prenda agregada con éxito");
     }
 
-    resetearFormulario();
+    resetForm();
     cargarPrendas();
   } catch (error) {
     alert("❌ Error al guardar los datos");
@@ -109,23 +109,23 @@ formulario.addEventListener("submit", async (e) => {
 async function cargarPrendaEnFormulario(id) {
   try {
     const res = await fetch(`${API_URL}/${id}`);
-    const prenda = await res.json();
+    const item = await res.json();
 
-    nombre.value = prenda.nombre;
-    descripcion.value = prenda.descripcion;
-    imagen.value = prenda.imagen;
-    precio.value = prenda.precio;
-    descuento.value = prenda.descuento;
-    color.value = prenda.color;
-    genero.value = prenda.genero;
-    temporada.value = prenda.temporada;
-    tipo.value = prenda.tipo;
-    fecha_lanzamiento.value = prenda.fecha_lanzamiento;
-    estilo.value = prenda.estilo;
+    nameInput.value = item.nombre;
+    descriptionInput.value = item.descripcion;
+    imageInput.value = item.imagen;
+    priceInput.value = item.precio;
+    discountInput.value = item.descuento;
+    colorInput.value = item.color;
+    genderInput.value = item.genero;
+    seasonInput.value = item.temporada;
+    typeInput.value = item.tipo;
+    releaseDateInput.value = item.fecha_lanzamiento;
+    styleInput.value = item.estilo;
 
-    modoEdicion = true;
-    idEditando = id;
-    tituloFormulario.textContent = "Editar prenda";
+    editMode = true;
+    editingId = id;
+    formTitle.textContent = "Editar prenda";
   } catch (error) {
     alert("⚠️ Error al cargar la prenda");
     console.error(error);
@@ -150,19 +150,19 @@ async function borrarPrenda(id) {
 }
 
 // Resetear formulario
-function resetearFormulario() {
-  formulario.reset();
-  modoEdicion = false;
-  idEditando = null;
-  tituloFormulario.textContent = "Agregar prenda";
+function resetForm() {
+  form.reset();
+  editMode = false;
+  editingId = null;
+  formTitle.textContent = "Agregar prenda";
 }
 
 // Botón cancelar
-btnCancelar.addEventListener("click", resetearFormulario);
+btnCancel.addEventListener("click", resetForm);
 
 // Iniciar app
 cargarPrendas();
 
 {
-  
+
 }

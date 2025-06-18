@@ -105,6 +105,7 @@ formulario.addEventListener("submit", async (e) => {
   }
 });
 
+
 // Cargar prenda en el formulario para editar
 async function cargarPrendaEnFormulario(id) {
   try {

@@ -1,11 +1,12 @@
 footer {
-    background: #333;
+    background: #717568;
     color: white;
     text-align: center;
     padding: 1rem 0;
     position: fixed;
     width: 100%;
     bottom: 0;
+    font-family: red hat text; sans serif;
 }
 
 footer a {
@@ -17,3 +18,4 @@ footer a {
 footer a:hover {
   text-decoration: underline;
 }
+

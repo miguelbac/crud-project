@@ -4,89 +4,36 @@
 <head>
   <meta charset="UTF-8" />
   <title>CRUD</title>
-  <style>
-    body {
-      font-family: sans-serif;
-      margin: 0;
-      padding: 1rem;
-      background: #f9f9f9;
-    }
-
-    h1 {
-      text-align: center;
-      margin-bottom: 2rem;
-    }
-
-    form {
-      max-width: 600px;
-      margin: 0 auto 2rem;
-      background: #fff;
-      padding: 1rem;
-      border-radius: 8px;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    }
-
-    form input {
-      width: calc(50% - 10px);
-      margin: 5px;
-      padding: 10px;
-    }
-
-    form button {
-      margin: 5px;
-      padding: 10px 15px;
-    }
-
-    #listaLibros {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1rem;
-      padding: 0;
-      list-style: none;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-
-    #listaLibros li {
-      background: #fff;
-      padding: 1rem;
-      border-radius: 8px;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-    }
-
-    #listaLibros li button {
-      margin-top: 0.5rem;
-      padding: 6px 10px;
-      cursor: pointer;
-    }
-  </style>
-</head>
-
-</style>
+  <link rel="stylesheet" href="../src/styles/base.css">
+  <!-- Funnel Display font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
+  <!-- Red Hat Text font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
 </head>
 
 <body>
   <h1>ADAMY</h1>
 
-<form id="formulario">
-  <h3 id="tituloFormulario">Agregar prenda de ropa</h3>
-  <input type="text" placeholder="Nombre" id="nombre" required />
-  <input type="text" placeholder="Descripción" id="descripcion" />
-  <input type="text" placeholder="Imagen (nombre archivo)" id="imagen" />
-  <input type="number" placeholder="Precio" id="precio" step="0.01" />
-  <input type="number" placeholder="Descuento (%)" id="descuento" />
-  <input type="text" placeholder="Color" id="color" />
-  <input type="text" placeholder="Género" id="genero" />
-  <input type="text" placeholder="Temporada" id="temporada" />
-  <input type="text" placeholder="Tipo" id="tipo" />
-  <input type="date" placeholder="Fecha de lanzamiento" id="fecha_lanzamiento" />
-  <input type="text" placeholder="Estilo" id="estilo" />
-  <button type="submit">Guardar</button>
-  <button type="button" id="btnCancelar">Cancelar</button>
-</form>
+  <form id="formulario">
+    <h3 id="tituloFormulario">Agregar prenda de ropa</h3>
+    <input type="text" placeholder="Nombre" id="nombre" required />
+    <input type="text" placeholder="Descripción" id="descripcion" />
+    <input type="text" placeholder="Imagen (nombre archivo)" id="imagen" />
+    <input type="number" placeholder="Precio" id="precio" step="0.01" />
+    <input type="number" placeholder="Descuento (%)" id="descuento" />
+    <input type="text" placeholder="Color" id="color" />
+    <input type="text" placeholder="Género" id="genero" />
+    <input type="text" placeholder="Temporada" id="temporada" />
+    <input type="text" placeholder="Tipo" id="tipo" />
+    <input type="date" placeholder="Fecha de lanzamiento" id="fecha_lanzamiento" />
+    <input type="text" placeholder="Estilo" id="estilo" />
+    <button type="submit">Guardar</button>
+    <button type="button" id="btnCancelar">Cancelar</button>
+  </form>
 
   <ul id="listaLibros"></ul>
 

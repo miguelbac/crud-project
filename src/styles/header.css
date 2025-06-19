@@ -19,11 +19,17 @@ body {
 
 header {
   background-color: #A5A6A1;
-  color: #A5A6A1;
-  padding: 20px;
+  color: #3E2A35;
+  padding: 14px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  
 }
 
 .barra-busqueda {
@@ -66,7 +72,7 @@ header {
       
 }
 
- .button-toggle {
+ /* .button-toggle {
       display: none;
       background: none;
       border: none;
@@ -154,7 +160,7 @@ header {
  
 .boton2 {
       background-color: #ffffff20; /* fondo blanco semitransparente */
-  border: 1px solid #ffffff40;
+  /* border: 1px solid #ffffff40;
   color: white;
   padding: 10px 20px;
   font-size: 16px;
@@ -162,6 +168,73 @@ header {
   border-radius: 8px;
   cursor: pointer;
   backdrop-filter: blur(4px); /* efecto de fondo difuminado */
-  transition: all 0.3s ease;
+  /* transition: all 0.3s ease;
 
+} */ 
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+
+
+h1 {
+  font-size: 24px;
+}
+
+.nav {
+  position: relative;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.menu li a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.menu li a:hover {
+  color: #3E2A35;
+}
+
+/* Botón hamburguesa */
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+  user-select: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .menu {
+    position: absolute;
+    top: 60px;
+    right: 1;
+    background-color: #A5A6A1;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+    display: none;
+    border-radius: 0 0 8px 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    opacity: 80%;
+  }
+
+  .menu.show {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+}
+
+ 

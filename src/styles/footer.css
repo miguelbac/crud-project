@@ -1,0 +1,24 @@
+
+
+footer {
+    background: #717568;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    font-family: red hat text; sans serif;
+}
+
+footer a {
+  color: white;
+  text-decoration: none;
+  margin: 0 1rem;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+

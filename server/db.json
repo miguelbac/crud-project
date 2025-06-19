@@ -1,12 +1,8 @@
 {
   "prendas": [
+ 
     {
-      "nombre": "Camisola",
-      "autor": "undefined",
-      "id": "1"
-    },
-    {
-      "id": "2",
+      "id": "1",
       "nombre": "Vestido Floral",
       "descripcion": "Vestido largo con estampado floral.",
       "imagen": "vestido1.jpg",
@@ -396,6 +392,473 @@
       "tipo": "Top",
       "fecha_lanzamiento": "2025-05-25",
       "estilo": "Casual"
+    }
+  ],
+   "products": [
+    {
+      "id": "91",
+      "nombre": "Anorak de Mujer Negro",
+      "descripcion": "Anorak acolchado ideal para los días fríos.",
+      "imagen": [
+        "src/img/anorak1.jpg",
+        "src/img/anorak1.2.jpg"
+      ],
+      "precio": 59.99,
+      "descuento": 10,
+      "color": "Negro",
+      "genero": "Mujer",
+      "temporada": "Invierno",
+      "tipo": "Anorak",
+      "fecha_lanzamiento": "2024-12-01",
+      "estilo": "Casual"
+    },
+    {
+      "id": "92",
+      "nombre": "Abrigo de Lana Hombre Negro",
+      "descripcion": "Abrigo largo de lana para un estilo elegante.",
+      "imagen": [
+        "src/img/HAbrigoLana1.jpg",
+        "src/img/HAbrigoLana1.2.jpg"
+      ],
+      "precio": 89.99,
+      "descuento": 20,
+      "color": "Negro",
+      "genero": "Hombre",
+      "temporada": "Invierno",
+      "tipo": "Abrigo",
+      "fecha_lanzamiento": "2024-11-15",
+      "estilo": "Formal"
+    },
+    {
+      "id": "93",
+      "nombre": "Camisa Hombre Negra y Blanca",
+      "descripcion": "Camisa casual con diseño a rayas en blanco y negro.",
+      "imagen": [
+        "src/img/HCamisa1.jpg",
+        "src/img/HCamisa1.1.jpg"
+      ],
+      "precio": 29.99,
+      "descuento": 15,
+      "color": "Negro y Blanco",
+      "genero": "Hombre",
+      "temporada": "Primavera",
+      "tipo": "Camisa",
+      "fecha_lanzamiento": "2025-03-20",
+      "estilo": "Casual"
+    },
+    {
+      "id": "94",
+      "nombre": "Camisa Hombre Rosa y Blanca",
+      "descripcion": "Camisa fresca de algodón ideal para primavera.",
+      "imagen": [
+        "src/img/HCamisa2.jpg",
+        "src/img/HCamisa2.1.jpg"
+      ],
+      "precio": 32.99,
+      "descuento": 5,
+      "color": "Rosa y Blanco",
+      "genero": "Hombre",
+      "temporada": "Primavera",
+      "tipo": "Camisa",
+      "fecha_lanzamiento": "2025-03-10",
+      "estilo": "Semi-formal"
+    },
+    {
+      "id": "95",
+      "nombre": "Camisa de hombre otoño verde",
+      "descripcion": "Camisa de hombre en color verde para la temporada de otoño.",
+      "imagen": [
+        "src/img/HCamisa3.jpg",
+        "src/img/HCamisa3.1.jpg"
+      ],
+      "precio": 35.78,
+      "descuento": 5,
+      "color": "Verde",
+      "genero": "Hombre",
+      "temporada": "Otoño",
+      "tipo": "Camisa",
+      "fecha_lanzamiento": "2024-06-16",
+      "estilo": "Casual"
+    },
+    {
+      "id": "96",
+      "nombre": "Camisa de hombre otoño gris",
+      "descripcion": "Camisa de hombre en color gris para la temporada de otoño.",
+      "imagen": [
+        "src/img/HCamisa4.jpg",
+        "src/img/HCamisa4.1.jpg"
+      ],
+      "precio": 100.34,
+      "descuento": 10,
+      "color": "Gris",
+      "genero": "Hombre",
+      "temporada": "Otoño",
+      "tipo": "Camisa",
+      "fecha_lanzamiento": "2025-03-20",
+      "estilo": "Casual"
+    },
+    {
+      "id": "97",
+      "nombre": "Cazadora acolchada de hombre negra invierno",
+      "descripcion": "Cazadora de hombre en color negro para la temporada de invierno.",
+      "imagen": [
+        "src/img/Hcazadoraaccolchada1.jpg",
+        "src/img/Hcazadoraaccolchada1.1.jpg"
+      ],
+      "precio": 59.0,
+      "descuento": 5,
+      "color": "Negro",
+      "genero": "Hombre",
+      "temporada": "Invierno",
+      "tipo": "Cazadora",
+      "fecha_lanzamiento": "2025-03-28",
+      "estilo": "Casual"
+    },
+    {
+      "id": "98",
+      "nombre": "Pantalón de hombre negro",
+      "descripcion": "Pantalón de hombre en color negro para la temporada de otoño.",
+      "imagen": [
+        "src/img/Hpantalon.jpg",
+        "src/img/Hpantalon1.1.jpg"
+      ],
+      "precio": 53.01,
+      "descuento": 5,
+      "color": "Negro",
+      "genero": "Hombre",
+      "temporada": "Otoño",
+      "tipo": "Pantalón",
+      "fecha_lanzamiento": "2024-09-28",
+      "estilo": "Casual"
+    },
+    {
+      "id": "99",
+      "nombre": "Pantalón de hombre beige",
+      "descripcion": "Pantalón de hombre en color beige para la temporada de otoño.",
+      "imagen": [
+        "src/img/Hpantalon2.jpg",
+        "src/img/Hpantalon2.1.jpg"
+      ],
+      "precio": 74.26,
+      "descuento": 15,
+      "color": "Beige",
+      "genero": "Hombre",
+      "temporada": "Otoño",
+      "tipo": "Pantalón",
+      "fecha_lanzamiento": "2024-06-03",
+      "estilo": "Casual"
+    },
+    {
+      "id": "910",
+      "nombre": "Pantalón de mujer jeans con piedras azul",
+      "descripcion": "Jeans de mujer en color azul para la temporada de primavera.",
+      "imagen": [
+        "src/img/jeans1.jpg",
+        "src/img/jeans2.jpg"
+      ],
+      "precio": 90.08,
+      "descuento": 15,
+      "color": "Azul",
+      "genero": "Mujer",
+      "temporada": "Primavera",
+      "tipo": "Jeans",
+      "fecha_lanzamiento": "2025-03-17",
+      "estilo": "Casual"
+    },
+    {
+      "id": "911",
+      "nombre": "Pantalón de mujer jeans azul",
+      "descripcion": "Jeans de mujer en color azul para la temporada de primavera.",
+      "imagen": [
+        "src/img/jeans3.jpg",
+        "src/img/jeans3.1.jpg"
+      ],
+      "precio": 86.42,
+      "descuento": 20,
+      "color": "Azul",
+      "genero": "Mujer",
+      "temporada": "Primavera",
+      "tipo": "Jeans",
+      "fecha_lanzamiento": "2024-06-11",
+      "estilo": "Casual"
+    },
+    {
+      "id": "912",
+      "nombre": "Pantalón de mujer blanco",
+      "descripcion": "Pantalón de mujer en color blanco para la temporada de primavera.",
+      "imagen": [
+        "src/img/pantalon1.jpg",
+        "src/img/pantalon1.1.jpg"
+      ],
+      "precio": 51.76,
+      "descuento": 5,
+      "color": "Blanco",
+      "genero": "Mujer",
+      "temporada": "Primavera",
+      "tipo": "Pantalón",
+      "fecha_lanzamiento": "2024-02-21",
+      "estilo": "Casual"
+    },
+    {
+      "id": "913",
+      "nombre": "Pantalón de mujer beige",
+      "descripcion": "Pantalón de mujer en color beige para la temporada de primavera.",
+      "imagen": [
+        "src/img/pantalon2.jpg",
+        "src/img/pantalon2.1.jpg"
+      ],
+      "precio": 82.96,
+      "descuento": 10,
+      "color": "Beige",
+      "genero": "Mujer",
+      "temporada": "Primavera",
+      "tipo": "Pantalón",
+      "fecha_lanzamiento": "2024-04-06",
+      "estilo": "Casual"
+    },
+    {
+      "id": "914",
+      "nombre": "Pantalón de mujer negro",
+      "descripcion": "Pantalón de mujer en color negro para la temporada de primavera.",
+      "imagen": [
+        "src/img/pantalon3.jpg",
+        "src/img/pantalon3.1.jpg"
+      ],
+      "precio": 54.46,
+      "descuento": 10,
+      "color": "Negro",
+      "genero": "Mujer",
+      "temporada": "Primavera",
+      "tipo": "Pantalón",
+      "fecha_lanzamiento": "2024-05-17",
+      "estilo": "Casual"
+    },
+    {
+      "id": "915",
+      "nombre": "Pantalón de mujer blanco",
+      "descripcion": "Pantalón de mujer en color blanco para la temporada de primavera.",
+      "imagen": [
+        "src/img/pantalon4.jpg",
+        "src/img/pantalon4.1.jpg"
+      ],
+      "precio": 102.14,
+      "descuento": 5,
+      "color": "Blanco",
+      "genero": "Mujer",
+      "temporada": "Primavera",
+      "tipo": "Pantalón",
+      "fecha_lanzamiento": "2024-09-10",
+      "estilo": "Casual"
+    },
+    {
+      "id": "916",
+      "nombre": "Plumífero largo de mujer negro abrigo invierno",
+      "descripcion": "Abrigo de mujer en color negro para la temporada de invierno.",
+      "imagen": [
+        "src/img/plumifero largo1.jpg",
+        "src/img/plumifero largo1.2.jpg"
+      ],
+      "precio": 42.79,
+      "descuento": 5,
+      "color": "Negro",
+      "genero": "Mujer",
+      "temporada": "Invierno",
+      "tipo": "Abrigo",
+      "fecha_lanzamiento": "2024-04-07",
+      "estilo": "Formal"
+    },
+    {
+      "id": "917",
+      "nombre": "Top de mujer blanco verano casual",
+      "descripcion": "Top de mujer en color blanco para la temporada de verano.",
+      "imagen": [
+        "src/img/top1.jpg",
+        "src/img/top1.1.jpg"
+      ],
+      "precio": 64.88,
+      "descuento": 5,
+      "color": "Blanco",
+      "genero": "Mujer",
+      "temporada": "Verano",
+      "tipo": "Top",
+      "fecha_lanzamiento": "2024-08-02",
+      "estilo": "Casual"
+    },
+    {
+      "id": "918",
+      "nombre": "Top de mujer beige verano casual",
+      "descripcion": "Top de mujer en color beige para la temporada de verano.",
+      "imagen": [
+        "src/img/top2.jpg",
+        "src/img/top2.1.jpg"
+      ],
+      "precio": 25.12,
+      "descuento": 10,
+      "color": "Beige",
+      "genero": "Mujer",
+      "temporada": "Verano",
+      "tipo": "Top",
+      "fecha_lanzamiento": "2024-03-16",
+      "estilo": "Casual"
+    },
+    {
+      "id": "919",
+      "nombre": "Top de mujer azul verano casual",
+      "descripcion": "Top de mujer en color azul para la temporada de verano.",
+      "imagen": [
+        "src/img/top3.jpg",
+        "src/img/top3.1.jpg"
+      ],
+      "precio": 52.54,
+      "descuento": 5,
+      "color": "Azul",
+      "genero": "Mujer",
+      "temporada": "Verano",
+      "tipo": "Top",
+      "fecha_lanzamiento": "2024-04-21",
+      "estilo": "Casual"
+    },
+    {
+      "id": "920",
+      "nombre": "Top de mujer rosa verano casual",
+      "descripcion": "Top de mujer en color rosa para la temporada de verano.",
+      "imagen": [
+        "src/img/top4.jpg",
+        "src/img/top4.1.jpg"
+      ],
+      "precio": 40.83,
+      "descuento": 5,
+      "color": "Rosa",
+      "genero": "Mujer",
+      "temporada": "Verano",
+      "tipo": "Top",
+      "fecha_lanzamiento": "2024-07-17",
+      "estilo": "Casual"
+    },
+    {
+      "id": "921",
+      "nombre": "Vestido de mujer azul corto primavera",
+      "descripcion": "Vestido de mujer en color azul para la temporada de primavera.",
+      "imagen": [
+        "src/img/vestido1.jpg",
+        "src/img/vestido1.2.jpg"
+      ],
+      "precio": 103.6,
+      "descuento": 15,
+      "color": "Azul",
+      "genero": "Mujer",
+      "temporada": "Primavera",
+      "tipo": "Vestido",
+      "fecha_lanzamiento": "2024-04-15",
+      "estilo": "Casual"
+    },
+    {
+      "id": "922",
+      "nombre": "Vestido de mujer blanco corto primavera",
+      "descripcion": "Vestido de mujer en color blanco para la temporada de primavera.",
+      "imagen": [
+        "src/img/vestido2.jpg",
+        "src/img/vestido2.0.jpg"
+      ],
+      "precio": 26.71,
+      "descuento": 20,
+      "color": "Blanco",
+      "genero": "Mujer",
+      "temporada": "Primavera",
+      "tipo": "Vestido",
+      "fecha_lanzamiento": "2024-02-04",
+      "estilo": "Casual"
+    },
+    {
+      "id": "923",
+      "nombre": "Vestido de mujer azul corto primavera",
+      "descripcion": "Vestido de mujer en color azul para la temporada de primavera.",
+      "imagen": [
+        "src/img/vestido3.jpg",
+        "src/img/vestido3.1.jpg"
+      ],
+      "precio": 35.91,
+      "descuento": 20,
+      "color": "Azul",
+      "genero": "Mujer",
+      "temporada": "Primavera",
+      "tipo": "Vestido",
+      "fecha_lanzamiento": "2024-04-23",
+      "estilo": "Casual"
+    },
+    {
+      "id": "924",
+      "nombre": "Vestido de mujer rojo corto primavera",
+      "descripcion": "Vestido de mujer en color rojo para la temporada de primavera.",
+      "imagen": [
+        "src/img/vestido4.jpg",
+        "src/img/vestido4.1.jpg"
+      ],
+      "precio": 62.5,
+      "descuento": 10,
+      "color": "Rojo",
+      "genero": "Mujer",
+      "temporada": "Primavera",
+      "tipo": "Vestido",
+      "fecha_lanzamiento": "2024-07-16",
+      "estilo": "Casual"
+    },
+    {
+      "id": "925",
+      "nombre": "Vestido de lentejuelas beige formal",
+      "descripcion": "Vestido de mujer en color beige para la temporada de otoño.",
+      "imagen": [
+        "src/img/vestidoF1.jpg",
+        "src/img/vestidoF1.1.jpg"
+      ],
+      "precio": 99.84,
+      "descuento": 5,
+      "color": "Beige",
+      "genero": "Mujer",
+      "temporada": "Otoño",
+      "tipo": "Vestido",
+      "fecha_lanzamiento": "2024-03-11",
+      "estilo": "Formal"
+    },
+    {
+      "id": "926",
+      "nombre": "Vestido de mujer verde formal",
+      "descripcion": "Vestido de mujer en color verde para la temporada de otoño.",
+      "imagen": [
+        "src/img/vestidoF2.jpg",
+        "src/img/vestidoF2.1.jpg"
+      ],
+      "precio": 41.09,
+      "descuento": 15,
+      "color": "Verde",
+      "genero": "Mujer",
+      "temporada": "Otoño",
+      "tipo": "Vestido",
+      "fecha_lanzamiento": "2025-02-26",
+      "estilo": "Formal"
+    },
+    {
+      "id": "927",
+      "nombre": "Traje de hombre negro formal",
+      "descripcion": "Traje de hombre en color negro para la temporada de invierno.",
+      "imagen": [
+        "src/img/traje1.jpg",
+        "src/img/traje1.jpg"
+      ],
+      "precio": 71.22,
+      "descuento": 5,
+      "color": "Negro",
+      "genero": "Hombre",
+      "temporada": "Invierno",
+      "tipo": "Traje",
+      "fecha_lanzamiento": "2024-05-10",
+      "estilo": "Formal"
+    }
+  ],"users": [
+    {
+      "id": 1,
+      "username": "admin",
+      "password": "Adamy*2025"
     }
   ]
 }

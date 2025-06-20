@@ -199,10 +199,10 @@ cargarPrendas();
   
 
   const boton = document.getElementById('hamburguesa');
-  const menu2 = document.getElementById('menu');
+  const menu2 = document.getElementById('menu2');
 
   boton.addEventListener('click', () => {
-    menu.classList.toggle('show');
+    menu2.classList.boton('show');
   });
 
 

@@ -411,6 +411,107 @@
       "tipo": "Anorak",
       "fecha_lanzamiento": "2024-12-01",
       "estilo": "Casual"
+    },  {
+      "id": "921",
+      "nombre": "Vestido de mujer azul corto primavera",
+      "descripcion": "Vestido de mujer en color azul para la temporada de primavera.",
+      "imagen": [
+        "../src/img/vestido1.jpg",
+        "../src/img/vestido1.2.jpg"
+      ],
+      "precio": 103.6,
+      "descuento": 15,
+      "color": "Azul",
+      "genero": "Mujer",
+      "temporada": "Primavera",
+      "tipo": "Vestido",
+      "fecha_lanzamiento": "2024-04-15",
+      "estilo": "Casual"
+    },
+    {
+      "id": "922",
+      "nombre": "Vestido de mujer blanco corto primavera",
+      "descripcion": "Vestido de mujer en color blanco para la temporada de primavera.",
+      "imagen": [
+        "../src/img/vestido2.0.jpg",
+        "../src/img/vestido2.jpg"
+      ],
+      "precio": 26.71,
+      "descuento": 20,
+      "color": "Blanco",
+      "genero": "Mujer",
+      "temporada": "Primavera",
+      "tipo": "Vestido",
+      "fecha_lanzamiento": "2024-02-04",
+      "estilo": "Casual"
+    },
+    {
+      "id": "923",
+      "nombre": "Vestido de mujer azul corto primavera",
+      "descripcion": "Vestido de mujer en color azul para la temporada de primavera.",
+      "imagen": [
+        "../src/img/vestido3.jpg",
+        "../src/img/vestido3.1.jpg"
+      ],
+      "precio": 35.91,
+      "descuento": 20,
+      "color": "Azul",
+      "genero": "Mujer",
+      "temporada": "Primavera",
+      "tipo": "Vestido",
+      "fecha_lanzamiento": "2024-04-23",
+      "estilo": "Casual"
+    },
+    {
+      "id": "924",
+      "nombre": "Vestido de mujer rojo corto primavera",
+      "descripcion": "Vestido de mujer en color rojo para la temporada de primavera.",
+      "imagen": [
+        "../src/img/vestido4.jpg",
+        "../src/img/vestido4.1.jpg"
+      ],
+      "precio": 62.5,
+      "descuento": 10,
+      "color": "Rojo",
+      "genero": "Mujer",
+      "temporada": "Primavera",
+      "tipo": "Vestido",
+      "fecha_lanzamiento": "2024-07-16",
+      "estilo": "Casual"
+    },
+    {
+      "id": "925",
+      "nombre": "Vestido de lentejuelas beige formal",
+      "descripcion": "Vestido de mujer en color beige para la temporada de otoño.",
+      "imagen": [
+        "../src/img/vestidoF1.jpg",
+        "../src/img/vestidoF1.1.jpg"
+      ],
+      "precio": 99.84,
+      "descuento": 5,
+      "color": "Beige",
+      "genero": "Mujer",
+      "temporada": "Otoño",
+      "tipo": "Vestido",
+      "fecha_lanzamiento": "2024-03-11",
+      "estilo": "Formal"
+    },
+    {
+      "id": "926",
+      "nombre": "Vestido de mujer verde formal",
+      "descripcion": "Vestido de mujer en color verde para la temporada de otoño.",
+      "imagen": [
+        "../src/img/vestidoF2.jpg",
+        "../src/img/vestidoF2.1.jpg"
+      ],
+      "precio": 41.09,
+      "descuento": 15,
+      "color": "Verde",
+      "genero": "Mujer",
+      "temporada": "Otoño",
+      "tipo": "Vestido",
+      "fecha_lanzamiento": "2025-02-26",
+      "estilo": "Formal"
     },
     {
       "id": "92",
@@ -735,108 +836,7 @@
       "fecha_lanzamiento": "2024-07-17",
       "estilo": "Casual"
     },
-    {
-      "id": "921",
-      "nombre": "Vestido de mujer azul corto primavera",
-      "descripcion": "Vestido de mujer en color azul para la temporada de primavera.",
-      "imagen": [
-        "../src/img/vestido1.jpg",
-        "../src/img/vestido1.2.jpg"
-      ],
-      "precio": 103.6,
-      "descuento": 15,
-      "color": "Azul",
-      "genero": "Mujer",
-      "temporada": "Primavera",
-      "tipo": "Vestido",
-      "fecha_lanzamiento": "2024-04-15",
-      "estilo": "Casual"
-    },
-    {
-      "id": "922",
-      "nombre": "Vestido de mujer blanco corto primavera",
-      "descripcion": "Vestido de mujer en color blanco para la temporada de primavera.",
-      "imagen": [
-        "../src/img/vestido2.jpg",
-        "../src/img/vestido2.0.jpg"
-      ],
-      "precio": 26.71,
-      "descuento": 20,
-      "color": "Blanco",
-      "genero": "Mujer",
-      "temporada": "Primavera",
-      "tipo": "Vestido",
-      "fecha_lanzamiento": "2024-02-04",
-      "estilo": "Casual"
-    },
-    {
-      "id": "923",
-      "nombre": "Vestido de mujer azul corto primavera",
-      "descripcion": "Vestido de mujer en color azul para la temporada de primavera.",
-      "imagen": [
-        "../src/img/vestido3.jpg",
-        "../src/img/vestido3.1.jpg"
-      ],
-      "precio": 35.91,
-      "descuento": 20,
-      "color": "Azul",
-      "genero": "Mujer",
-      "temporada": "Primavera",
-      "tipo": "Vestido",
-      "fecha_lanzamiento": "2024-04-23",
-      "estilo": "Casual"
-    },
-    {
-      "id": "924",
-      "nombre": "Vestido de mujer rojo corto primavera",
-      "descripcion": "Vestido de mujer en color rojo para la temporada de primavera.",
-      "imagen": [
-        "../src/img/vestido4.jpg",
-        "../src/img/vestido4.1.jpg"
-      ],
-      "precio": 62.5,
-      "descuento": 10,
-      "color": "Rojo",
-      "genero": "Mujer",
-      "temporada": "Primavera",
-      "tipo": "Vestido",
-      "fecha_lanzamiento": "2024-07-16",
-      "estilo": "Casual"
-    },
-    {
-      "id": "925",
-      "nombre": "Vestido de lentejuelas beige formal",
-      "descripcion": "Vestido de mujer en color beige para la temporada de otoño.",
-      "imagen": [
-        "../src/img/vestidoF1.jpg",
-        "../src/img/vestidoF1.1.jpg"
-      ],
-      "precio": 99.84,
-      "descuento": 5,
-      "color": "Beige",
-      "genero": "Mujer",
-      "temporada": "Otoño",
-      "tipo": "Vestido",
-      "fecha_lanzamiento": "2024-03-11",
-      "estilo": "Formal"
-    },
-    {
-      "id": "926",
-      "nombre": "Vestido de mujer verde formal",
-      "descripcion": "Vestido de mujer en color verde para la temporada de otoño.",
-      "imagen": [
-        "../src/img/vestidoF2.jpg",
-        "../src/img/vestidoF2.1.jpg"
-      ],
-      "precio": 41.09,
-      "descuento": 15,
-      "color": "Verde",
-      "genero": "Mujer",
-      "temporada": "Otoño",
-      "tipo": "Vestido",
-      "fecha_lanzamiento": "2025-02-26",
-      "estilo": "Formal"
-    },
+  
     {
       "id": "927",
       "nombre": "Traje de hombre negro formal",
@@ -853,6 +853,73 @@
       "tipo": "Traje",
       "fecha_lanzamiento": "2024-05-10",
       "estilo": "Formal"
+    },
+       {
+      "id": "928",
+      "nombre": "Mallas Largas",
+      "descripcion": "Mallas Fitness Mujer Negro",
+      "imagen": [
+        "../src/img/mallas1.jpg",
+        "../src/img/mallas2.jpg"
+      ],
+      "precio": 15.22,
+      "descuento": 2,
+      "color": "Negro",
+      "genero": "Mujer",
+      "temporada": "Primavera",
+      "tipo": "Mallas deportivas",
+      "fecha_lanzamiento": "2024-05-10",
+      "estilo": "Deportivo"
+    }, {
+      "id": "929",
+      "nombre": "Camiseta Fútbol",
+      "descripcion": "Camiseta Fútbol Hombre Amarillo",
+      "imagen": [
+        "../src/img/camisetaDep1.1.jpg",
+        "../src/img/camisetaDep1.jpg"
+      ],
+      "precio": 18.52,
+      "descuento": 2,
+      "color": "Amarillo",
+      "genero": "Hombre",
+      "temporada": "Primavera",
+      "tipo": "Camiseta hombre",
+      "fecha_lanzamiento": "2025-02-10",
+      "estilo": "Deportivo"
+    },
+    {
+      "id": "930",
+      "nombre": "Bañador Hombre",
+      "descripcion": "Bañador Hombre Azul",
+      "imagen": [
+        "../src/img/bannador1.1.jpg",
+        "../src/img/bannador1.jpg"
+      ],
+      "precio": 22.99,
+      "descuento": 0,
+      "color": "Azul",
+      "genero": "Hombre",
+      "temporada": "Verano",
+      "tipo": "Bañador",
+      "fecha_lanzamiento": "2025-05-10",
+      "estilo": "Deportivo"
+    },
+    {
+      "id": "932",
+      "nombre": "Camiseta Fitness",
+      "descripcion": "Camiseta Fitness Mujer Azul",
+      "imagen": [
+        "../src/img/topDeportivo1.1.jpg",
+        "../src/img/TopDeportivoM1.jpg"
+      ],
+      "precio": 5.99,
+      "descuento": 0,
+      "color": "Azul",
+      "genero": "Mujer",
+      "temporada": "Verano",
+      "tipo": "Deportivo Top",
+      "fecha_lanzamiento": "2025-04-19",
+      "estilo": "Deportivo"
     }
   ],"users": [
     {

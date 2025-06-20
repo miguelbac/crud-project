@@ -35,6 +35,7 @@ header {
 .barra-busqueda {
   display: flex;
   
+  
 }
 
 .barra-busqueda input {
@@ -44,6 +45,7 @@ header {
   outline: none;
   opacity: 50%;
   background-color: #FFFFFF;
+  align-items: end;
 }
 
 .barra-busqueda button {
@@ -237,4 +239,67 @@ h1 {
   }
 }
 
+.perfil {
+  outline: none;
+  border: none;
+  border: none;
+  outline: none;
+  background-color: #A5A6A1;
+  color: white;
+  border-radius: px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  align-items: end;
+  opacity: 50%;
+}
+
+.megusta {
+   outline: none;
+  border: none;
+  border: none;
+  outline: none;
+  background-color: #A5A6A1;
+  color: white;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  align-items: end;
+  opacity: 50%;
+
+}
  
+.hamburguesa {
+  cursor: pointer;
+  font-weight: bold;
+  user-select: none;
+}
+
+.menu2 {
+  position: absolute;
+  top: 70px;
+  right: 20px;
+  background-color: #0077cc;
+  list-style: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  display: none;
+  flex-direction: column;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+.menu2 li {
+  margin: 10px 0;
+}
+
+.menu2 li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.menu2 li a:hover {
+  color: #ffdd57;
+}
+
+.menu2.show {
+  display: flex;
+}

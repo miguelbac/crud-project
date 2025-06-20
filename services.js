@@ -198,5 +198,13 @@ cargarPrendas();
 
   
 
+  const boton = document.getElementById('hamburguesa');
+  const menu2 = document.getElementById('menu');
+
+  boton.addEventListener('click', () => {
+    menu.classList.toggle('show');
+  });
+
+
 
   

@@ -23,25 +23,34 @@
 </head>
 <header>
   <nav class="nav">
-    <ul class="menu">
+    <!-- Menú hamburguesa a la izquierda -->
+    <div class="menu-toggle" id="menu-toggle">☰</div>
+
+    <!-- Logo -->
+    <div class="logo-container">
+      <img class="logo" src="../src/img/logo png A.png" alt="Logo">
+    </div>
+
+    <!-- Menú desplegable -->
+    <ul class="menu" id="menu">
       <li><a href="#">Género</a></li>
       <li><a href="#">Inicio</a></li>
       <li><a href="#">Servicios</a></li>
       <li><a href="#">Contacto</a></li>
     </ul>
-    <div class="menu-toggle" id="menu-toggle">☰</div>
+
+    <!-- Barra de búsqueda -->
+    <div class="search-bar">
+      <input type="text" placeholder="Busca por producto, colección..." id="searchText">
+      <button id="searchButton">🔍</button>
+    </div>
+
+    <!-- Iconos -->
+    <div class="user-buttons">
+      <button class="perfil"><img src="../src/img/usuario def.png" alt="Perfil"></button>
+      <button class="megusta"><img src="../src/img/icons8-me-gusta-48.png" alt="Me gusta"></button>
+    </div>
   </nav>
-  <img class="logo" src="../src/img/logo png A.png" alt="">
-  <div class="search-bar">
-    <input type="text" placeholder="Busca por producto, colección...">
-    <button>🔍</button>
-  </div>
-  <div class="grupo1">
-    <button class="perfil"><img src="../src/img/usuario def.png" alt=""></button>
-    <!-- </div> -->
-    <!-- <div class="megusta"> -->
-    <button class="megusta"><img src="../src/img/icons8-me-gusta-48.png" alt=""></button>
-  </div>
 </header>
 
 
@@ -83,7 +92,7 @@
   </div>
 </footer>
 
-<script src="../services.js"></script>
+<script src="../src/components/Burguer-menu.js"></script>
 </body>
 
 </html>

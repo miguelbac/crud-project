@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>CRUD</title>
+  <link rel="stylesheet" href="../src/styles/base.css">
+  <link rel="stylesheet" href="../src/styles/footer.css">
+  <link rel="stylesheet" href="../src/styles/header.css">
+  <link rel="stylesheet" href="../src/styles/usuario.css">
+
+  <!-- Funnel Display font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap"
+    rel="stylesheet">
+  <!-- Red Hat Text font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap"
+    rel="stylesheet">
+</head>
+<header>
+  <nav class="nav">
+    <!-- Menú hamburguesa a la izquierda -->
+    <div class="menu-toggle" id="menu-toggle">☰</div>
+
+    <!-- Logo -->
+    <div class="logo-container">
+      <img class="logo" src="../src/img/logo png A.png" alt="Logo">
+    </div>
+
+    <!-- Menú desplegable -->
+    <ul class="menu" id="menu">
+      <li><a href="#">Género</a></li>
+      <li><a href="#">Inicio</a></li>
+      <li><a href="#">Servicios</a></li>
+      <li><a href="#">Contacto</a></li>
+    </ul>
+
+    <!-- Barra de búsqueda -->
+    <div class="search-bar">
+      <input type="text" placeholder="Busca por producto, colección..." id="searchText">
+      <button id="searchButton">🔍</button>
+    </div>
+
+    <!-- Iconos -->
+    <div class="user-buttons">
+      <button class="perfil"><img src="../src/img/usuario def.png" alt="Perfil"></button>
+      <button class="megusta"><img src="../src/img/icons8-me-gusta-48.png" alt="Me gusta"></button>
+    </div>
+  </nav>
+</header>
+
+<form id="form-registro">
+  <h2>Registro de Usuario</h2>
+  <input type="text" id="nombre" placeholder="Usuario" required />
+ 
+  <input type="password" id="password" placeholder="Contraseña" required />
+  <button type="submit">Registrarse</button>
+</form>
+
+
+
+<footer>
+  <div class="pie">
+    <a href="mailto:contacto@adamy.com" target="_blank">CONTAC US HERE</a>
+    <a href="https://www.instagram.com" target="_blank">INSTAGRAM</a>
+    <p>ADAMY @ 2025 TODOS LOS DERECHOS RESERVADOS</p>
+  </div>
+</footer>
+<script src="../src/components/usuario.js"></script>
+<script src="../src/components/Burguer-menu.js"></script>
+</body>
+
+</html>

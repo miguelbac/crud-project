@@ -5,7 +5,8 @@ footer {
     padding: 1rem;
     width: 100%;
     bottom: 0;
-    font-family: Red Hat Text; Sans Serif;
+    font-family:"Red Hat Text"; Sans-Serif;
+    
 }
 
 footer a {
@@ -18,4 +19,7 @@ footer a:hover {
   text-decoration: underline;
 }
 
+body {
+  min-height: 100vh;
+}
 

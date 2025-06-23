@@ -9,50 +9,48 @@
   <link rel="stylesheet" href="../src/styles/header.css">
   <link rel="stylesheet" href="../src/styles/usuario.css">
 
-  <!-- Funnel Display font -->
+  <!-- Fuentes -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
     href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap"
     rel="stylesheet">
-  <!-- Red Hat Text font -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap"
-    rel="stylesheet">
+
 </head>
-<header>
-  <nav class="nav">
-    <!-- Menú hamburguesa a la izquierda -->
-    <div class="menu-toggle" id="menu-toggle">☰</div>
 
-    <!-- Logo -->
-    <div class="logo-container">
-      <img class="logo" src="../src/img/logo png A.png" alt="Logo">
-    </div>
+<body>
+  <header>
+    <nav class="nav">
+      <div class="menu-toggle" id="menu-toggle">☰</div>
 
-    <!-- Menú desplegable -->
-    <ul class="menu" id="menu">
-      <li><a href="#">Género</a></li>
-      <li><a href="#">Inicio</a></li>
-      <li><a href="#">Servicios</a></li>
-      <li><a href="#">Contacto</a></li>
-    </ul>
+      <!-- Logo -->
+      <div class="logo-container">
+        <img class="logo" src="../src/img/icons/logo.png" alt="Logo">
+      </div>
 
-    <!-- Barra de búsqueda -->
-    <div class="search-bar">
-      <input type="text" placeholder="Busca por producto, colección..." id="searchText">
-      <button id="searchButton">🔍</button>
-    </div>
+      <!-- Menú desplegable -->
+      <ul class="menu" id="menu">
+        <li><a href="#">Género</a></li>
+        <li><a href="#">Inicio</a></li>
+        <li><a href="#">Servicios</a></li>
+        <li><a href="#">Contacto</a></li>
+      </ul>
 
-    <!-- Iconos -->
-    <div class="user-buttons">
-      <button class="perfil"><img src="../src/img/usuario def.png" alt="Perfil"></button>
-      <button class="megusta"><img src="../src/img/icons8-me-gusta-48.png" alt="Me gusta"></button>
-    </div>
-  </nav>
-</header>
+      <!-- Barra de búsqueda -->
+      <div class="search-bar">
+        <input type="text" placeholder="Buscar producto" id="searchText">
+        <button id="searchButton">
+          <img src="../src/img/icons/search-icon.png" alt="Buscar" class="search-icon">
+        </button>
+      </div>
+
+      <!-- Iconos -->
+      <div class="user-buttons">
+        <button class="users"><img src="../src/img/icons/users2.png" alt="Perfil"></button>
+        <button class="favs"><img src="../src/img/icons/favs2.png" alt="Me gusta"></button>
+      </div>
+    </nav>
+  </header>
 
 <form id="login-form">
   <h2>Iniciar sesión</h2>

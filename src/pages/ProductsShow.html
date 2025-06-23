@@ -5,94 +5,51 @@
   <meta charset="UTF-8" />
   <title>CRUD</title>
   <link rel="stylesheet" href="../styles/cards.css"/>
-  <style>
-    body {
-      font-family: sans-serif;
-      margin: 0;
-      padding: 1rem;
-      background: #f9f9f9;
-    }
+   <link rel="stylesheet" href="../styles/footer.css"/>
+    <link rel="stylesheet" href="../styles/header.css"/>
 
-    h1 {
-      text-align: center;
-      margin-bottom: 2rem;
-    }
-
-    form {
-      max-width: 600px;
-      margin: 0 auto 2rem;
-      background: #fff;
-      padding: 1rem;
-      border-radius: 8px;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    }
-
-    form input {
-      width: calc(50% - 10px);
-      margin: 5px;
-      padding: 10px;
-    }
-
-    form button {
-      margin: 5px;
-      padding: 10px 15px;
-    }
-
-    #listaLibros {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1rem;
-      padding: 0;
-      list-style: none;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-
-    #listaLibros li {
-      background: #fff;
-      padding: 1rem;
-      border-radius: 8px;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-    }
-
-    #listaLibros li button {
-      margin-top: 0.5rem;
-      padding: 6px 10px;
-      cursor: pointer;
-    }
-  </style>
 </head>
 
 </style>
 </head>
 
 <body>
-  <h1>ADAMY</h1>
-  <input type="text" id="searchText"  placeholder="Buscar...">
-  <button id="searchButton">Buscar</button>
-<div id="containerProducts"></div>
-<!--<form id="formulario">
-  <h3 id="tituloFormulario">Agregar prenda de ropa</h3>
-  <input type="text" placeholder="Nombre" id="nombre" required />
-  <input type="text" placeholder="Descripción" id="descripcion" />
-  <input type="text" placeholder="Imagen (nombre archivo)" id="imagen" />
-  <input type="number" placeholder="Precio" id="precio" step="0.01" />
-  <input type="number" placeholder="Descuento (%)" id="descuento" />
-  <input type="text" placeholder="Color" id="color" />
-  <input type="text" placeholder="Género" id="genero" />
-  <input type="text" placeholder="Temporada" id="temporada" />
-  <input type="text" placeholder="Tipo" id="tipo" />
-  <input type="date" placeholder="Fecha de lanzamiento" id="fecha_lanzamiento" />
-  <input type="text" placeholder="Estilo" id="estilo" />
-  <button type="submit">Guardar</button>
-  <button type="button" id="btnCancelar">Cancelar</button>
-</form>
 
-  <ul id="listaLibros"></ul>
--->
+ <header>
+  <nav class="nav">
+    <ul class="menu">
+      <li><a href="#">Género</a></li>
+      <li><a href="#">Inicio</a></li>
+      <li><a href="#">Servicios</a></li>
+      <li><a href="#">Contacto</a></li>
+    </ul>
+    <div class="menu-toggle" id="menu-toggle">☰</div>
+  </nav>
+  <img class="logo" src="../src/img/logo png A.png" alt="">
+  <div class="search-bar">
+    <input type="text" id="searchText" placeholder="Busca por producto, colección...">
+    <button id="searchButton">🔍</button>
+  </div>
+  <div class="grupo1">
+    <button class="perfil"><img src="../src/img/usuario def.png" alt=""></button>
+    <!-- </div> -->
+    <!-- <div class="megusta"> -->
+    <button class="megusta"><img src="../src/img/icons8-me-gusta-48.png" alt=""></button>
+  </div>
+</header>
+
+
+  
+<div id="containerProducts"></div>
+
+
+<footer>
+  <div class="pie">
+    <a href="mailto:contacto@adamy.com" target="_blank">CONTAC US HERE</a>
+    <a href="https://www.instagram.com" target="_blank">INSTAGRAM</a>
+    <p>ADAMY @ 2025 TODOS LOS DERECHOS RESERVADOS</p>
+  </div>
+</footer>
   <script src="../components/productCard.js"></script>
 </body>
 

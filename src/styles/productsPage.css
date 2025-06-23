@@ -1,7 +1,7 @@
 
 .main-ProductsShow {
-    background: #717568;
-  font-family: "Red Hat Text", Sans-serif;
+   background-color: rgba(165, 166, 161, 1);
+  font-family: Red Hat Text, Sans-serif;
   display: flex;
   min-height: calc(100vh - 140px); /* 100vh - header (80px) - footer (60px) */
     padding-top: 80px;
@@ -9,7 +9,7 @@
 /* Barra lateral izquierda */
 .sidebar {
 background-color: #F2F2F2;
-width: 20%;
+width: 18rem;
 padding: 20px;
 box-sizing: border-box;
 }
@@ -20,17 +20,63 @@ box-sizing: border-box;
   margin: 0;
 }
 .sidebar li {
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
-
+.sidebar h4 {
+   margin-left: 4%;
+}
 .sidebar a {
   text-decoration: none;
   color: #333;
   font-weight: bold;
+  margin-left: 8%;
 }
-#containerProducts {
+
+.color-options {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 6px;
+  margin-left:25px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.color-box {
+  width: 20px;
+  height: 20px;
+  border: 1px solid #050505de;
+  cursor: pointer;
+  border-radius: 4px;
+}
+#ResultsNumber{
+    margin-left: 30px;
+}
+.resultadosOrden{
   flex-grow: 1; /* ocupa el resto del espacio */
   padding: 20px;
-  background: #fff; 
-
 }
+.product-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+ #containerProducts {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    margin-top: 20px;
+    padding: 20px;
+
+
+  }
+ #sortSelect{
+    background: #F2F2F2;
+    border-radius: 10px;
+    padding: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    font-family: "Red Hat Text", Sans-serif;
+    font-size: 14px;
+    margin-top: 2px;
+ }

@@ -8,91 +8,89 @@
   <link rel="stylesheet" href="../src/styles/footer.css">
   <link rel="stylesheet" href="../src/styles/header.css">
 
-  <!-- Funnel Display font -->
+  <!-- Fuentes -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
     href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap"
     rel="stylesheet">
-  <!-- Red Hat Text font -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap"
-    rel="stylesheet">
+
 </head>
-<header>
-  <nav class="nav">
-    <!-- Menú hamburguesa a la izquierda -->
-    <div class="menu-toggle" id="menu-toggle">☰</div>
 
-    <!-- Logo -->
-    <div class="logo-container">
-      <img class="logo" src="../src/img/logo png A.png" alt="Logo">
+<body>
+  <header>
+    <nav class="nav">
+      <div class="menu-toggle" id="menu-toggle">☰</div>
+
+      <!-- Logo -->
+      <div class="logo-container">
+        <img class="logo" src="../src/img/icons/logo.png" alt="Logo">
+      </div>
+
+      <!-- Menú desplegable -->
+      <ul class="menu" id="menu">
+        <li><a href="#">Género</a></li>
+        <li><a href="#">Inicio</a></li>
+        <li><a href="#">Servicios</a></li>
+        <li><a href="#">Contacto</a></li>
+      </ul>
+
+      <!-- Barra de búsqueda -->
+      <div class="search-bar">
+        <input type="text" placeholder="Buscar producto" id="searchText">
+        <button id="searchButton">
+          <img src="../src/img/icons/search-icon.png" alt="Buscar" class="search-icon">
+        </button>
+      </div>
+
+      <!-- Iconos -->
+      <div class="user-buttons">
+        <button class="users"><img src="../src/img/icons/users2.png" alt="Perfil"></button>
+        <button class="favs"><img src="../src/img/icons/favs2.png" alt="Me gusta"></button>
+      </div>
+    </nav>
+  </header>
+
+
+  <div class="background-video">
+    <video autoplay muted loop playsinline>
+      <source src="../src/img/background/background-video.mp4" type="video/mp4" />
+    </video>
+    <div class="video-text">
+      <h1>NEW COLLECTION</h1>
+      <p><a href="#" class="link-hover">VER MÁS</a></p>
     </div>
+  </div>
 
-    <!-- Menú desplegable -->
-    <ul class="menu" id="menu">
-      <li><a href="#">Género</a></li>
-      <li><a href="#">Inicio</a></li>
-      <li><a href="#">Servicios</a></li>
-      <li><a href="#">Contacto</a></li>
-    </ul>
-
-    <!-- Barra de búsqueda -->
-    <div class="search-bar">
-      <input type="text" placeholder="Busca por producto, colección..." id="searchText">
-      <button id="searchButton">🔍</button>
+  <div class="season-container">
+    <div class="season-text">
+      <a href="#" class="link-hover">TEMPORADA</a>
     </div>
+    <div class="background-season background-season-1"></div>
+    <div class="background-season background-season-2"></div>
+  </div>
 
-    <!-- Iconos -->
-    <div class="user-buttons">
-      <button class="perfil"><img src="../src/img/usuario def.png" alt="Perfil"></button>
-      <button class="megusta"><img src="../src/img/icons8-me-gusta-48.png" alt="Me gusta"></button>
+  <div class="background-women">
+    <div class="section-text">
+      <a href="#" class="link-hover">MUJER</a>
     </div>
-  </nav>
-</header>
-
-
-<div class="background-video">
-  <video autoplay muted loop playsinline>
-    <source src="../src/img/background/background-video.mp4" type="video/mp4" />
-  </video>
-  <div class="video-text">
-    <h1>NEW COLLECTION</h1>
-    <p><a href="#" class="link-hover">VER MÁS</a></p>
   </div>
-</div>
 
-<div class="season-container">
-  <div class="season-text">
-    <a href="#" class="link-hover">TEMPORADA</a>
+  <div class="background-men">
+    <div class="section-text">
+      <a href="#" class="link-hover">HOMBRE</a>
+    </div>
   </div>
-  <div class="background-season background-season-1"></div>
-  <div class="background-season background-season-2"></div>
-</div>
 
-<div class="background-women">
-  <div class="section-text">
-    <a href="#" class="link-hover">MUJER</a>
-  </div>
-</div>
+  <footer>
+    <div class="pie">
+      <a href="mailto:contacto@adamy.com" target="_blank">CONTAC US HERE</a>
+      <a href="https://www.instagram.com" target="_blank">INSTAGRAM</a>
+      <p>ADAMY @ 2025 TODOS LOS DERECHOS RESERVADOS</p>
+    </div>
+  </footer>
 
-<div class="background-men">
-  <div class="section-text">
-    <a href="#" class="link-hover">HOMBRE</a>
-  </div>
-</div>
-
-<footer>
-  <div class="pie">
-    <a href="mailto:contacto@adamy.com" target="_blank">CONTAC US HERE</a>
-    <a href="https://www.instagram.com" target="_blank">INSTAGRAM</a>
-    <p>ADAMY @ 2025 TODOS LOS DERECHOS RESERVADOS</p>
-  </div>
-</footer>
-
-<script src="../src/components/Burguer-menu.js"></script>
+  <script src="../src/components/Burguer-menu.js"></script>
 </body>
 
 </html>

@@ -286,6 +286,7 @@ h1 {
   box-shadow: 0 4px 12px rgba(0,0,0,0.3);
 }
 
+
 .menu2 li {
   margin: 10px 0;
 }
@@ -303,3 +304,5 @@ h1 {
 .menu2.show {
   display: flex;
 }
+
+

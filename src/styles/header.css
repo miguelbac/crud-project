@@ -1,0 +1,308 @@
+
+
+.logo {
+    width: 40px;
+    height: auto;
+    align-items: center;
+}
+
+/* Reset básico */
+/* * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+} */
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+header {
+  background-color: #A5A6A1;
+  color: #3E2A35;
+  padding: 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  
+}
+
+.search-bar {
+  display: flex;
+  
+  
+}
+
+.search-bar input {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 4px 0 0 4px;
+  outline: none;
+  opacity: 50%;
+  background-color: #FFFFFF;
+  align-items: end;
+}
+
+.search-bar button {
+  padding: 8px 12px;
+  border: none;
+  background-color: #FFFFFF;
+  color: #FFFFFF;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+  opacity: 50%;
+}
+
+.search-bar button:hover {
+  background-color: #FFFFFF;
+  opacity: 50%;
+}
+
+ 
+ .button-toggle {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 2rem;
+      cursor: pointer;
+      color: #3E2A35;
+      
+}
+
+ /* .button-toggle {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 2rem;
+      cursor: pointer;
+      color: #3E2A35;
+      }
+    .submenu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 2rem;
+      cursor: pointer;
+      color: #A5A6A1;
+      }
+      .menu2 {
+        display: none;
+      }
+      .menu2 a {
+        text-decoration: none;
+        color: inherit;
+      }
+@media screen and (max-width: 768px) {
+  .boton-logo {
+   margin: 20px;
+  }
+  .button-toggle {
+    display: block;
+  }
+  .submenu-toggle {
+    display: block;
+  }
+  .menu {
+    display: none;
+    flex-direction: column;
+    background: #A5A6A1;
+    position: absolute;
+    top: 80px;
+    left: 50;
+    width: 100%;
+    max-width: 45%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 10px ;
+    
+    left: 0;
+    z-index: 9999;
+    
+  }
+  .menu a {
+    display: block;
+    padding: 10px;
+    color: #A5A6A1;
+    opacity: 50;
+  }
+ 
+  .menu.open {
+    display: flex;
+  }
+    .menu2 {
+    display: none;
+    flex-direction: column;
+    background: #A5A6A1;
+    position: relative;
+    top: 0px;
+    left: 0;
+    width: 100%;
+    max-width: 95%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 10px 0;
+    border-radius: 10px 0px 0px 10px;
+    right: 0;
+    left: 0;
+  }
+  .menu2 a {
+    display: block;
+    border-bottom: #A5A6A1 solid;
+  }
+
+  .menu2.open {
+    display: flex;
+  }
+}
+ 
+.boton2 {
+      background-color: #ffffff20; /* fondo blanco semitransparente */
+  /* border: 1px solid #ffffff40;
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 8px;
+  cursor: pointer;
+  backdrop-filter: blur(4px); /* efecto de fondo difuminado */
+  /* transition: all 0.3s ease;
+
+} */ 
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+h1 {
+  font-size: 24px;
+}
+
+.nav {
+  position: relative;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.menu li a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.menu li a:hover {
+  color: #3E2A35;
+}
+
+/* Botón hamburguesa */
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+  user-select: none;
+}
+
+/* Responsive */
+
+  .menu {
+    position: absolute;
+    top: 60px;
+    right: 1;
+    background-color: #A5A6A1;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+    display: none;
+    border-radius: 0 0 8px 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    opacity: 80%;
+  }
+
+  .menu.show {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+
+.perfil {
+  outline: none;
+  border: none;
+  border: none;
+  outline: none;
+  background-color: #A5A6A1;
+  color: white;
+  border-radius: px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  align-items: end;
+  opacity: 50%;
+}
+
+.megusta {
+   outline: none;
+  border: none;
+  border: none;
+  outline: none;
+  background-color: #A5A6A1;
+  color: white;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  align-items: end;
+  opacity: 50%;
+
+}
+ 
+.hamburguesa {
+  cursor: pointer;
+  font-weight: bold;
+  user-select: none;
+}
+
+.menu2 {
+  position: absolute;
+  top: 70px;
+  right: 20px;
+  background-color: #0077cc;
+  list-style: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  display: none;
+  flex-direction: column;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+
+.menu2 li {
+  margin: 10px 0;
+}
+
+.menu2 li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.menu2 li a:hover {
+  color: #ffdd57;
+}
+
+.menu2.show {
+  display: flex;
+}
+
+

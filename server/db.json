@@ -11,11 +11,11 @@
       "precio": 59.99,
       "descuento": 10,
       "color": "Negro",
-      "genero": "Mujer",
-      "temporada": "Invierno",
-      "tipo": "Anorak",
-      "fecha_lanzamiento": "2024-12-01",
-      "estilo": "Casual"
+      "gender": "Mujer",
+      "season": "Invierno",
+      "category": "Anorak",
+      "releaseDate": "2024-12-01",
+      "style": "Casual"
     },
     {
       "id": "92",
@@ -28,11 +28,11 @@
       "precio": 89.99,
       "descuento": 20,
       "color": "Negro",
-      "genero": "Hombre",
-      "temporada": "Invierno",
-      "tipo": "Abrigo",
-      "fecha_lanzamiento": "2024-11-15",
-      "estilo": "Formal"
+      "gender": "Hombre",
+      "season": "Invierno",
+      "category": "Abrigo",
+      "releaseDate": "2024-11-15",
+      "style": "Formal"
     },
     {
       "id": "93",
@@ -45,11 +45,11 @@
       "precio": 29.99,
       "descuento": 15,
       "color": "Negro y Blanco",
-      "genero": "Hombre",
-      "temporada": "Primavera",
-      "tipo": "Camisa",
-      "fecha_lanzamiento": "2025-03-20",
-      "estilo": "Casual"
+      "gender": "Hombre",
+      "season": "Primavera",
+      "category": "Camisa",
+      "releaseDate": "2025-03-20",
+      "style": "Casual"
     },
     {
       "id": "94",
@@ -62,11 +62,11 @@
       "precio": 32.99,
       "descuento": 5,
       "color": "Rosa y Blanco",
-      "genero": "Hombre",
-      "temporada": "Primavera",
-      "tipo": "Camisa",
-      "fecha_lanzamiento": "2025-03-10",
-      "estilo": "Semi-formal"
+      "gender": "Hombre",
+      "season": "Primavera",
+      "category": "Camisa",
+      "releaseDate": "2025-03-10",
+      "style": "Semi-formal"
     },
     {
       "id": "95",
@@ -79,11 +79,11 @@
       "precio": 35.78,
       "descuento": 5,
       "color": "Verde",
-      "genero": "Hombre",
-      "temporada": "Otoño",
-      "tipo": "Camisa",
-      "fecha_lanzamiento": "2024-06-16",
-      "estilo": "Casual"
+      "gender": "Hombre",
+      "season": "Otoño",
+      "category": "Camisa",
+      "releaseDate": "2024-06-16",
+      "style": "Casual"
     },
     {
       "id": "96",
@@ -96,11 +96,11 @@
       "precio": 100.34,
       "descuento": 10,
       "color": "Gris",
-      "genero": "Hombre",
-      "temporada": "Otoño",
-      "tipo": "Camisa",
-      "fecha_lanzamiento": "2025-03-20",
-      "estilo": "Casual"
+      "gender": "Hombre",
+      "season": "Otoño",
+      "category": "Camisa",
+      "releaseDate": "2025-03-20",
+      "style": "Casual"
     },
     {
       "id": "97",
@@ -110,14 +110,14 @@
         "../src/img/Hcazadoraaccolchada1.jpg",
         "../src/img/Hcazadoraaccolchada1.1.jpg"
       ],
-      "precio": 59.0,
-      "descuento": 5,
+      "price": 59.0,
+      "discount": 5,
       "color": "Negro",
-      "genero": "Hombre",
-      "temporada": "Invierno",
-      "tipo": "Cazadora",
-      "fecha_lanzamiento": "2025-03-28",
-      "estilo": "Casual"
+      "gender": "Hombre",
+      "season": "Invierno",
+      "category": "Cazadora",
+      "releaseDate": "2025-03-28",
+      "style": "Casual"
     },
     {
       "id": "98",
@@ -130,11 +130,11 @@
       "precio": 53.01,
       "descuento": 5,
       "color": "Negro",
-      "genero": "Hombre",
-      "temporada": "Otoño",
-      "tipo": "Pantalón",
-      "fecha_lanzamiento": "2024-09-28",
-      "estilo": "Casual"
+      "gender": "Hombre",
+      "season": "Otoño",
+      "category": "Pantalón",
+      "releaseDate": "2024-09-28",
+      "style": "Casual"
     },
     {
       "id": "99",
@@ -147,11 +147,11 @@
       "precio": 74.26,
       "descuento": 15,
       "color": "Beige",
-      "genero": "Hombre",
-      "temporada": "Otoño",
-      "tipo": "Pantalón",
-      "fecha_lanzamiento": "2024-06-03",
-      "estilo": "Casual"
+      "gender": "Hombre",
+      "season": "Otoño",
+      "category": "Pantalón",
+      "releaseDate": "2024-06-03",
+      "style": "Casual"
     },
     {
       "id": "910",
@@ -164,11 +164,11 @@
       "precio": 90.08,
       "descuento": 15,
       "color": "Azul",
-      "genero": "Mujer",
-      "temporada": "Primavera",
-      "tipo": "Jeans",
-      "fecha_lanzamiento": "2025-03-17",
-      "estilo": "Casual"
+      "gender": "Mujer",
+      "season": "Primavera",
+      "category": "Jeans",
+      "releaseDate": "2025-03-17",
+      "style": "Casual"
     },
     {
       "id": "911",
@@ -181,11 +181,11 @@
       "precio": 86.42,
       "descuento": 20,
       "color": "Azul",
-      "genero": "Mujer",
-      "temporada": "Primavera",
-      "tipo": "Jeans",
-      "fecha_lanzamiento": "2024-06-11",
-      "estilo": "Casual"
+      "gender": "Mujer",
+      "season": "Primavera",
+      "category": "Jeans",
+      "releaseDate": "2024-06-11",
+      "style": "Casual"
     },
     {
       "id": "912",
@@ -198,11 +198,11 @@
       "precio": 51.76,
       "descuento": 5,
       "color": "Blanco",
-      "genero": "Mujer",
-      "temporada": "Primavera",
-      "tipo": "Pantalón",
-      "fecha_lanzamiento": "2024-02-21",
-      "estilo": "Casual"
+      "gender": "Mujer",
+      "season": "Primavera",
+      "category": "Pantalón",
+      "releaseDate": "2024-02-21",
+      "style": "Casual"
     },
     {
       "id": "913",
@@ -215,11 +215,11 @@
       "precio": 82.96,
       "descuento": 10,
       "color": "Beige",
-      "genero": "Mujer",
-      "temporada": "Primavera",
-      "tipo": "Pantalón",
-      "fecha_lanzamiento": "2024-04-06",
-      "estilo": "Casual"
+      "gender": "Mujer",
+      "season": "Primavera",
+      "category": "Pantalón",
+      "releaseDate": "2024-04-06",
+      "style": "Casual"
     },
     {
       "id": "914",
@@ -232,11 +232,11 @@
       "precio": 54.46,
       "descuento": 10,
       "color": "Negro",
-      "genero": "Mujer",
-      "temporada": "Primavera",
-      "tipo": "Pantalón",
-      "fecha_lanzamiento": "2024-05-17",
-      "estilo": "Casual"
+      "gender": "Mujer",
+      "season": "Primavera",
+      "category": "Pantalón",
+      "releaseDate": "2024-05-17",
+      "style": "Casual"
     },
     {
       "id": "915",
@@ -249,11 +249,11 @@
       "precio": 102.14,
       "descuento": 5,
       "color": "Blanco",
-      "genero": "Mujer",
-      "temporada": "Primavera",
-      "tipo": "Pantalón",
-      "fecha_lanzamiento": "2024-09-10",
-      "estilo": "Casual"
+      "gender": "Mujer",
+      "season": "Primavera",
+      "category": "Pantalón",
+      "releaseDate": "2024-09-10",
+      "style": "Casual"
     },
     {
       "id": "916",
@@ -263,14 +263,14 @@
         "../src/img/plumifero largo1.jpg",
         "../src/img/plumifero largo1.2.jpg"
       ],
-      "precio": 42.79,
-      "descuento": 5,
+      "price": 42.79,
+      "discount": 5,
       "color": "Negro",
-      "genero": "Mujer",
-      "temporada": "Invierno",
-      "tipo": "Abrigo",
-      "fecha_lanzamiento": "2024-04-07",
-      "estilo": "Formal"
+      "gender": "Mujer",
+      "season": "Invierno",
+      "category": "Abrigo",
+      "releaseDate": "2024-04-07",
+      "style": "Formal"
     },
     {
       "id": "917",
@@ -283,11 +283,11 @@
       "precio": 64.88,
       "descuento": 5,
       "color": "Blanco",
-      "genero": "Mujer",
-      "temporada": "Verano",
-      "tipo": "Top",
-      "fecha_lanzamiento": "2024-08-02",
-      "estilo": "Casual"
+      "gender": "Mujer",
+      "season": "Verano",
+      "category": "Top",
+      "releaseDate": "2024-08-02",
+      "style": "Casual"
     },
     {
       "id": "918",
@@ -300,11 +300,11 @@
       "precio": 25.12,
       "descuento": 10,
       "color": "Beige",
-      "genero": "Mujer",
-      "temporada": "Verano",
-      "tipo": "Top",
-      "fecha_lanzamiento": "2024-03-16",
-      "estilo": "Casual"
+      "gender": "Mujer",
+      "season": "Verano",
+      "category": "Top",
+      "releaseDate": "2024-03-16",
+      "style": "Casual"
     },
     {
       "id": "919",
@@ -317,11 +317,11 @@
       "precio": 52.54,
       "descuento": 5,
       "color": "Azul",
-      "genero": "Mujer",
-      "temporada": "Verano",
-      "tipo": "Top",
-      "fecha_lanzamiento": "2024-04-21",
-      "estilo": "Casual"
+      "gender": "Mujer",
+      "season": "Verano",
+      "category": "Top",
+      "releaseDate": "2024-04-21",
+      "style": "Casual"
     },
     {
       "id": "920",
@@ -334,11 +334,11 @@
       "precio": 40.83,
       "descuento": 5,
       "color": "Rosa",
-      "genero": "Mujer",
-      "temporada": "Verano",
-      "tipo": "Top",
-      "fecha_lanzamiento": "2024-07-17",
-      "estilo": "Casual"
+      "gender": "Mujer",
+      "season": "Verano",
+      "category": "Top",
+      "releaseDate": "2024-07-17",
+      "style": "Casual"
     },
     {
       "id": "921",
@@ -351,11 +351,11 @@
       "precio": 103.6,
       "descuento": 15,
       "color": "Azul",
-      "genero": "Mujer",
-      "temporada": "Primavera",
-      "tipo": "Vestido",
-      "fecha_lanzamiento": "2024-04-15",
-      "estilo": "Casual"
+      "gender": "Mujer",
+      "season": "Primavera",
+      "category": "Vestido",
+      "releaseDate": "2024-04-15",
+      "style": "Casual"
     },
     {
       "id": "922",
@@ -368,11 +368,11 @@
       "precio": 26.71,
       "descuento": 20,
       "color": "Blanco",
-      "genero": "Mujer",
-      "temporada": "Primavera",
-      "tipo": "Vestido",
-      "fecha_lanzamiento": "2024-02-04",
-      "estilo": "Casual"
+      "gender": "Mujer",
+      "season": "Primavera",
+      "category": "Vestido",
+      "releaseDate": "2024-02-04",
+      "style": "Casual"
     },
     {
       "id": "923",
@@ -385,11 +385,11 @@
       "precio": 35.91,
       "descuento": 20,
       "color": "Azul",
-      "genero": "Mujer",
-      "temporada": "Primavera",
-      "tipo": "Vestido",
-      "fecha_lanzamiento": "2024-04-23",
-      "estilo": "Casual"
+      "gender": "Mujer",
+      "season": "Primavera",
+      "category": "Vestido",
+      "releaseDate": "2024-04-23",
+      "style": "Casual"
     },
     {
       "id": "924",
@@ -402,11 +402,11 @@
       "precio": 62.5,
       "descuento": 10,
       "color": "Rojo",
-      "genero": "Mujer",
-      "temporada": "Primavera",
-      "tipo": "Vestido",
-      "fecha_lanzamiento": "2024-07-16",
-      "estilo": "Casual"
+      "gender": "Mujer",
+      "season": "Primavera",
+      "category": "Vestido",
+      "releaseDate": "2024-07-16",
+      "style": "Casual"
     },
     {
       "id": "925",
@@ -419,11 +419,11 @@
       "precio": 99.84,
       "descuento": 5,
       "color": "Beige",
-      "genero": "Mujer",
-      "temporada": "Otoño",
-      "tipo": "Vestido",
-      "fecha_lanzamiento": "2024-03-11",
-      "estilo": "Formal"
+      "gender": "Mujer",
+      "season": "Otoño",
+      "category": "Vestido",
+      "releaseDate": "2024-03-11",
+      "style": "Formal"
     },
     {
       "id": "926",
@@ -436,11 +436,11 @@
       "precio": 41.09,
       "descuento": 15,
       "color": "Verde",
-      "genero": "Mujer",
-      "temporada": "Otoño",
-      "tipo": "Vestido",
-      "fecha_lanzamiento": "2025-02-26",
-      "estilo": "Formal"
+      "gender": "Mujer",
+      "season": "Otoño",
+      "category": "Vestido",
+      "releaseDate": "2025-02-26",
+      "style": "Formal"
     },
     {
       "id": "927",
@@ -453,17 +453,18 @@
       "precio": 71.22,
       "descuento": 5,
       "color": "Negro",
-      "genero": "Hombre",
-      "temporada": "Invierno",
-      "tipo": "Traje",
-      "fecha_lanzamiento": "2024-05-10",
-      "estilo": "Formal"
+      "gender": "Hombre",
+      "season": "Invierno",
+      "category": "Traje",
+      "releaseDate": "2024-05-10",
+      "style": "Formal"
     }
-  ],"users": [
+  ],
+  "users": [
     {
       "id": 1,
       "username": "admin",
-      "password": "Adamy*2025"
+      "password": "admin"
     }
   ]
 }

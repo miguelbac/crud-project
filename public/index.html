@@ -2,50 +2,88 @@
 <html lang="es">
 
 <head>
- <meta charset="UTF-8" />
+  <meta charset="UTF-8" />
   <title>CRUD</title>
   <link rel="stylesheet" href="../src/styles/base.css">
+  <link rel="stylesheet" href="../src/styles/footer.css">
+  <link rel="stylesheet" href="../src/styles/header.css">
+
   <!-- Funnel Display font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap"
+    rel="stylesheet">
   <!-- Red Hat Text font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap"
+    rel="stylesheet">
 </head>
+<header>
+  <nav class="nav">
+    <ul class="menu">
+      <li><a href="#">Género</a></li>
+      <li><a href="#">Inicio</a></li>
+      <li><a href="#">Servicios</a></li>
+      <li><a href="#">Contacto</a></li>
+    </ul>
+    <div class="menu-toggle" id="menu-toggle">☰</div>
+  </nav>
+  <img class="logo" src="../src/img/logo png A.png" alt="">
+  <div class="search-bar">
+    <input type="text" placeholder="Busca por producto, colección...">
+    <button>🔍</button>
+  </div>
+  <div class="grupo1">
+    <button class="perfil"><img src="../src/img/usuario def.png" alt=""></button>
+    <!-- </div> -->
+    <!-- <div class="megusta"> -->
+    <button class="megusta"><img src="../src/img/icons8-me-gusta-48.png" alt=""></button>
+  </div>
+</header>
 
-<body>
-  <h1>ADAMY</h1>
 
-<form id="form">
-  <h3 id="formTitle">Agregar prenda de ropa</h3>
-  <input type="text" placeholder="Nombre" id="name" required />
-  <input type="text" placeholder="Descripción" id="description" />
-  <input type="text" placeholder="Imagen (nombre archivo)" id="image" />
-  <input type="number" placeholder="Precio" id="price" step="0.01" />
-  <input type="number" placeholder="Descuento (%)" id="discount" />
-  <input type="text" placeholder="Color" id="color" />
-  <input type="text" placeholder="Género" id="gender" />
-  <input type="text" placeholder="Temporada" id="season" />
-  <input type="text" placeholder="Tipo" id="type" />
-  <input type="date" placeholder="Fecha de lanzamiento" id="release_date" />
-  <input type="text" placeholder="Estilo" id="style" />
-  <button type="submit">Guardar</button>
-  <button type="button" id="btnCancel">Cancelar</button>
-</form>
+<div class="background-video">
+  <video autoplay muted loop playsinline>
+    <source src="../src/img/background/background-video.mp4" type="video/mp4" />
+  </video>
+  <div class="video-text">
+    <h1>NEW COLLECTION</h1>
+    <p><a href="#" class="link-hover">VER MÁS</a></p>
+  </div>
+</div>
 
-<ul id="itemList"></ul>
+<div class="season-container">
+  <div class="season-text">
+    <a href="#" class="link-hover">TEMPORADA</a>
+  </div>
+  <div class="background-season background-season-1"></div>
+  <div class="background-season background-season-2"></div>
+</div>
+
+<div class="background-women">
+  <div class="section-text">
+    <a href="#" class="link-hover">MUJER</a>
+  </div>
+</div>
+
+<div class="background-men">
+  <div class="section-text">
+    <a href="#" class="link-hover">HOMBRE</a>
+  </div>
+</div>
 
 <footer>
   <div class="pie">
     <a href="mailto:contacto@adamy.com" target="_blank">CONTAC US HERE</a>
     <a href="https://www.instagram.com" target="_blank">INSTAGRAM</a>
     <p>ADAMY @ 2025 TODOS LOS DERECHOS RESERVADOS</p>
-  </div> 
+  </div>
 </footer>
 
-  <script src="../services.js"></script>
+<script src="../services.js"></script>
 </body>
 
 </html>

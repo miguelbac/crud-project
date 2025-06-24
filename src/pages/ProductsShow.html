@@ -5,95 +5,123 @@
   <meta charset="UTF-8" />
   <title>CRUD</title>
   <link rel="stylesheet" href="../styles/cards.css"/>
-  <style>
-    body {
-      font-family: sans-serif;
-      margin: 0;
-      padding: 1rem;
-      background: #f9f9f9;
-    }
+  <link rel="stylesheet" href="../styles/footer.css"/>
+  <link rel="stylesheet" href="../styles/header.css"/>
+  <link rel="stylesheet" href="../styles/productsPage.css"/>
 
-    h1 {
-      text-align: center;
-      margin-bottom: 2rem;
-    }
-
-    form {
-      max-width: 600px;
-      margin: 0 auto 2rem;
-      background: #fff;
-      padding: 1rem;
-      border-radius: 8px;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    }
-
-    form input {
-      width: calc(50% - 10px);
-      margin: 5px;
-      padding: 10px;
-    }
-
-    form button {
-      margin: 5px;
-      padding: 10px 15px;
-    }
-
-    #listaLibros {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1rem;
-      padding: 0;
-      list-style: none;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-
-    #listaLibros li {
-      background: #fff;
-      padding: 1rem;
-      border-radius: 8px;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-    }
-
-    #listaLibros li button {
-      margin-top: 0.5rem;
-      padding: 6px 10px;
-      cursor: pointer;
-    }
-  </style>
 </head>
 
 </style>
 </head>
 
 <body>
-  <h1>ADAMY</h1>
-  <input type="text" id="searchText"  placeholder="Buscar...">
-  <button id="searchButton">Buscar</button>
-<div id="containerProducts"></div>
-<!--<form id="formulario">
-  <h3 id="tituloFormulario">Agregar prenda de ropa</h3>
-  <input type="text" placeholder="Nombre" id="nombre" required />
-  <input type="text" placeholder="Descripción" id="descripcion" />
-  <input type="text" placeholder="Imagen (nombre archivo)" id="imagen" />
-  <input type="number" placeholder="Precio" id="precio" step="0.01" />
-  <input type="number" placeholder="Descuento (%)" id="descuento" />
-  <input type="text" placeholder="Color" id="color" />
-  <input type="text" placeholder="Género" id="genero" />
-  <input type="text" placeholder="Temporada" id="temporada" />
-  <input type="text" placeholder="Tipo" id="tipo" />
-  <input type="date" placeholder="Fecha de lanzamiento" id="fecha_lanzamiento" />
-  <input type="text" placeholder="Estilo" id="estilo" />
-  <button type="submit">Guardar</button>
-  <button type="button" id="btnCancelar">Cancelar</button>
-</form>
 
-  <ul id="listaLibros"></ul>
--->
+ <header>
+    <nav class="nav">
+      <div class="menu-toggle" id="menu-toggle">☰</div>
+
+      <!-- Logo -->
+      <div class="logo-container">
+        <img class="logo" src="../img/icons/logo.png" alt="Logo">
+      </div>
+
+      <!-- Menú desplegable -->
+      <ul class="menu" id="menu">
+        <li><a href="#">Género</a></li>
+        <li><a href="#">Inicio</a></li>
+        <li><a href="#">Servicios</a></li>
+        <li><a href="#">Contacto</a></li>
+      </ul>
+
+      <!-- Barra de búsqueda -->
+      <div class="search-bar">
+        <input type="text" placeholder="Buscar producto" id="searchText">
+        <button id="searchButton">
+          <img src="../img/icons/search-icon.png" alt="Buscar" class="search-icon">
+        </button>
+      </div>
+
+      <!-- Iconos -->
+      <div class="user-buttons">
+        <button class="users"><img src="../img/icons/users2.png" alt="Perfil"></button>
+        <button class="favs"><img src="../img/icons/favs2.png" alt="Me gusta"></button>
+      </div>
+    </nav>
+  </header>
+
+
+ <main class="main-ProductsShow">
+  <aside class="sidebar">
+  <ul>
+    <li><a href="#" data-text="All"><h3>VER TODO</h3></a></li>
+    <li><hr></li> 
+      <li><h3>Categorías</h3></li>
+
+      <li><h4>Género</h4></li>
+      <li><a href="#" data-text="Hombre">-Hombre</a></li>
+      <li><a href="#" data-text="Mujer">-Mujer</a></li>
+      
+      <li><h4>Estación</h4></li>
+       <li><a href="#" data-text="Primavera">-Primavera</a></li>
+      <li><a href="#" data-text="Verano">-Verano</a></li>
+      <li><a href="#" data-text="Otoño">-Otoño</a></li>
+      <li><a href="#" data-text="Invierno">-Invierno</a></li>
+ 
+      <li><h4>Tipo</h4></li>
+       <li><a href="#" data-text="Formal">-Formal</a></li>
+      <li><a href="#" data-text="Casual">-Casual</a></li>
+      <li><a href="#" data-text="Deportivo">-Deportivo</a></li>
+
+      <li><h4>Color</h4></li>
+      <div class="color-options">
+  
+ <a href="#" data-text="Negro"> 
+    <div class="color-box" data-text="Negro" style="background-color: black;"></div></a>
+  <a href="#" data-text="Blanco"> 
+    <div class="color-box"  style="background-color: white;"></div></a>
+   <a href="#" data-text="Rojo">
+    <div class="color-box" data-text="Rojo" style="background-color: red;"></div></a>
+  <a href="#" data-text="Gris">
+     <div class="color-box" data-text="Gris" style="background-color:grey;"></div></a>
+  <a href="#" data-text="Beige"> 
+    <div class="color-box" data-text="Beige" style="background-color: rgb(243, 230, 173)"></div></a>
+  <a href="#" data-text="Amarillo">
+    <div class="color-box" data-text="Amarillo" style="background-color: yellow;"></div></a>
+ <a href="#" data-text="Azul">
+  <div class="color-box" data-text="Azul" style="background-color: blue;"></div></a>
+ <a href="#" data-text="Verde">
+  <div class="color-box" data-text="Verde" style="background-color: green;"></div></a>
+ <a href="#" data-text="Rosa">
+  <div class="color-box" data-text="Rosa" style="background-color:rgb(240, 116, 184);"></div></a>
+</div>
+    </ul>
+</aside>
+
+<div class="resultadosOrden">
+<div class="product-toolbar">
+  <p id="ResultsNumber">Resultados</p>
+  <select id="sortSelect">
+    <option value="default">Ordenar</option>
+    <option value="precio_asc">Precio: Menor a Mayor ⬇</option>
+    <option value="precio_desc">Precio: Mayor a Menor ⬆</option>
+    <option value="descuento_asc">Descuento: Menor a Mayor ⬇</option>
+    <option value="descuento_desc">Descuento: Mayor a Menor ⬆</option>
+  </select>
+</div> 
+
+<section id="containerProducts"></section>
+</div>
+</main>
+
+<footer>
+  <div class="pie">
+    <a href="mailto:contacto@adamy.com" target="_blank">CONTAC US HERE</a>
+    <a href="https://www.instagram.com" target="_blank">INSTAGRAM</a>
+    <p>ADAMY @ 2025 TODOS LOS DERECHOS RESERVADOS</p>
+  </div>
+</footer>
   <script src="../components/productCard.js"></script>
+  <script src="../components/Burguer-menu.js"></script>
 </body>
 
 

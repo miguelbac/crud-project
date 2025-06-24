@@ -161,3 +161,14 @@ btnSearch.addEventListener("click", () => {
     }
     searchProducts(searchValue);
 });
+
+window.addEventListener('DOMContentLoaded', () => {
+    const params = new URLSearchParams(window.location.search);
+    const id = params.get('id');
+    if (id) {
+        loadAndDisplayProducts(id);
+    } else {
+        // mensaje si no hay ID
+        container.innerHTML = "<p>Producto no encontrado desde index</p>";
+    }
+});

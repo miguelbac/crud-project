@@ -171,3 +171,12 @@ window.addEventListener('DOMContentLoaded', () => {
         loadAndDisplayProducts();
     }
 });
+
+window.addEventListener('DOMContentLoaded', () => {
+    const params = new URLSearchParams(window.location.search);
+    const search = params.get('search');
+
+    if (search) {
+        searchProducts(search); // ← ejecuta la búsqueda con el texto recibido
+    }
+});

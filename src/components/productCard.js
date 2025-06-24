@@ -1,5 +1,9 @@
+
+const container = document.getElementById('containerProducts');
+const resultsNumber = document.getElementById('ResultsNumber');
+
 async function searchProducts(searchText) {
-    const container = document.getElementById('containerProducts');
+
     try {
         const response = await fetch('http://localhost:3000/products');
         const products = await response.json();
@@ -10,40 +14,21 @@ async function searchProducts(searchText) {
             (p.nombre && p.nombre.toLowerCase().includes(searchTxt)) ||
             (p.genero && p.genero.toLowerCase().includes(searchTxt)) ||
             (p.temporada && p.temporada.toLowerCase().includes(searchTxt)) ||
+            (p.temporada && p.tipo.toLowerCase().includes(searchTxt)) ||
+            (p.temporada && p.fecha_lanzamiento.toLowerCase().includes(searchTxt)) ||
             (p.estilo && p.estilo.toLowerCase().includes(searchTxt))
         );
 
-        if (!results || !results.length) {
-            container.innerHTML = "<p>No hay productos que coincidan con la búsqueda.</p>";
-            return;
-        }
-
-        let html = "";
-
-        for (const product of results) {
-            const image = product.imagen && product.imagen.length > 0
-                ? product.imagen[1]
-                : "img/sin-imagen.jpg";
-
-            html += `
-                <div class="productShow">
-                    <img src="${image}" alt="${product.nombre}" width="150">
-                    <h3>${product.nombre}</h3>
-                    <p>${product.descripcion}</p>
-                    <p><strong>Price:</strong> €${product.precio}</p>
-                </div>
-            `;
-        }
-
-        container.innerHTML = html;
+        paintCards(results);
     }
     catch (error) {
         container.innerHTML = `<p>Error loading products: ${error.message}</p>`;
+
     }
 }
 
 async function loadAndDisplayProducts(filter = "all") {
-    const container = document.getElementById('containerProducts');
+
     let url = 'http://localhost:3000/products';
 
     switch (filter) {
@@ -74,6 +59,33 @@ async function loadAndDisplayProducts(filter = "all") {
         case "Deportivo":
             url = 'http://localhost:3000/products?estilo=Deportivo';
             break;
+        case "Negro":
+            url = 'http://localhost:3000/products?color=Negro';
+            break;
+        case "Blanco":
+            url = 'http://localhost:3000/products?color=Blanco';
+            break;
+        case "Azul":
+            url = 'http://localhost:3000/products?color=Azul';
+            break;
+        case "Rojo":
+            url = 'http://localhost:3000/products?color=Rojo';
+            break;
+        case "Gris":
+            url = 'http://localhost:3000/products?color=Gris';
+            break;
+        case "Beige":
+            url = 'http://localhost:3000/products?color=Beige';
+            break;
+        case "Amarillo":
+            url = 'http://localhost:3000/products?color=Amarillo';
+            break;
+        case "Verde":
+            url = 'http://localhost:3000/products?color=Verde';
+            break;
+        case "Rosa":
+            url = 'http://localhost:3000/products?color=Rosa';
+            break;
         default:
             // Mantiene la URL original sin filtros
             break;
@@ -82,38 +94,56 @@ async function loadAndDisplayProducts(filter = "all") {
         const response = await fetch(url);
         const products = await response.json();
 
-        if (!products || !products.length) {
-            container.innerHTML = "<p>No hay productos disponibles.</p>";
-            return;
-        }
-
-        let html = "";
-
-        for (const product of products) {
-            const image = product.imagen && product.imagen.length > 0
-                ? product.imagen[1]
-                : "img/sin-imagen.jpg";
-
-            html += `
-                <div class="productShow">
-                    <img src="${image}" alt="${product.nombre}" width="150">
-                    <h3>${product.nombre}</h3>
-                    <p>${product.descripcion}</p>
-                    <p><strong>Price:</strong> €${product.precio}</p>
-                </div>
-            `;
-        }
-
-        container.innerHTML = html;
+        paintCards(products);
 
     } catch (error) {
         container.innerHTML = `<p>Error loading products: ${error.message}</p>`;
+
     }
 }
 
+function paintCards(products) {
+
+    if (!products || !products.length) {
+        container.innerHTML = "<p>No hay productos disponibles.</p>";
+        resultsNumber.textContent = "0 Resultados";
+        return;
+    }
+    total = products.length;
+    resultsNumber.textContent = `${total} Resultados`;
+    let html = "";
+
+    for (const product of products) {
+        const image = product.imagen && product.imagen.length > 0
+            ? product.imagen[1]
+            : "/img/sin-imagen.png";
+
+        html += `
+                <div class="productShow">
+                    <img src="${image}" alt="${product.nombre}" width="150">
+                    <h4>${product.nombre}</h4>
+                    
+                    <p><strong>Precio:</strong> €${product.precio}</p>
+                    ${product.descuento > 0
+                ? `<p style="color: red;"><strong>Descuento:</strong> ${product.descuento}%</p>`
+                : ''
+            }
+                </div>
+            `;
+    }
+
+    container.innerHTML = html;
+}
 //document.addEventListener('DOMContentLoaded', loadAndDisplayProducts("Mujer"));//llamada con parametro para filtrar
 
-document.addEventListener('DOMContentLoaded', loadAndDisplayProducts);
+//document.addEventListener('DOMContentLoaded', loadAndDisplayProducts);
+document.querySelectorAll('.sidebar a').forEach(link => {
+    link.addEventListener('click', function (e) {
+        e.preventDefault();
+        const valor = this.dataset.text;
+        loadAndDisplayProducts(valor);
+    });
+});
 
 //cuando se da en Buscar
 const btnSearch = document.getElementById("searchButton");

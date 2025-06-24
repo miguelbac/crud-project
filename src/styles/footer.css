@@ -1,16 +1,20 @@
 footer {
-    background: #717568;
-    color: #F2F2F2;
-    text-align: center;
-    padding: 1rem;
-    width: 100%;
-    bottom: 0;
-    font-family: Red Hat Text, Sans-Serif;
-    
+  background: #717568;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 1rem;
+  width: 100%;
+  bottom: 0;
+  font-family: Red Hat Text, Sans-Serif;
+  /* cambio Yely */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /*  */
 }
 
 footer a {
-  color: #F2F2F2;
+  color: #f2f2f2;
   text-decoration: none;
   margin: 0 1rem;
 }
@@ -22,4 +26,3 @@ footer a:hover {
 body {
   min-height: 100vh;
 }
-

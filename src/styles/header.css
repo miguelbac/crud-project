@@ -10,13 +10,19 @@ body {
 
 header {
   background-color: rgba(165, 166, 161, 1); /* Opaco inicialmente */
-  color: #3E2A35;
+  color: #3e2a35;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
+  /* campio Yely */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /*  */
   z-index: 1000;
-  transition: background-color 0.4s ease, backdrop-filter 0.4s ease, padding 0.4s ease;
+  transition: background-color 0.4s ease, backdrop-filter 0.4s ease,
+    padding 0.4s ease;
 }
 
 .nav {
@@ -48,7 +54,7 @@ header.scrolled .logo {
   font-size: 1.75rem;
   cursor: pointer;
   user-select: none;
-  color: #3E2A35;
+  color: #3e2a35;
   margin-right: 0.5rem;
 }
 
@@ -90,7 +96,7 @@ header.scrolled .logo {
 }
 
 .menu li a {
-  color: #3E2A35;
+  color: #3e2a35;
   text-decoration: none;
   font-weight: 600;
   font-size: 1rem;
@@ -100,7 +106,7 @@ header.scrolled .logo {
 }
 
 .menu li a:hover {
-  background-color: #A5A6A1;
+  background-color: #a5a6a1;
   color: #fff;
 }
 

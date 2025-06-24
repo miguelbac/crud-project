@@ -1,4 +1,3 @@
-/* Asegura que el contenedor ocupe toda la altura */
 html, body {
   height: 100%;
   margin: 0;
@@ -11,7 +10,7 @@ html, body {
 }
 
 .main-content {
-  flex: 1; /* esto empuja el footer hacia abajo */
+  flex: 1;
 }
 
 /* Footer */

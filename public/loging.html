@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="../src/styles/base.css">
   <link rel="stylesheet" href="../src/styles/footer.css">
   <link rel="stylesheet" href="../src/styles/header.css">
+  <link rel="stylesheet" href="../src/styles/usuario.css">
 
   <!-- Fuentes -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -24,7 +25,8 @@
 
       <!-- Logo -->
       <div class="logo-container">
-        <img class="logo" src="../src/img/icons/logo.png" alt="Logo">
+        
+        <img class="logo" src="../src/img/icons/logo.png" alt="Logo"></button>
       </div>
 
       <!-- Menú desplegable -->
@@ -45,52 +47,32 @@
 
       <!-- Iconos -->
       <div class="user-buttons">
-       <a href="../public/loging.html"><button class="users"><img src="../src/img/icons/users2.png" alt="Perfil"></button></a>
+        <button class="users"><img src="../src/img/icons/users2.png" alt="Perfil"></button>
         <button class="favs"><img src="../src/img/icons/favs2.png" alt="Me gusta"></button>
       </div>
     </nav>
   </header>
 
+<form id="login-form">
+  <h2>Iniciar sesión</h2>
+  <input type="text" id="username" placeholder="Usuario" required />
+  <input type="password" id="password" placeholder="Contraseña" required />
+  <button type="submit">Entrar</button>
+</form>
 
-  <div class="background-video">
-    <video autoplay muted loop playsinline>
-      <source src="../src/img/background/background-video.mp4" type="video/mp4" />
-    </video>
-    <div class="video-text">
-      <h1>NEW COLLECTION</h1>
-      <p><a href="#" class="link-hover">VER MÁS</a></p>
-    </div>
+
+
+
+<footer>
+  <div class="pie">
+    <a href="mailto:contacto@adamy.com" target="_blank">CONTAC US HERE</a>
+    <a href="https://www.instagram.com" target="_blank">INSTAGRAM</a>
+    <p>ADAMY @ 2025 TODOS LOS DERECHOS RESERVADOS</p>
   </div>
-
-  <div class="season-container">
-    <div class="season-text">
-      <a href="#" class="link-hover">TEMPORADA</a>
-    </div>
-    <div class="background-season background-season-1"></div>
-    <div class="background-season background-season-2"></div>
-  </div>
-
-  <div class="background-women">
-    <div class="section-text">
-      <a href="#" class="link-hover">MUJER</a>
-    </div>
-  </div>
-
-  <div class="background-men">
-    <div class="section-text">
-      <a href="#" class="link-hover">HOMBRE</a>
-    </div>
-  </div>
-
-  <footer>
-    <div class="pie">
-      <a href="mailto:contacto@adamy.com" target="_blank">CONTAC US HERE</a>
-      <a href="https://www.instagram.com" target="_blank">INSTAGRAM</a>
-      <p>ADAMY @ 2025 TODOS LOS DERECHOS RESERVADOS</p>
-    </div>
-  </footer>
-
-  <script src="../src/components/Burguer-menu.js"></script>
+</footer>
+<script src="../src/components/usuario.js"></script>
+<script src="../src/components/Burguer-menu.js"></script>
+<script src="../src/components/loging.js"></script>
 </body>
 
 </html>

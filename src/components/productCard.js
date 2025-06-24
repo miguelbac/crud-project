@@ -168,7 +168,6 @@ window.addEventListener('DOMContentLoaded', () => {
     if (id) {
         loadAndDisplayProducts(id);
     } else {
-        // mensaje si no hay ID
-        container.innerHTML = "<p>Producto no encontrado desde index</p>";
+        loadAndDisplayProducts();
     }
 });

@@ -3,18 +3,12 @@
   padding: 0;
   box-sizing: border-box;
   font-family: Funnel Display, sans-serif;
-  color: #f2f2f2;
+  color: #F2F2F2;
+
 }
 
-body,
-html {
+body, html {
   height: 100%;
-  font-family: sans-serif;
-  /* cambio Yely */
-  padding-top: 80px; /* підлаштуйте під висоту header */
-  padding-bottom: 60px; /* підлаштуйте під висоту footer */
-  box-sizing: border-box;
-  /*  */
 }
 
 /* VIDEO */
@@ -45,7 +39,7 @@ html {
 
 .video-text p {
   font-size: 1.5rem;
-  margin-top: 0;
+  margin-top: 0.0;
 }
 
 /* SEASONS */
@@ -64,12 +58,13 @@ html {
 }
 
 .background-season-1 {
-  background-image: url("../img/background/background-season-1.jpg");
+  background-image: url('../img/background/background-season-1.jpg');
 }
 
 .background-season-2 {
-  background-image: url("../img/background/background-season-2.jpg");
+  background-image: url('../img/background/background-season-2.jpg');
 }
+
 
 .season-text {
   position: absolute;
@@ -93,11 +88,11 @@ html {
 }
 
 .background-women {
-  background-image: url("../img/background/background-women.jpg");
+  background-image: url('../img/background/background-women.jpg');
 }
 
 .background-men {
-  background-image: url("../img/background/background-men.jpg");
+  background-image: url('../img/background/background-men.jpg');
 }
 
 .section-text {
@@ -133,29 +128,31 @@ html {
   }
 }
 
-#listaLibros {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1rem;
-  padding: 0;
-  list-style: none;
-  max-width: 1200px;
-  margin: 0 auto;
-}
+
+
+    #listaLibros {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+      padding: 0;
+      list-style: none;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
 
 #itemList li {
-  background: #fff;
-  padding: 1rem;
-  border-radius: 8px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+    background: #fff;
+    padding: 1rem;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 #itemList li button {
-  margin-top: 0.5rem;
-  padding: 6px 10px;
-  cursor: pointer;
+    margin-top: 0.5rem;
+    padding: 6px 10px;
+    cursor: pointer;
 }
 
 .link-hover {
@@ -168,7 +165,7 @@ html {
 }
 
 .link-hover::after {
-  content: "";
+  content: '';
   position: absolute;
   bottom: -4px;
   left: 50%;

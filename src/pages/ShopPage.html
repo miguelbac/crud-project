@@ -17,7 +17,37 @@
 </head>
 
 <body>
-  <h1>ADAMY</h1>
+<header>
+    <nav class="nav">
+      <div class="menu-toggle" id="menu-toggle">☰</div>
+      <!-- Logo -->
+      <div class="logo-container">
+        <a href="../../public/index.html">
+        <img class="logo" src="../img/icons/logo.png" alt="Logo">
+        </a>
+      </div>
+      <!-- Menú desplegable -->
+      <ul class="menu" id="menu">
+        <li><a href="../../public/index.html">Inicio</a></li>           
+        <li><a href="#" class="link-hover" data-id="Hombre">Hombre</a></li>    
+        <li><a href="#" class="link-hover" data-id="Mujer">Mujer</a></li>
+        <li><a href="#" class="link-hover" data-id="Verano">Temporada</a></li>
+        <li><a href="#">Contactanos</a></li>
+      </ul>      
+      <!-- Barra de búsqueda -->
+      <div class="search-bar">
+        <input type="text" placeholder="Buscar producto" id="searchText">
+        <button id="searchButton">
+          <img src="../img/icons/search-icon.png" alt="Buscar" class="search-icon">
+        </button>
+      </div>
+      <!-- Iconos -->
+      <div class="user-buttons">
+       <a href="../pages/Loging.html"><button class="users"><img src="../img/icons/users.png" alt="Perfil"></button></a>
+        <button class="favs"><img src="../img/icons/favs.png" alt="Me gusta"></button>
+      </div>
+    </nav>
+  </header>
 
 <form id="form">
   <h3 id="formTitle">Agregar prenda de ropa</h3>
@@ -39,15 +69,17 @@
 <ul id="itemList"></ul>
 
 
-<footer>
-  <div class="pie">
-    <a href="mailto:contacto@adamy.com" target="_blank">CONTAC US HERE</a>
+<footer class="site-footer">
+  <div class="footer-content">
+    <a href="mailto:contacto@adamy.com" target="_blank">CONTACT US HERE</a>
     <a href="https://www.instagram.com" target="_blank">INSTAGRAM</a>
     <p>ADAMY @ 2025 TODOS LOS DERECHOS RESERVADOS</p>
-  </div> 
+  </div>
 </footer>
 
   <script src="../services.js"></script>
+  <script src="../src/components/Burguer-menu.js"></script>
+
 </body>
 
 </html>

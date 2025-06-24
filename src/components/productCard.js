@@ -140,7 +140,7 @@ function paintCards(products) {
 }
 //document.addEventListener('DOMContentLoaded', loadAndDisplayProducts("Mujer"));//llamada con parametro para filtrar
 
-//document.addEventListener('DOMContentLoaded', loadAndDisplayProducts);
+//Este escucha el evento de la barra lateral
 document.querySelectorAll('.sidebar a').forEach(link => {
     link.addEventListener('click', function (e) {
         e.preventDefault();
@@ -148,6 +148,15 @@ document.querySelectorAll('.sidebar a').forEach(link => {
         loadAndDisplayProducts(valor);
     });
 });
+//este escucha el evento en el menu hamburguesa
+document.querySelectorAll('.link-hover').forEach(link => {
+    link.addEventListener('click', function (e) {
+        e.preventDefault(); // evita recargar
+        const categoria = this.getAttribute('data-id');
+        loadAndDisplayProducts(categoria);
+    });
+});
+
 
 //cuando se da en Buscar
 const btnSearch = document.getElementById("searchButton");
@@ -169,5 +178,49 @@ window.addEventListener('DOMContentLoaded', () => {
         loadAndDisplayProducts(id);
     } else {
         loadAndDisplayProducts();
+    }
+});
+
+window.addEventListener('DOMContentLoaded', () => {
+    const params = new URLSearchParams(window.location.search);
+    const search = params.get('search');
+
+    if (search) {
+        searchProducts(search);
+    }
+});
+
+//Para ordenar con el select por precio y descuento
+document.getElementById('sortSelect').addEventListener('change', async function () {
+    const sortOption = this.value;
+
+    try {
+        const response = await fetch('http://localhost:3000/products');
+        let products = await response.json();
+
+        // Aplica el ordenamiento
+        switch (sortOption) {
+            case 'precio_asc':
+                products.sort((a, b) => a.precio - b.precio);
+                break;
+            case 'precio_desc':
+                products.sort((a, b) => b.precio - a.precio);
+                break;
+            case 'descuento_asc':
+                products = products.filter(p => p.descuento > 0);
+                products.sort((a, b) => a.descuento - b.descuento);
+                break;
+            case 'descuento_desc':
+                products = products.filter(p => p.descuento > 0);
+                products.sort((a, b) => b.descuento - a.descuento);
+                break;
+            default:
+                // No hacer nada, mantener el orden original
+                break;
+        }
+
+        paintCards(products);
+    } catch (error) {
+        container.innerHTML = `<p>Error al ordenar productos: ${error.message}</p>`;
     }
 });

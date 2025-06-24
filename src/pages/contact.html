@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>CRUD</title>
+  <link rel="stylesheet" href="../styles/base.css">
+  <link rel="stylesheet" href="../styles/footer.css">
+  <link rel="stylesheet" href="../styles/header.css">
+
+  <!-- Fuentes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap"
+    rel="stylesheet">
+
+</head>
+
+<body>
+  <header>
+    <nav class="nav">
+      <div class="menu-toggle" id="menu-toggle">☰</div>
+
+      <!-- Logo -->
+      <div class="logo-container">
+        <a href="../../public/index.html">
+        <img class="logo" src="../img/icons/logo.png" alt="Logo">
+        </a>
+      </div>
+
+      <!-- Menú desplegable -->
+      <ul class="menu" id="menu">
+        <li><a href="../../public/index.html">Inicio</a></li>
+        <li><a href="#">Hombre</a></li>
+        <li><a href="#">Mujer</a></li>
+        <li><a href="#">Temporada</a></li>
+        <li><a href="">Contactanos</a></li>
+      </ul>
+
+      <!-- Barra de búsqueda -->
+      <div class="search-bar">
+        <input type="text" placeholder="Buscar producto" id="searchText">
+        <button id="searchButton">
+          <img src="../img/icons/search-icon.png" alt="Buscar" class="search-icon">
+        </button>
+      </div>
+
+      <!-- Iconos -->
+      <div class="user-buttons">
+       <a href="../public/loging.html"><button class="users"><img src="../img/icons/users2.png" alt="Perfil"></button></a>
+        <button class="favs"><img src="../img/icons/favs2.png" alt="Me gusta"></button>
+      </div>
+    </nav>
+  </header>
+
+  <div class="conocerte-container">
+  <img src="../img/icons/queremosconocerte.jpg" alt="Imagen" class="conocerte-imagen">
+  </div>
+  <div class="conocerte-texto">
+    ¡Queremos conocerte más!
+  </div>
+
+
+
+   <footer>
+    <div class="pie">
+      <a href="mailto:contacto@adamy.com" target="_blank">CONTAC US HERE</a>
+      <a href="https://www.instagram.com" target="_blank">INSTAGRAM</a>
+      <p>ADAMY @ 2025 TODOS LOS DERECHOS RESERVADOS</p>
+    </div>
+  </footer>
+
+  <script src="../components/Burguer-menu.js"></script>
+  <script src="../components/indexToProducts.js"></script>
+</body>
+
+</html>

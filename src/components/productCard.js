@@ -2,21 +2,25 @@
 const container = document.getElementById('containerProducts');
 const resultsNumber = document.getElementById('ResultsNumber');
 
+function normalizeText(text) {
+    return text.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+}
+
 async function searchProducts(searchText) {
 
     try {
         const response = await fetch('http://localhost:3000/products');
         const products = await response.json();
 
-        const searchTxt = searchText.toLowerCase();
+        const searchTxt = normalizeText(searchText);
 
         const results = products.filter(p =>
-            (p.nombre && p.nombre.toLowerCase().includes(searchTxt)) ||
-            (p.genero && p.genero.toLowerCase().includes(searchTxt)) ||
-            (p.temporada && p.temporada.toLowerCase().includes(searchTxt)) ||
-            (p.temporada && p.tipo.toLowerCase().includes(searchTxt)) ||
-            (p.temporada && p.fecha_lanzamiento.toLowerCase().includes(searchTxt)) ||
-            (p.estilo && p.estilo.toLowerCase().includes(searchTxt))
+            (p.nombre && normalizeText(p.nombre).includes(searchTxt)) ||
+            (p.genero && normalizeText(p.genero).includes(searchTxt)) ||
+            (p.temporada && normalizeText(p.temporada).includes(searchTxt)) ||
+            (p.tipo && normalizeText(p.tipo).includes(searchTxt)) ||
+            (p.fecha_lanzamiento && normalizeText(p.fecha_lanzamiento).includes(searchTxt)) ||
+            (p.estilo && normalizeText(p.estilo).includes(searchTxt))
         );
 
         paintCards(results);
@@ -156,4 +160,14 @@ btnSearch.addEventListener("click", () => {
         return;
     }
     searchProducts(searchValue);
+});
+
+window.addEventListener('DOMContentLoaded', () => {
+    const params = new URLSearchParams(window.location.search);
+    const id = params.get('id');
+    if (id) {
+        loadAndDisplayProducts(id);
+    } else {
+        loadAndDisplayProducts();
+    }
 });

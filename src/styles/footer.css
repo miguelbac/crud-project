@@ -1,26 +1,35 @@
-footer {
-    background: #717568;
-    color: #F2F2F2;
-    text-align: center;
-    padding: 1rem;
-    width: 100%;
-    bottom: 0;
-    font-family: Red Hat Text, Sans-Serif;
-    
+/* Asegura que el contenedor ocupe toda la altura */
+html, body {
+  height: 100%;
+  margin: 0;
 }
 
-footer a {
+.page-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content {
+  flex: 1; /* esto empuja el footer hacia abajo */
+}
+
+/* Footer */
+.site-footer {
+  background: #717568;
+  color: #F2F2F2;
+  text-align: center;
+  padding: 1rem;
+  width: 100%;
+  font-family: 'Red Hat Text', sans-serif;
+}
+
+.footer-content a {
   color: #F2F2F2;
   text-decoration: none;
   margin: 0 1rem;
 }
 
-footer a:hover {
+.footer-content a:hover {
   text-decoration: underline;
 }
-
-body {
-  min-height: 100vh;
-}
-
-

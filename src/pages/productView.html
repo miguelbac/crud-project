@@ -4,10 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CRUD</title>
-    <link rel="stylesheet" href="../src/styles/base.css" />
-    <link rel="stylesheet" href="../src/styles/footer.css" />
-    <link rel="stylesheet" href="../src/styles/header.css" />
-    <link rel="stylesheet" href="../src/styles/product-view.css" />
+    <link rel="stylesheet" href="../styles/base.css" />
+    <link rel="stylesheet" href="../styles/footer.css" />
+    <link rel="stylesheet" href="../styles/header.css" />
+    <link rel="stylesheet" href="../styles/productView.css" />
 
     <!-- Fuentes -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -63,35 +63,43 @@
       </nav>
     </header>
     <main>
-        <section id="grid-images-layout"></section>
+      <div class="product-main-layout">
+        <section id="grid-images-layout">
+          <!-- Сюди JS додасть <img> з фото товару -->
+        </section>
         <section id="product-detail-layout">
           <h2 id="product-name">nombre</h2>
-          <div>
-            <h3 id="precio-actual">precio</h3>
-            <h3>Precio actual</h3>
+          <div class="price-block">
+            <span id="precio-actual">0 €</span>
+            <span id="precio-original" class="old-price">0 €</span>
+            <span id="discount" class="discount">-0%</span>
+            <span class="price-label">Precio actual</span>
           </div>
-          <h4 id="description">description</h4>
-          <h4 id="color">color</h4>
-          <button>añadir a favoritos</button>
-
-            <h3 id="discount calculation">descuento</h3>
-            <h3>descuento</h3>
-          </div>
+          <div id="description" class="product-description">description</div>
+          <button id="add-to-favs" class="add-to-favs-btn">
+            Añadir a favoritos
+          </button>
         </section>
       </div>
       <section id="product-info-block">
         <aside>
-          <img src="" alt="Envío gratuito" />
+          <img src="../img/icons/Envío_gratuito.svg" alt="Envío gratuito" />
           <h3>Envío gratuito</h3>
           <p>En pedidos a partir de 200 €</p>
         </aside>
         <aside>
-          <img src="" alt="Devoluciones en 30 días" />
+          <img
+            src="../img/icons/Devoluciones_en_30_días.svg"
+            alt="Devoluciones en 30 días"
+          />
           <h3>Devoluciones en 30 días</h3>
           <p>Solo productos originales</p>
         </aside>
         <aside>
-          <img src="" alt="Disfruta de descuentos con  ADAMY" />
+          <img
+            src="../img/icons/Disfruta_de_descuentos_con_ADAMY.svg"
+            alt="Disfruta de descuentos con  ADAMY"
+          />
           <h3>Disfruta de descuentos con ADAMY</h3>
           <p>Hasta -50%</p>
         </aside>
@@ -104,7 +112,7 @@
         <p>ADAMY @ 2025 TODOS LOS DERECHOS RESERVADOS</p>
       </div>
     </footer>
-    <script src="../src/components/Burguer-menu.js"></script>
-    <script src="../src/components/productView.js"></script>
+    <script src="../components/Burguer-menu.js"></script>
+    <script src="../components/productView.js"></script>
   </body>
 </html>

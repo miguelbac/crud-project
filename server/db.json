@@ -511,6 +511,24 @@
       "estilo": "Deportivo"
     },
     {
+      "id": "936",
+      "nombre": "Bañador Rojo",
+      "descripcion": "Bañador Rojo con volantes para mujer",
+      "imagen": [
+        "../img/bannadorRojo1.jpg",
+        "../img/bannadorRojo1.1.jpg"
+      ],
+      "precio": 19.99,
+      "descuento": 0,
+      "color": "Rojo",
+      "genero": "Mujer",
+      "temporada": "Verano",
+      "tipo": "Playa",
+      "fecha_lanzamiento": "2025-06-19",
+      "estilo": "Casual"
+    },
+      {
+      "id": "932",
       "nombre": "Camiseta Fitness",
       "descripcion": "Camiseta Fitness Mujer Azul",
       "imagen": [

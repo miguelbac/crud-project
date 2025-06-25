@@ -1,20 +1,12 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
   <meta charset="UTF-8" />
-  <title>CRUD</title>
+  <title>Contactanos - ADAMY</title>
   <link rel="stylesheet" href="../styles/base.css">
   <link rel="stylesheet" href="../styles/footer.css">
   <link rel="stylesheet" href="../styles/header.css">
-
-  <!-- Fuentes -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap"
-    rel="stylesheet">
-
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
 <body>
@@ -24,14 +16,14 @@
 
       <!-- Logo -->
       <div class="logo-container">
-        <a href="../../public/index.html">
-        <img class="logo" src="../img/icons/logo.png" alt="Logo">
+        <a href="../public/index.html">
+          <img class="logo" src="../img/icons/logo.png" alt="Logo">
         </a>
       </div>
 
       <!-- Menú desplegable -->
       <ul class="menu" id="menu">
-        <li><a href="../../public/index.html">Inicio</a></li>
+        <li><a href="../public/index.html">Inicio</a></li>
         <li><a href="#">Hombre</a></li>
         <li><a href="#">Mujer</a></li>
         <li><a href="#">Temporada</a></li>
@@ -48,22 +40,49 @@
 
       <!-- Iconos -->
       <div class="user-buttons">
-       <a href="../public/loging.html"><button class="users"><img src="../img/icons/users2.png" alt="Perfil"></button></a>
+        <a href="../public/loging.html"><button class="users"><img src="../img/icons/users2.png" alt="Perfil"></button></a>
         <button class="favs"><img src="../img/icons/favs2.png" alt="Me gusta"></button>
       </div>
     </nav>
   </header>
 
-  <div class="conocerte-container">
-  <img src="../img/icons/queremosconocerte.jpg" alt="Imagen" class="conocerte-imagen">
-  </div>
-  <div class="conocerte-texto">
-    ¡Queremos conocerte más!
-  </div>
+  <main class="container mx-auto p-4">
+    <h1 class="text-3xl font-bold text-center mb-8">Contáctanos</h1>
+    <div class="grid grid-cols-2 gap-4">
 
+      <!-- Bloque de Dirección -->
+      <div class="bg-white shadow-md rounded-md p-4">
+        <h2 class="text-2xl font-semibold text-blue-500 mb-2">Dirección</h2>
+        <p class="text-gray-700">Calle Falsa 123, Ciudad</p>
+        <p class="text-gray-700">País</p>
+        <!-- Mapa de Google -->
+        <div id="map" class="w-full h-64 rounded-md overflow-hidden">
+          <!-- Aquí se cargará el mapa -->
+        </div>
+      </div>
 
+      <!-- Bloque de Número de Teléfono -->
+      <div class="bg-white shadow-md rounded-md p-4">
+        <h2 class="text-2xl font-semibold mb-2">Teléfono</h2>
+        <p class="text-gray-700">+123 456 789</p>
+      </div>
 
-   <footer>
+      <!-- Bloque de Correo -->
+      <div class="bg-white shadow-md rounded-md p-4">
+        <h2 class="text-2xl font-semibold mb-2">Correo</h2>
+        <p class="text-gray-700">contacto@adamy.com</p>
+      </div>
+
+      <!-- Bloque de Redes Sociales -->
+      <div class="bg-white shadow-md rounded-md p-4">
+        <h2 class="text-2xl font-semibold mb-2">Redes Sociales</h2>
+        <p class="text-gray-700">Instagram: @adamy_ropa</p>
+        <p class="text-gray-700">Facebook: ADAMY</p>
+      </div>
+    </div>
+  </main>
+
+  <footer>
     <div class="pie">
       <a href="mailto:contacto@adamy.com" target="_blank">CONTAC US HERE</a>
       <a href="https://www.instagram.com" target="_blank">INSTAGRAM</a>
@@ -72,7 +91,21 @@
   </footer>
 
   <script src="../components/Burguer-menu.js"></script>
-  <script src="../components/indexToProducts.js"></script>
+  <script src="../../components/indexToProducts.js"></script>
+  <script>
+    
+    // Cargar mapa de Google
+    function initMap() {
+      const map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 8,
+        center: { lat: -34.397, lng: 150.644 }
+      });
+      const marker = new google.maps.Marker({
+        position: { lat: -34.397, lng: 150.644 },
+        map: map
+      });
+    }
+  </script>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBDaeWicvigtP9xPv919E-RNoxfvC-Hqik&callback=initMap"></script>
 </body>
-
 </html>

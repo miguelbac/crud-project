@@ -1,6 +1,5 @@
 {
- 
-   "products": [
+  "products": [
     {
       "id": "91",
       "nombre": "Anorak de Mujer",
@@ -17,7 +16,8 @@
       "tipo": "Anorak",
       "fecha_lanzamiento": "2024-12-01",
       "estilo": "Casual"
-    },  {
+    },
+    {
       "id": "921",
       "nombre": "Vestido azul corto",
       "descripcion": "Vestido de mujer en color azul para la temporada de primavera.",
@@ -212,7 +212,7 @@
         "../img/Hcazadoraaccolchada1.jpg",
         "../img/Hcazadoraaccolchada1.1.jpg"
       ],
-      "precio": 59.0,
+      "precio": 59,
       "descuento": 10,
       "color": "Negro",
       "genero": "Hombre",
@@ -442,7 +442,6 @@
       "fecha_lanzamiento": "2024-07-17",
       "estilo": "Casual"
     },
-  
     {
       "id": "927",
       "nombre": "Traje para hombre",
@@ -460,7 +459,7 @@
       "fecha_lanzamiento": "2024-05-10",
       "estilo": "Formal"
     },
-       {
+    {
       "id": "928",
       "nombre": "Mallas Largas",
       "descripcion": "Mallas Fitness Mujer Negro",
@@ -476,7 +475,8 @@
       "tipo": "Deporte",
       "fecha_lanzamiento": "2024-05-10",
       "estilo": "Deportivo"
-    }, {
+    },
+    {
       "id": "929",
       "nombre": "Camiseta para Fútbol",
       "descripcion": "Camiseta para Fútbol Amarilla",
@@ -511,12 +511,10 @@
       "estilo": "Deportivo"
     },
     {
-      "id": "932",
       "nombre": "Camiseta Fitness",
       "descripcion": "Camiseta Fitness Mujer Azul",
       "imagen": [
-        "../img/topDeportivo1.1.jpg",
-        "../img/TopDeportivoM1.jpg"
+        "../img/topDeportivo1.1.jpg"
       ],
       "precio": 5.99,
       "descuento": 0,
@@ -525,20 +523,15 @@
       "temporada": "Verano",
       "tipo": "Deporte",
       "fecha_lanzamiento": "2025-04-19",
-      "estilo": "Deportivo"
+      "estilo": "Deportivo",
+      "id": "932"
     }
-  ],"users": [
+  ],
+  "users": [
     {
       "id": 1,
       "username": "admin",
       "password": "Adamy*2025"
     }
   ]
-
-  
- 
-  
-
 }
-
-

@@ -1,18 +1,36 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Funnel Display, sans-serif;
+}
+
+body {
+  font-family: 'Red Hat Text', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
 form {
   max-width: 300px;
   margin: 70px auto;
   display: flex;
   flex-direction: column;
   gap: 10px;
+  background: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 3px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 input, button {
   padding: 10px;
   border-radius: 6px;
   border: 1px solid #ccc;
-  color: #3E2A35;
 }
 
-h2{
-    padding: 25px;
+h2 {
+  text-align: center;
+  margin-bottom: 10px;
 }

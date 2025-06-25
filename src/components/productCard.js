@@ -118,22 +118,24 @@ function paintCards(products) {
     let html = "";
 
     for (const product of products) {
+
         const image = product.imagen && product.imagen.length > 0
             ? product.imagen[1]
             : "/img/sin-imagen.png";
 
         html += `
-                <div class="productShow">
-                    <img src="${image}" alt="${product.nombre}" width="150">
-                    <h4>${product.nombre}</h4>
-                    
-                    <p><strong>Precio:</strong> €${product.precio}</p>
-                    ${product.descuento > 0
+        <div class="productShow">
+            <a href="productView.html?id=${product.id}">
+                <img src="${image}" alt="${product.nombre}" width="150">
+            </a>
+            <h4>${product.nombre}</h4>
+            <p><strong>Precio:</strong> €${product.precio}</p>
+            ${product.descuento > 0
                 ? `<p style="color: red;"><strong>Descuento:</strong> ${product.descuento}%</p>`
                 : ''
             }
-                </div>
-            `;
+        </div>
+    `;
     }
 
     container.innerHTML = html;

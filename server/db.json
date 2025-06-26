@@ -531,8 +531,8 @@
       "id": "932",
       "nombre": "Camiseta Fitness",
       "descripcion": "Camiseta Fitness Mujer Azul",
-      "imagen": [
-        "../img/topDeportivo1.1.jpg"
+      "imagen": ["../img/topDeportivo1.1.jpg",
+        "../img/topDeportivoM1.jpg"
       ],
       "precio": 5.99,
       "descuento": 0,
@@ -541,8 +541,8 @@
       "temporada": "Verano",
       "tipo": "Deporte",
       "fecha_lanzamiento": "2025-04-19",
-      "estilo": "Deportivo",
-      "id": "932"
+      "estilo": "Deportivo"
+    
     }
   ],
   "users": [

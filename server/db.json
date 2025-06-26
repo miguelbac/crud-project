@@ -543,22 +543,6 @@
       "tipo": "Deporte",
       "fecha_lanzamiento": "2025-04-19",
       "estilo": "Deportivo"
-    },
-    {
-      "id": "0127",
-      "nombre": "mioo",
-      "descripcion": "prueba",
-      "imagen": [
-        ""
-      ],
-      "precio": 25,
-      "descuento": 2,
-      "color": "Verde",
-      "genero": "Hombre",
-      "temporada": "Otoño",
-      "tipo": "",
-      "fecha_lanzamiento": "2025-06-10",
-      "estilo": "Formal"
     }
   ],
   "users": [

@@ -1,4 +1,7 @@
-
+html, body {
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
 .main-ProductsShow {
    background-color: rgb(249, 250, 247);
   font-family: Red Hat Text, Sans-serif;

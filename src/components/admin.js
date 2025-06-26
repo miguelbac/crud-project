@@ -109,56 +109,61 @@ btnCancel.addEventListener("click", () => {
 
 );
 */
-form.addEventListener("submit", (e) => {
+form.addEventListener("submit", async (e) => {
   e.preventDefault();
 
   const imagenInput = document.getElementById("imageInput");
   const archivo = imagenInput.files[0];
+  const preview = document.getElementById("imagePreview");
+  const id = editId.value;
 
-  if (!archivo) {
-    alert("Por favor selecciona una imagen.");
-    return;
+  let base64Image = "";
+
+  if (archivo) {
+    // Si el usuario sube una nueva imagen
+    base64Image = await new Promise((resolve, reject) => {
+      const reader = new FileReader();
+      reader.onloadend = () => resolve(reader.result);
+      reader.onerror = reject;
+      reader.readAsDataURL(archivo);
+    });
+  } else if (preview && preview.src && preview.src.startsWith("data:image")) {
+    // Si ya hay una imagen previa mostrada en la edición
+    base64Image = preview.src;
   }
 
-  const reader = new FileReader();
-
-  reader.onloadend = async function () {
-    const base64Image = reader.result;
-
-    const data = {
-      nombre: document.getElementById("name").value,
-      descripcion: document.getElementById("description").value,
-      imagen: [base64Image], // se guarda como arreglo
-      precio: parseFloat(document.getElementById("price").value),
-      descuento: parseInt(document.getElementById("discount").value),
-      color: document.getElementById("color").value,
-      genero: document.getElementById("gender").value,
-      temporada: document.getElementById("season").value,
-      tipo: document.getElementById("type").value,
-      fecha_lanzamiento: document.getElementById("release_date").value,
-      estilo: document.getElementById("style").value
-    };
-
-    const id = editId.value;
-
-    const options = {
-      method: id ? "PUT" : "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(id ? { ...data, id } : data)
-    };
-
-    const url = id ? `${API_URL}/${id}` : API_URL;
-    const res = await fetch(url, options);
-
-    if (res.ok) {
-      alert(id ? "Producto actualizado" : "Producto añadido");
-      form.reset();
-      form.classList.add("hidden");
-      editId.value = "";
-    } else {
-      alert("Error al guardar el producto");
-    }
+  const data = {
+    nombre: document.getElementById("name").value,
+    descripcion: document.getElementById("description").value,
+    imagen: base64Image ? [base64Image] : [], // si no hay imagen, va arreglo vacío
+    precio: parseFloat(document.getElementById("price").value),
+    descuento: parseInt(document.getElementById("discount").value),
+    color: document.getElementById("color").value,
+    genero: document.getElementById("gender").value,
+    temporada: document.getElementById("season").value,
+    tipo: document.getElementById("type").value,
+    fecha_lanzamiento: document.getElementById("release_date").value,
+    estilo: document.getElementById("style").value
   };
 
-  reader.readAsDataURL(archivo); // convierte imagen a base64
+  const options = {
+    method: id ? "PUT" : "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(id ? { ...data, id } : data)
+  };
+
+  const url = id ? `${API_URL}/${id}` : API_URL;
+  const res = await fetch(url, options);
+
+  if (res.ok) {
+    alert(id ? "Producto actualizado" : "Producto añadido");
+    form.reset();
+    form.classList.add("hidden");
+    editId.value = "";
+    preview.src = "";
+    preview.style.display = "none";
+  } else {
+    alert("Error al guardar el producto");
+  }
 });
+

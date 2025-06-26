@@ -26,6 +26,10 @@ body > *:not(.site-footer) {
   margin: 0 1rem;
 }
 
+.footer-content p {
+  color: #F2F2F2;
+}
+
 .footer-content a:hover {
   text-decoration: underline;
 }

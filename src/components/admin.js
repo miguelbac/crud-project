@@ -13,16 +13,6 @@ const btnCancel = document.getElementById("btnCancel");
 const editId = document.getElementById("editId");
 
 // 1. Mostrar formulario vacío para añadir
-btnAdd.addEventListener("click", () => {
-  // Ocultar la vista previa de la imagen
-  const imagePreview = document.getElementById("imagePreview");
-  imagePreview.src = "";
-  imagePreview.style.display = "none";
-  form.reset();
-  editId.value = "";
-  formTitle.textContent = "Agregar prenda de ropa";
-  form.classList.remove("hidden");
-});
 
 // 2. Mostrar formulario con datos cargados para editar
 btnEdit.addEventListener("click", async () => {
@@ -38,8 +28,6 @@ btnEdit.addEventListener("click", async () => {
   document.getElementById("name").value = producto.nombre || "";
   document.getElementById("description").value = producto.descripcion || "";
   //document.getElementById("image").value = producto.imagen[0] || "";
-  document.getElementById("imagePreview").src = producto.imagen[0] || "";
-  document.getElementById("imagePreview").style.display = "block";
   document.getElementById("price").value = producto.precio || "";
   document.getElementById("discount").value = producto.descuento || "";
   document.getElementById("color").value = producto.color || "";
@@ -77,10 +65,8 @@ btnCancel.addEventListener("click", () => {
   editId.value = "";
 
   // Ocultar la vista previa de la imagen
-  const imagePreview = document.getElementById("imagePreview");
-  imagePreview.src = "";
-  imagePreview.style.display = "none";
-});
+});  
+
 
 // 5. Enviar formulario para crear o editar
 /*form.addEventListener("submit", async (e) => {

@@ -72,7 +72,7 @@ btnCancel.addEventListener("click", () => {
 });
 
 // 5. Enviar formulario para crear o editar
-form.addEventListener("submit", async (e) => {
+/*form.addEventListener("submit", async (e) => {
   e.preventDefault();
 
   const data = {
@@ -108,4 +108,60 @@ form.addEventListener("submit", async (e) => {
   } else {
     alert("Error al guardar el producto");
   }
+}
+
+);
+*/
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+
+  const imagenInput = document.getElementById("imageInput");
+  const archivo = imagenInput.files[0];
+
+  if (!archivo) {
+    alert("Por favor selecciona una imagen.");
+    return;
+  }
+
+  const reader = new FileReader();
+
+  reader.onloadend = async function () {
+    const base64Image = reader.result;
+
+    const data = {
+      nombre: document.getElementById("name").value,
+      descripcion: document.getElementById("description").value,
+      imagen: [base64Image], // se guarda como arreglo
+      precio: parseFloat(document.getElementById("price").value),
+      descuento: parseInt(document.getElementById("discount").value),
+      color: document.getElementById("color").value,
+      genero: document.getElementById("gender").value,
+      temporada: document.getElementById("season").value,
+      tipo: document.getElementById("type").value,
+      fecha_lanzamiento: document.getElementById("release_date").value,
+      estilo: document.getElementById("style").value
+    };
+
+    const id = editId.value;
+
+    const options = {
+      method: id ? "PUT" : "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(id ? { ...data, id } : data)
+    };
+
+    const url = id ? `${API_URL}/${id}` : API_URL;
+    const res = await fetch(url, options);
+
+    if (res.ok) {
+      alert(id ? "Producto actualizado" : "Producto añadido");
+      form.reset();
+      form.classList.add("hidden");
+      editId.value = "";
+    } else {
+      alert("Error al guardar el producto");
+    }
+  };
+
+  reader.readAsDataURL(archivo); // convierte imagen a base64
 });

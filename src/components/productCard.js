@@ -90,6 +90,9 @@ async function loadAndDisplayProducts(filter = "all") {
         case "Rosa":
             url = 'http://localhost:3000/products?color=Rosa';
             break;
+        case "next":
+            url = 'https://fakestoreapi.com/products/1';
+            break;
         default:
             // Mantiene la URL original sin filtros
             break;

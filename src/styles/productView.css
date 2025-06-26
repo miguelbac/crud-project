@@ -11,7 +11,9 @@ html, body {
   justify-content: center;
 }
 
-
+h3{
+  color: black;
+}
 /* Estilos solo dentro de .product-page */
 .product-page .product-main-layout {
   display: flex;
@@ -127,7 +129,7 @@ html, body {
 #product-detail-layout h2,
 #product-detail-layout h3,
 #product-detail-layout h4 {
-  color: #222;
+  color: #222 ;
 }
 
 @media (max-width: 900px) {

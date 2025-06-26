@@ -122,10 +122,14 @@ function paintCards(products) {
 
     for (const product of products) {
 
-        const image = product.imagen && product.imagen.length > 0
-            ? product.imagen[1]
-            : "/img/sin-imagen.png";
-
+        let image = "../img/sin-imagen.png"
+        if (product.imagen && Array.isArray(product.imagen)) {
+            if (product.imagen.length >= 2 && product.imagen[1]) {
+                image = product.imagen[1];
+            } else if (product.imagen.length >= 1 && product.imagen[0]) {
+                image = product.imagen[0];
+            }
+        }
         html += `
         <div class="productShow">
             <a href="productView.html?id=${product.id}">

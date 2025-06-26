@@ -527,11 +527,12 @@
       "fecha_lanzamiento": "2025-06-19",
       "estilo": "Casual"
     },
-      {
+    {
       "id": "932",
       "nombre": "Camiseta Fitness",
       "descripcion": "Camiseta Fitness Mujer Azul",
-      "imagen": ["../img/topDeportivo1.1.jpg",
+      "imagen": [
+        "../img/topDeportivo1.1.jpg",
         "../img/topDeportivoM1.jpg"
       ],
       "precio": 5.99,
@@ -542,12 +543,27 @@
       "tipo": "Deporte",
       "fecha_lanzamiento": "2025-04-19",
       "estilo": "Deportivo"
-    
+    },
+    {
+      "id": "0127",
+      "nombre": "mioo",
+      "descripcion": "prueba",
+      "imagen": [
+        ""
+      ],
+      "precio": 25,
+      "descuento": 2,
+      "color": "Verde",
+      "genero": "Hombre",
+      "temporada": "Otoño",
+      "tipo": "",
+      "fecha_lanzamiento": "2025-06-10",
+      "estilo": "Formal"
     }
   ],
   "users": [
     {
-      "id": 1,
+      "id": "1",
       "username": "admin",
       "password": "Adamy*2025"
     }

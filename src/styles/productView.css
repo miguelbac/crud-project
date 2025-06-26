@@ -8,9 +8,10 @@ main {
 
 /* Основний макет продукту */
 .product-main-layout {
+
   display: flex;
   gap: 40px;
-  margin: 32px 0 24px 0;
+  margin: 5rem 0 24px 0;
   align-items: flex-start;
 }
 

@@ -12,6 +12,10 @@ body {
   background-color: #f4f4f4;
 }
 
+#login-form{
+
+margin-top: 10rem;
+}
 form {
   max-width: 300px;
   margin: 70px auto;

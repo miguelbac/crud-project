@@ -1,19 +1,17 @@
+
+
+/* Footer */
 html, body {
   height: 100%;
   margin: 0;
-}
-
-.page-container {
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
 }
 
-.main-content {
-  flex: 1;
+body > *:not(.site-footer) {
+  flex-shrink: 0;
 }
 
-/* Footer */
 .site-footer {
   background: #717568;
   color: #F2F2F2;
@@ -21,6 +19,7 @@ html, body {
   padding: 1rem;
   width: 100%;
   font-family: 'Red Hat Text', sans-serif;
+  margin-top: auto;
 }
 
 .footer-content a {
@@ -32,3 +31,4 @@ html, body {
 .footer-content a:hover {
   text-decoration: underline;
 }
+

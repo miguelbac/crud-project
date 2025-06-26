@@ -5,6 +5,20 @@
   display: flex;
   min-height: calc(100vh - 140px); /* 100vh - header (80px) - footer (60px) */
     padding-top: 80px;
+    width: 100%; 
+    box-sizing: border-box;
+}
+.productShow a {
+  display: block; /* importante */
+  text-decoration: none;
+  color: inherit;
+}
+
+.productShow img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
 }
 /* Barra lateral izquierda */
 .sidebar {
@@ -64,7 +78,7 @@ box-sizing: border-box;
 
  #containerProducts {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
     gap: 15px;
     margin-top: 20px;
     padding: 20px;

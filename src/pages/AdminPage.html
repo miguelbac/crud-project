@@ -2,53 +2,68 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="../styles/base.css">
-    <link rel="stylesheet" href="../styles/footer.css">
-    <link rel="stylesheet" href="../styles/header.css">
-    <link rel="stylesheet" href="../styles/form.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin</title>
 
-    <!-- Fuentes -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap"
-        rel="stylesheet">
+  <link rel="apple-touch-icon" sizes="180x180" href="../img/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../img/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../img/favicon/favicon-16x16.png">
+  <link rel="manifest" href="../src/img/favicon/site.webmanifest">
+
+  <link rel="stylesheet" href="../styles/footer.css">
+  <link rel="stylesheet" href="../styles/header.css">
+  <link rel="stylesheet" href="../styles/admin.css">
+
+  <!-- Fuentes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap"
+    rel="stylesheet">
 </head>
 <header>
-    <nav class="nav">
-      <div class="menu-toggle" id="menu-toggle">☰</div>
-      <!-- Logo -->
-      <div class="logo-container">
-        <a href="../../public/index.html">
+  <nav class="nav">
+    <div class="menu-toggle" id="menu-toggle">☰</div>
+    <!-- Logo -->
+    <div class="logo-container">
+      <a href="../../public/index.html">
         <img class="logo" src="../img/icons/logo.png" alt="Logo">
-        </a>
-      </div>
-      <!-- Menú desplegable -->
-      <ul class="menu" id="menu">
-        <li><a href="../../public/index.html">Inicio</a></li>           
-        <li><a href="#" class="link-hover" data-id="Hombre">Hombre</a></li>
-        <li><a href="#" class="link-hover" data-id="Mujer">Mujer</a></li>
-        <li><a href="#" class="link-hover" data-id="Otoño">Temporada</a></li>
-        <li><a href="#">Contactanos</a></li>
-      </ul>      
-      <!-- Barra de búsqueda -->
-      <div class="search-bar">
-        <input type="text" placeholder="Buscar producto" id="searchText">
-        <button id="searchButton">
-          <img src="../img/icons/search-icon.png" alt="Buscar" class="search-icon">
-        </button>
-      </div>
-      <!-- Iconos -->
-      <div class="user-buttons">
-       <a href="../pages/Loging.html"><button class="users"><img src="../img/icons/users.png" alt="Perfil"></button></a>
-        <button class="favs"><img src="../img/icons/favs.png" alt="Me gusta"></button>
-      </div>
-    </nav>
-  </header>
-  <form id="form">
+      </a>
+      </a>
+    </div>
+    <!-- Menú desplegable -->
+    <ul class="menu" id="menu">
+      <li><a href="../../public/index.html">Inicio</a></li>
+      <li><a href="#" class="link-hover" data-id="Hombre">Hombre</a></li>
+      <li><a href="#" class="link-hover" data-id="Mujer">Mujer</a></li>
+      <li><a href="#" class="link-hover" data-id="Verano">Temporada</a></li>
+      <li><a href="#">Contactanos</a></li>
+    </ul>
+    <!-- Barra de búsqueda -->
+    <div class="search-bar">
+      <input type="text" placeholder="Buscar producto" id="searchText">
+      <button id="searchButton">
+        <img src="../img/icons/search-icon.png" alt="Buscar" class="search-icon">
+      </button>
+    </div>
+    <!-- Iconos -->
+    <div class="user-buttons">
+      <a href="../pages/Loging.html"><button class="users"><img src="../img/icons/users.png" alt="Perfil"></button></a>
+      <button class="favs"><img src="../img/icons/favs.png" alt="Me gusta"></button>
+    </div>
+  </nav>
+</header>
+<h1>Panel de Administración</h1>
+
+<div class="admin-buttons">
+  <button id="btnAdd">Añadir producto</button>
+  <button id="btnEdit">Editar producto</button>
+  <button id="btnDelete">Eliminar producto</button>
+</div>
+
+<!-- Formulario (oculto por defecto) -->
+<form id="form" class="hidden">
   <h3 id="formTitle">Agregar prenda de ropa</h3>
   <div class="form-grid">
     <input type="text" placeholder="Nombre" id="name" required />
@@ -84,18 +99,16 @@
     </select>
 
     <input type="text" placeholder="Tipo" id="type" />
-
     <input type="date" placeholder="Fecha de lanzamiento" id="release_date" />
 
     <select id="style" required>
       <option value="">Estilo</option>
       <option value="Casual">Casual</option>
       <option value="Formal">Formal</option>
-      <option value="Semi-Formal">Semi-Formal</option>
       <option value="Deportivo">Deportivo</option>
     </select>
 
-    <input type="hidden" id="editIndex" />
+    <input type="hidden" id="editId" />
   </div>
 
   <div class="form-actions">
@@ -110,7 +123,10 @@
     <p>ADAMY @ 2025 TODOS LOS DERECHOS RESERVADOS</p>
   </div>
 </footer>
-  <script src="../components/Burguer-menu.js"></script>
+<script src="../components/Burguer-menu.js"></script>
+<script src="../components/admin.js"></script>
+<script src="../src/components/indexToProducts.js"></script>
+
 
 
 <body>

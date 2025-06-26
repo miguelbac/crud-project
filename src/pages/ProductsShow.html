@@ -3,41 +3,42 @@
 
 <head>
   <meta charset="UTF-8" />
-  <title>CRUD</title>
-  <link rel="stylesheet" href="../styles/cards.css"/>
-  <link rel="stylesheet" href="../styles/footer.css"/>
-  <link rel="stylesheet" href="../styles/header.css"/>
-  <link rel="stylesheet" href="../styles/productsPage.css"/>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <title>Catálogo</title>
+
+  <link rel="apple-touch-icon" sizes="180x180" href="../img/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../img/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../img/favicon/favicon-16x16.png">
+  <link rel="manifest" href="../src/img/favicon/site.webmanifest">
+
+  <link rel="stylesheet" href="../styles/cards.css" />
+  <link rel="stylesheet" href="../styles/footer.css" />
+  <link rel="stylesheet" href="../styles/header.css" />
+  <link rel="stylesheet" href="../styles/productsPage.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
     href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap"
     rel="stylesheet">
-
 </head>
-
-</style>
-</head>
-
 <body>
-
-<header>
+  <header>
     <nav class="nav">
       <div class="menu-toggle" id="menu-toggle">☰</div>
       <!-- Logo -->
       <div class="logo-container">
         <a href="../../public/index.html">
-        <img class="logo" src="../img/icons/logo.png" alt="Logo">
+          <img class="logo" src="../img/icons/logo.png" alt="Logo">
+        </a>
         </a>
       </div>
       <!-- Menú desplegable -->
       <ul class="menu" id="menu">
-        <li><a href="../../public/index.html">Inicio</a></li>           
-        <li><a href="#" class="link-hover" data-id="Hombre">Hombre</a></li>    
+        <li><a href="../../public/index.html">Inicio</a></li>
+        <li><a href="#" class="link-hover" data-id="Hombre">Hombre</a></li>
         <li><a href="#" class="link-hover" data-id="Mujer">Mujer</a></li>
         <li><a href="#" class="link-hover" data-id="Verano">Temporada</a></li>
-        <li><a href="#">Contactanos</a></li>
-      </ul>      
+        <li><a href="../pages/contact.html">Contactanos</a></li>
+      </ul>
       <!-- Barra de búsqueda -->
       <div class="search-bar">
         <input type="text" placeholder="Buscar producto" id="searchText">
@@ -47,7 +48,8 @@
       </div>
       <!-- Iconos -->
       <div class="user-buttons">
-       <a href="../pages/Loging.html"><button class="users"><img src="../img/icons/users.png" alt="Perfil"></button></a>
+        <a href="../pages/Loging.html"><button class="users"><img src="../img/icons/users.png"
+              alt="Perfil"></button></a>
         <button class="favs"><img src="../img/icons/favs.png" alt="Me gusta"></button>
       </div>
     </nav>
@@ -55,15 +57,21 @@
 
 
 
- <main class="main-ProductsShow">
-  <aside class="sidebar">
-  <ul>
-    <li><a href="#" data-text="All"><h3>VER TODO</h3></a></li>
-    <li><hr></li> 
-      <li><h3>Categorías</h3></li>
+  <main class="main-ProductsShow">
+    <aside class="sidebar">
+      <ul>
+        <li><a href="#" data-text="All">
+            <h3>VER TODO</h3>
+          </a></li>
+        <li>
+          <hr>
+        </li>
+        <li>
+          <h3>Categorías</h3>
+        </li>
 
       <li><h4>Género</h4></li>
-      <li><a href="#" data-text="Hombre">- Hombre</a></li>
+      <li><a href="#" data-text="Hombre" >- Hombre</a></li>
       <li><a href="#" data-text="Mujer">- Mujer</a></li>
       
       <li><h4>Estación</h4></li>
@@ -77,54 +85,67 @@
       <li><a href="#" data-text="Casual">- Casual</a></li>
       <li><a href="#" data-text="Deportivo">- Deportivo</a></li>
 
-      <li><h4>Color</h4></li>
-      <div class="color-options">
-  
- <a href="#" data-text="Negro"> 
-    <div class="color-box" data-text="Negro" style="background-color: black;"></div></a>
-  <a href="#" data-text="Blanco"> 
-    <div class="color-box"  style="background-color: white;"></div></a>
-   <a href="#" data-text="Rojo">
-    <div class="color-box" data-text="Rojo" style="background-color: red;"></div></a>
-  <a href="#" data-text="Gris">
-     <div class="color-box" data-text="Gris" style="background-color:grey;"></div></a>
-  <a href="#" data-text="Beige"> 
-    <div class="color-box" data-text="Beige" style="background-color: rgb(243, 230, 173)"></div></a>
-  <a href="#" data-text="Amarillo">
-    <div class="color-box" data-text="Amarillo" style="background-color: yellow;"></div></a>
- <a href="#" data-text="Azul">
-  <div class="color-box" data-text="Azul" style="background-color: blue;"></div></a>
- <a href="#" data-text="Verde">
-  <div class="color-box" data-text="Verde" style="background-color: green;"></div></a>
- <a href="#" data-text="Rosa">
-  <div class="color-box" data-text="Rosa" style="background-color:rgb(240, 116, 184);"></div></a>
-</div>
-    </ul>
-</aside>
+<li><a href="#" data-text="next">- PROXIMAMENTE</a></li>
 
-<div class="resultadosOrden">
-<div class="product-toolbar">
-  <p id="ResultsNumber">Resultados</p>
-  <select id="sortSelect">
-    <option value="default">Ordenar</option>
-    <option value="precio_asc">Precio: Menor a Mayor ⬇</option>
-    <option value="precio_desc">Precio: Mayor a Menor ⬆</option>
-    <option value="descuento_asc">Descuento: Menor a Mayor ⬇</option>
-    <option value="descuento_desc">Descuento: Mayor a Menor ⬆</option>
-  </select>
-</div> 
+        <li>
+          <h4>Color</h4>
+        </li>
+        <div class="color-options">
 
-<section id="containerProducts"></section>
-</div>
-</main>
+          <a href="#" data-text="Negro">
+            <div class="color-box" data-text="Negro" style="background-color: black;"></div>
+          </a>
+          <a href="#" data-text="Blanco">
+            <div class="color-box" style="background-color: white;"></div>
+          </a>
+          <a href="#" data-text="Rojo">
+            <div class="color-box" data-text="Rojo" style="background-color: red;"></div>
+          </a>
+          <a href="#" data-text="Gris">
+            <div class="color-box" data-text="Gris" style="background-color:grey;"></div>
+          </a>
+          <a href="#" data-text="Beige">
+            <div class="color-box" data-text="Beige" style="background-color: rgb(243, 230, 173)"></div>
+          </a>
+          <a href="#" data-text="Amarillo">
+            <div class="color-box" data-text="Amarillo" style="background-color: yellow;"></div>
+          </a>
+          <a href="#" data-text="Azul">
+            <div class="color-box" data-text="Azul" style="background-color: blue;"></div>
+          </a>
+          <a href="#" data-text="Verde">
+            <div class="color-box" data-text="Verde" style="background-color: green;"></div>
+          </a>
+          <a href="#" data-text="Rosa">
+            <div class="color-box" data-text="Rosa" style="background-color:rgb(240, 116, 184);"></div>
+          </a>
+        </div>
+      </ul>
+    </aside>
 
-<footer class="site-footer">
-  <div class="footer-content">
-    <a href="mailto:contacto@adamy.com" target="_blank">CONTACT US HERE</a>
-    <a href="https://www.instagram.com" target="_blank">INSTAGRAM</a>
-    <p>ADAMY @ 2025 TODOS LOS DERECHOS RESERVADOS</p>
-  </div>
-</footer>
+    <div class="resultadosOrden">
+      <div class="product-toolbar">
+        <p id="ResultsNumber">Resultados</p>
+        <select id="sortSelect">
+          <option value="default">Ordenar</option>
+          <option value="precio_asc">Precio: Menor a Mayor ⬇</option>
+          <option value="precio_desc">Precio: Mayor a Menor ⬆</option>
+          <option value="descuento_asc">Descuento: Menor a Mayor ⬇</option>
+          <option value="descuento_desc">Descuento: Mayor a Menor ⬆</option>
+        </select>
+      </div>
+
+      <section id="containerProducts"></section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-content">
+      <a href="mailto:contacto@adamy.com" target="_blank">CONTACT US HERE</a>
+      <a href="https://www.instagram.com" target="_blank">INSTAGRAM</a>
+      <p>ADAMY @ 2025 TODOS LOS DERECHOS RESERVADOS</p>
+    </div>
+  </footer>
   <script src="../components/productCard.js"></script>
   <script src="../components/Burguer-menu.js"></script>
 </body>

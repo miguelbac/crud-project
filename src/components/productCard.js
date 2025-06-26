@@ -90,6 +90,9 @@ async function loadAndDisplayProducts(filter = "all") {
         case "Rosa":
             url = 'http://localhost:3000/products?color=Rosa';
             break;
+        case "next":
+            url = 'https://fakestoreapi.com/products/1';
+            break;
         default:
             // Mantiene la URL original sin filtros
             break;
@@ -118,29 +121,31 @@ function paintCards(products) {
     let html = "";
 
     for (const product of products) {
+
         const image = product.imagen && product.imagen.length > 0
             ? product.imagen[1]
             : "/img/sin-imagen.png";
 
         html += `
-                <div class="productShow">
-                    <img src="${image}" alt="${product.nombre}" width="150">
-                    <h4>${product.nombre}</h4>
-                    
-                    <p><strong>Precio:</strong> €${product.precio}</p>
-                    ${product.descuento > 0
+        <div class="productShow">
+            <a href="productView.html?id=${product.id}">
+                <img src="${image}" alt="${product.nombre}" width="150">
+            </a>
+            <h4>${product.nombre}</h4>
+            <p><strong>Precio:</strong> €${product.precio}</p>
+            ${product.descuento > 0
                 ? `<p style="color: red;"><strong>Descuento:</strong> ${product.descuento}%</p>`
                 : ''
             }
-                </div>
-            `;
+        </div>
+    `;
     }
 
     container.innerHTML = html;
 }
 //document.addEventListener('DOMContentLoaded', loadAndDisplayProducts("Mujer"));//llamada con parametro para filtrar
 
-//document.addEventListener('DOMContentLoaded', loadAndDisplayProducts);
+//Este escucha el evento de la barra lateral
 document.querySelectorAll('.sidebar a').forEach(link => {
     link.addEventListener('click', function (e) {
         e.preventDefault();
@@ -148,6 +153,15 @@ document.querySelectorAll('.sidebar a').forEach(link => {
         loadAndDisplayProducts(valor);
     });
 });
+//este escucha el evento en el menu hamburguesa
+document.querySelectorAll('.link-hover').forEach(link => {
+    link.addEventListener('click', function (e) {
+        e.preventDefault(); // evita recargar
+        const categoria = this.getAttribute('data-id');
+        loadAndDisplayProducts(categoria);
+    });
+});
+
 
 //cuando se da en Buscar
 const btnSearch = document.getElementById("searchButton");
@@ -169,5 +183,49 @@ window.addEventListener('DOMContentLoaded', () => {
         loadAndDisplayProducts(id);
     } else {
         loadAndDisplayProducts();
+    }
+});
+
+window.addEventListener('DOMContentLoaded', () => {
+    const params = new URLSearchParams(window.location.search);
+    const search = params.get('search');
+
+    if (search) {
+        searchProducts(search);
+    }
+});
+
+//Para ordenar con el select por precio y descuento
+document.getElementById('sortSelect').addEventListener('change', async function () {
+    const sortOption = this.value;
+
+    try {
+        const response = await fetch('http://localhost:3000/products');
+        let products = await response.json();
+
+        // Aplica el ordenamiento
+        switch (sortOption) {
+            case 'precio_asc':
+                products.sort((a, b) => a.precio - b.precio);
+                break;
+            case 'precio_desc':
+                products.sort((a, b) => b.precio - a.precio);
+                break;
+            case 'descuento_asc':
+                products = products.filter(p => p.descuento > 0);
+                products.sort((a, b) => a.descuento - b.descuento);
+                break;
+            case 'descuento_desc':
+                products = products.filter(p => p.descuento > 0);
+                products.sort((a, b) => b.descuento - a.descuento);
+                break;
+            default:
+                // No hacer nada, mantener el orden original
+                break;
+        }
+
+        paintCards(products);
+    } catch (error) {
+        container.innerHTML = `<p>Error al ordenar productos: ${error.message}</p>`;
     }
 });

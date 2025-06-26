@@ -3,8 +3,13 @@
 
 <head>
   <meta charset="UTF-8" />
-  <title>CRUD</title>
-  <link rel="stylesheet" href="../styles/base.css">
+  <title>Login</title>
+
+  <link rel="apple-touch-icon" sizes="180x180" href="../img/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../img/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../img/favicon/favicon-16x16.png">
+  <link rel="manifest" href="../src/img/favicon/site.webmanifest">
+
   <link rel="stylesheet" href="../styles/footer.css">
   <link rel="stylesheet" href="../styles/header.css">
   <link rel="stylesheet" href="../styles/user.css">
@@ -25,17 +30,18 @@
       <!-- Logo -->
       <div class="logo-container">
         <a href="../../public/index.html">
-        <img class="logo" src="../img/icons/logo.png" alt="Logo">
+          <img class="logo" src="../img/icons/logo.png" alt="Logo">
+        </a>
         </a>
       </div>
       <!-- Menú desplegable -->
       <ul class="menu" id="menu">
-        <li><a href="../../public/index.html">Inicio</a></li>           
-        <li><a href="#" class="link-hover" data-id="Hombre">Hombre</a></li>    
+        <li><a href="../../public/index.html">Inicio</a></li>
+        <li><a href="#" class="link-hover" data-id="Hombre">Hombre</a></li>
         <li><a href="#" class="link-hover" data-id="Mujer">Mujer</a></li>
         <li><a href="#" class="link-hover" data-id="Verano">Temporada</a></li>
         <li><a href="#">Contactanos</a></li>
-      </ul>      
+      </ul>
       <!-- Barra de búsqueda -->
       <div class="search-bar">
         <input type="text" placeholder="Buscar producto" id="searchText">
@@ -45,28 +51,30 @@
       </div>
       <!-- Iconos -->
       <div class="user-buttons">
-       <a href="../pages/Loging.html"><button class="users"><img src="../img/icons/users.png" alt="Perfil"></button></a>
+        <a href="../pages/Loging.html"><button class="users"><img src="../img/icons/users.png"
+              alt="Perfil"></button></a>
         <button class="favs"><img src="../img/icons/favs.png" alt="Me gusta"></button>
       </div>
     </nav>
   </header>
 
-<form id="login-form">
-  <h2>Iniciar sesión</h2>
-  <input type="text" id="username" placeholder="Usuario" required />
-  <input type="password" id="password" placeholder="Contraseña" required />
-  <button type="submit">Entrar</button>
-</form>
-<footer class="site-footer">
-  <div class="footer-content">
-    <a href="mailto:contacto@adamy.com" target="_blank">CONTACT US HERE</a>
-    <a href="https://www.instagram.com" target="_blank">INSTAGRAM</a>
-    <p>ADAMY @ 2025 TODOS LOS DERECHOS RESERVADOS</p>
-  </div>
-</footer>
-<script src="../components/usuario.js"></script>
-<script src="../components/Burguer-menu.js"></script>
-<script src="../components/loging.js"></script>
+  <form id="login-form">
+    <h2>Iniciar sesión</h2>
+    <input type="text" id="username" placeholder="Usuario" required />
+    <input type="password" id="password" placeholder="Contraseña" required />
+    <button type="submit">Entrar</button>
+  </form>
+  <footer class="site-footer">
+    <div class="footer-content">
+      <a href="mailto:contacto@adamy.com" target="_blank">CONTACT US HERE</a>
+      <a href="https://www.instagram.com" target="_blank">INSTAGRAM</a>
+      <p>ADAMY @ 2025 TODOS LOS DERECHOS RESERVADOS</p>
+    </div>
+  </footer>
+  <script src="../components/user.js"></script>
+  <script src="../components/Burguer-menu.js"></script>
+  <script src="../components/indexToProducts.js"></script>
+
 </body>
 
 </html>

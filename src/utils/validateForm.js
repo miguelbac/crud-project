@@ -1,1 +1,0 @@
-// Validación de campos de formulario (inputs vacíos, tipos, etc.)

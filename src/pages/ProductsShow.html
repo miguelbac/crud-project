@@ -10,10 +10,11 @@
   <link rel="icon" type="image/png" sizes="16x16" href="../img/favicon/favicon-16x16.png">
   <link rel="manifest" href="../src/img/favicon/site.webmanifest">
 
-  <link rel="stylesheet" href="../styles/cards.css" />
+  <link rel="stylesheet" href="../styles/cards.css" />  
+  <link rel="stylesheet" href="../styles/productsPage.css" />
   <link rel="stylesheet" href="../styles/footer.css" />
   <link rel="stylesheet" href="../styles/header.css" />
-  <link rel="stylesheet" href="../styles/productsPage.css" />
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
@@ -37,7 +38,7 @@
         <li><a href="#" class="link-hover" data-id="Hombre">Hombre</a></li>
         <li><a href="#" class="link-hover" data-id="Mujer">Mujer</a></li>
         <li><a href="#" class="link-hover" data-id="Verano">Temporada</a></li>
-        <li><a href="#">Contactanos</a></li>
+        <li><a href="../pages/contact.html">Contáctanos</a></li>
       </ul>
       <!-- Barra de búsqueda -->
       <div class="search-bar">
@@ -50,7 +51,11 @@
       <div class="user-buttons">
         <a href="../pages/Loging.html"><button class="users"><img src="../img/icons/users.png"
               alt="Perfil"></button></a>
-        <button class="favs"><img src="../img/icons/favs.png" alt="Me gusta"></button>
+        <!--button class="favs"><img src="../img/icons/favs.png" alt="Me gusta"></button-->
+      <button class="favs" id="cart-icon">
+   <a href="../pages/add2Cart.html"><img src="../img/icons/favs.png" alt="Carrito" /></a>
+  <span id="cart-count" class="cart-count">0</span>
+</button>
       </div>
     </nav>
   </header>
@@ -70,26 +75,22 @@
           <h3>Categorías</h3>
         </li>
 
-        <li>
-          <h4>Género</h4>
-        </li>
-        <li><a href="#" data-text="Hombre">- Hombre</a></li>
-        <li><a href="#" data-text="Mujer">- Mujer</a></li>
+      <li><h4>Género</h4></li>
+      <li><a href="#" data-text="Hombre" >- Hombre</a></li>
+      <li><a href="#" data-text="Mujer">- Mujer</a></li>
+      
+      <li><h4>Estación</h4></li>
+       <li><a href="#" data-text="Primavera">- Primavera</a></li>
+      <li><a href="#" data-text="Verano">- Verano</a></li>
+      <li><a href="#" data-text="Otoño">- Otoño</a></li>
+      <li><a href="#" data-text="Invierno">- Invierno</a></li>
+ 
+      <li><h4>Tipo</h4></li>
+       <li><a href="#" data-text="Formal">- Formal</a></li>
+      <li><a href="#" data-text="Casual">- Casual</a></li>
+      <li><a href="#" data-text="Deportivo">- Deportivo</a></li>
 
-        <li>
-          <h4>Estación</h4>
-        </li>
-        <li><a href="#" data-text="Primavera">- Primavera</a></li>
-        <li><a href="#" data-text="Verano">- Verano</a></li>
-        <li><a href="#" data-text="Otoño">- Otoño</a></li>
-        <li><a href="#" data-text="Invierno">- Invierno</a></li>
 
-        <li>
-          <h4>Tipo</h4>
-        </li>
-        <li><a href="#" data-text="Formal">- Formal</a></li>
-        <li><a href="#" data-text="Casual">- Casual</a></li>
-        <li><a href="#" data-text="Deportivo">- Deportivo</a></li>
 
         <li>
           <h4>Color</h4>
@@ -143,15 +144,16 @@
     </div>
   </main>
 
-  <footer class="site-footer">
+   <footer class="site-footer">
     <div class="footer-content">
-      <a href="mailto:contacto@adamy.com" target="_blank">CONTACT US HERE</a>
+      <a href="../pages/contact.html">CONTACT US HERE</a>
       <a href="https://www.instagram.com" target="_blank">INSTAGRAM</a>
       <p>ADAMY @ 2025 TODOS LOS DERECHOS RESERVADOS</p>
     </div>
   </footer>
   <script src="../components/productCard.js"></script>
   <script src="../components/Burguer-menu.js"></script>
+  ;<script src="../components/cartCount.js"></script>
 </body>
 
 

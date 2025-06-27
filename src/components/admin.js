@@ -13,12 +13,6 @@ const btnCancel = document.getElementById("btnCancel");
 const editId = document.getElementById("editId");
 
 // 1. Mostrar formulario vacío para añadir
-btnAdd.addEventListener("click", () => {
-  form.reset();
-  editId.value = "";
-  formTitle.textContent = "Agregar prenda de ropa";
-  form.classList.remove("hidden");
-});
 
 // 2. Mostrar formulario con datos cargados para editar
 btnEdit.addEventListener("click", async () => {
@@ -33,7 +27,7 @@ btnEdit.addEventListener("click", async () => {
   // Rellenar campos
   document.getElementById("name").value = producto.nombre || "";
   document.getElementById("description").value = producto.descripcion || "";
-  document.getElementById("image").value = producto.imagen[0] || "";
+  //document.getElementById("image").value = producto.imagen[0] || "";
   document.getElementById("price").value = producto.precio || "";
   document.getElementById("discount").value = producto.descuento || "";
   document.getElementById("color").value = producto.color || "";
@@ -69,10 +63,19 @@ btnCancel.addEventListener("click", () => {
   form.classList.add("hidden");
   form.reset();
   editId.value = "";
+
+  // Ocultar la vista previa de la imagen
+});
+
+btnAdd.addEventListener("click", () => {
+  form.reset(); // Limpia el formulario
+  formTitle.textContent = "Agregar prenda de ropa";
+  form.classList.remove("hidden");
+  editId.value = ""; // Asegura que no sea una edición
 });
 
 // 5. Enviar formulario para crear o editar
-form.addEventListener("submit", async (e) => {
+/*form.addEventListener("submit", async (e) => {
   e.preventDefault();
 
   const data = {
@@ -108,4 +111,60 @@ form.addEventListener("submit", async (e) => {
   } else {
     alert("Error al guardar el producto");
   }
+}
+
+);
+*/
+form.addEventListener("submit", async (e) => {
+  e.preventDefault();
+
+  const imagenInput = document.getElementById("imageInput");
+  const archivo = imagenInput.files[0];
+  const id = editId.value;
+
+  let base64Image = "";
+
+  if (archivo) {
+    // Si el usuario sube una nueva imagen
+    base64Image = await new Promise((resolve, reject) => {
+      const reader = new FileReader();
+      reader.onloadend = () => resolve(reader.result);
+      reader.onerror = reject;
+      reader.readAsDataURL(archivo);
+    });
+  }
+
+  const data = {
+    nombre: document.getElementById("name").value,
+    descripcion: document.getElementById("description").value,
+    imagen: base64Image ? [base64Image] : [], // si no hay imagen, va arreglo vacío
+    precio: parseFloat(document.getElementById("price").value),
+    descuento: parseInt(document.getElementById("discount").value),
+    color: document.getElementById("color").value,
+    genero: document.getElementById("gender").value,
+    temporada: document.getElementById("season").value,
+    tipo: document.getElementById("type").value,
+    fecha_lanzamiento: document.getElementById("release_date").value,
+    estilo: document.getElementById("style").value
+  };
+
+  const options = {
+    method: id ? "PUT" : "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(id ? { ...data, id } : data)
+  };
+
+  const url = id ? `${API_URL}/${id}` : API_URL;
+  const res = await fetch(url, options);
+
+  if (res.ok) {
+    alert(id ? "Producto actualizado" : "Producto añadido");
+    form.reset();
+    form.classList.add("hidden");
+    editId.value = "";
+
+  } else {
+    alert("Error al guardar el producto");
+  }
 });
+

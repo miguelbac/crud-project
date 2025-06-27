@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cart</title>
+
+
+  <link rel="stylesheet" href="../styles/header.css" />
+ <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="../styles/footer.css" />
+
+
+
+  <!-- Fuentes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap"
+    rel="stylesheet" />
+</head>
+
+<body class="cart-page">
+  <header>
+    <nav class="nav">
+      <div class="menu-toggle" id="menu-toggle">☰</div>
+      <!-- Logo -->
+      <div class="logo-container">
+        <a href="../../public/index.html">
+          <img class="logo" src="../img/icons/logo.png" alt="Logo">
+        </a>
+      </div>
+      <!-- Menú desplegable -->
+      <ul class="menu" id="menu">
+        <li><a href="../../public/index.html">Inicio</a></li>
+        <li><a href="#" class="link-hover" data-id="Hombre">Hombre</a></li>
+        <li><a href="#" class="link-hover" data-id="Mujer">Mujer</a></li>
+        <li><a href="#" class="link-hover" data-id="Verano">Temporada</a></li>
+        <li><a href="../pages/contact.html">Contáctanos</a></li>
+      </ul>
+      <!-- Barra de búsqueda -->
+      <div class="search-bar">
+        <input type="text" placeholder="Buscar producto" id="searchText">
+        <button id="searchButton">
+          <img src="../img/icons/search-icon.png" alt="Buscar" class="search-icon">
+        </button>
+      </div>
+      <!-- Iconos -->
+      <div class="user-buttons">
+        <a href="../pages/Loging.html"><button class="users"><img src="../img/icons/users.png"
+              alt="Perfil"></button></a>
+      <button class="favs" id="cart-icon">
+   <a href="../pages/add2Cart.html"><img src="../img/icons/favs.png" alt="Carrito" /></a>
+  <span id="cart-count" class="cart-count">0</span>
+      </div>
+    </nav>
+  </header>
+  
+
+
+<body class="bg-gray-100 min-h-screen flex flex-col items-center p-6">
+
+  <h1 class="text-3xl font-bold mb-6">🛒 Carrito de Compras</h1>
+
+  <!-- Contenedor productos -->
+  <div id="cart-items" class="w-full max-w-2xl bg-white rounded-lg shadow p-6 space-y-4">
+    <!-- Productos del carrito aquí -->
+  </div>
+
+  <!-- Total -->
+  <div id="total" class="text-right text-xl font-semibold text-gray-800 w-full max-w-2xl mt-4 mb-6">
+    Total: €0.00
+  </div>
+
+  <!-- Botón finalizar -->
+  <button onclick="finalizarCompra()"
+          class="bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700 transition font-medium shadow">
+    Finalizar Compra
+  </button>
+
+  <!-- Modal -->
+  <div id="modal" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+    <div class="bg-white rounded-lg shadow-lg p-8 text-center max-w-sm">
+      <h2 class="text-2xl font-bold mb-4">¡Gracias por tu compra!</h2>
+      <p class="mb-6">Serás redirigido a la página principal...</p>
+      <button onclick="cerrarModal()"
+              class="bg-gray-700 text-white px-4 py-2 rounded hover:bg-gray-800 transition">
+        Cerrar ahora
+      </button>
+    </div>
+  </div>
+
+
+
+
+
+<footer class="site-footer">
+  <div class="footer-content">
+    <a href="../pages/contact.html">CONTACT US HERE</a>
+    <a href="https://www.instagram.com" target="_blank">INSTAGRAM</a>
+    <p>ADAMY @ 2025 TODOS LOS DERECHOS RESERVADOS</p>
+  </div>
+</footer>
+
+  <script src="../components/header-scroll.js"></script>
+  <script src="../components/Burguer-menu.js"></script>
+ 
+  <script src="../components/contact.js"></script>
+  <script src="../components/add2Cart.js"></script>
+  <script src="../components/cartCount.js"></script>
+</body>
+</html>

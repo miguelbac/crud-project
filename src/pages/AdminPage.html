@@ -38,7 +38,7 @@
       <li><a href="#" class="link-hover" data-id="Hombre">Hombre</a></li>
       <li><a href="#" class="link-hover" data-id="Mujer">Mujer</a></li>
       <li><a href="#" class="link-hover" data-id="Verano">Temporada</a></li>
-      <li><a href="#">Contactanos</a></li>
+      <li><a href="../pages/contact.html">Contáctanos</a></li>
     </ul>
     <!-- Barra de búsqueda -->
     <div class="search-bar">
@@ -50,7 +50,11 @@
     <!-- Iconos -->
     <div class="user-buttons">
       <a href="../pages/Loging.html"><button class="users"><img src="../img/icons/users.png" alt="Perfil"></button></a>
-      <button class="favs"><img src="../img/icons/favs.png" alt="Me gusta"></button>
+      <!--button class="favs"><img src="../img/icons/favs.png" alt="Me gusta"></button-->
+       <button class="favs" id="cart-icon">
+   <a href="../pages/add2Cart.html"><img src="../img/icons/favs.png" alt="Carrito" /></a>
+  <span id="cart-count" class="cart-count">0</span>
+</button>
     </div>
   </nav>
 </header>
@@ -68,13 +72,14 @@
   <div class="form-grid">
     <input type="text" placeholder="Nombre" id="name" required />
     <input type="text" placeholder="Descripción" id="description" />
-    <input type="text" placeholder="Imagen (nombre archivo)" id="image" />
+    <input type="file" id="imageInput" accept="image/*" />
     <input type="number" placeholder="Precio" id="price" step="0.01" />
     <input type="number" placeholder="Descuento (%)" id="discount" />
 
     <select id="color" required>
       <option value="">Color</option>
       <option value="Negro">Negro</option>
+      <option value="Amarillo">Amarillo</option>
       <option value="Azul">Azul</option>
       <option value="Blanco">Blanco</option>
       <option value="Rojo">Rojo</option>
@@ -118,15 +123,15 @@
 </form>
 <footer class="site-footer">
   <div class="footer-content">
-    <a href="mailto:contacto@adamy.com" target="_blank">CONTACT US HERE</a>
+    <a href="../pages/contact.html">CONTACT US HERE</a>
     <a href="https://www.instagram.com" target="_blank">INSTAGRAM</a>
     <p>ADAMY @ 2025 TODOS LOS DERECHOS RESERVADOS</p>
   </div>
 </footer>
+<script src="../components/contact.js"></script>
 <script src="../components/Burguer-menu.js"></script>
 <script src="../components/admin.js"></script>
-<script src="../src/components/indexToProducts.js"></script>
-
+<script src="../components/cartCount.js"></script>
 
 
 <body>

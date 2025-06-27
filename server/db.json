@@ -273,13 +273,9 @@
       "estilo": "Casual"
     },
     {
-      "id": "911",
       "nombre": "Jeans azul",
       "descripcion": "Pantalón Jeans de mujer en color azul para la temporada de primavera.",
-      "imagen": [
-        "../img/jeans3.jpg",
-        "../img/jeans3.1.jpg"
-      ],
+      "imagen": [],
       "precio": 86.42,
       "descuento": 5,
       "color": "Azul",
@@ -287,7 +283,8 @@
       "temporada": "Primavera",
       "tipo": "Jeans",
       "fecha_lanzamiento": "2024-06-11",
-      "estilo": "Casual"
+      "estilo": "Casual",
+      "id": "911"
     },
     {
       "id": "912",
@@ -527,12 +524,13 @@
       "fecha_lanzamiento": "2025-06-19",
       "estilo": "Casual"
     },
-      {
+    {
       "id": "932",
       "nombre": "Camiseta Fitness",
       "descripcion": "Camiseta Fitness Mujer Azul",
       "imagen": [
-        "../img/topDeportivo1.1.jpg"
+        "../img/topDeportivo1.1.jpg",
+        "../img/topDeportivoM1.jpg"
       ],
       "precio": 5.99,
       "descuento": 0,
@@ -541,13 +539,12 @@
       "temporada": "Verano",
       "tipo": "Deporte",
       "fecha_lanzamiento": "2025-04-19",
-      "estilo": "Deportivo",
-      "id": "932"
+      "estilo": "Deportivo"
     }
   ],
   "users": [
     {
-      "id": 1,
+      "id": "1",
       "username": "admin",
       "password": "Adamy*2025"
     }

@@ -90,6 +90,9 @@ async function loadAndDisplayProducts(filter = "all") {
         case "Rosa":
             url = 'http://localhost:3000/products?color=Rosa';
             break;
+        case "next":
+            url = 'https://fakestoreapi.com/products/1';
+            break;
         default:
             // Mantiene la URL original sin filtros
             break;
@@ -118,22 +121,28 @@ function paintCards(products) {
     let html = "";
 
     for (const product of products) {
-        const image = product.imagen && product.imagen.length > 0
-            ? product.imagen[1]
-            : "/img/sin-imagen.png";
 
+        let image = "../img/sin-imagen.png"
+        if (product.imagen && Array.isArray(product.imagen)) {
+            if (product.imagen.length >= 2 && product.imagen[1]) {
+                image = product.imagen[1];
+            } else if (product.imagen.length >= 1 && product.imagen[0]) {
+                image = product.imagen[0];
+            }
+        }
         html += `
-                <div class="productShow">
-                    <img src="${image}" alt="${product.nombre}" width="150">
-                    <h4>${product.nombre}</h4>
-                    
-                    <p><strong>Precio:</strong> €${product.precio}</p>
-                    ${product.descuento > 0
+        <div class="productShow">
+            <a href="productView.html?id=${product.id}">
+                <img src="${image}" alt="${product.nombre}" width="150">
+            </a>
+            <h4>${product.nombre}</h4>
+            <p><strong>Precio:</strong> €${product.precio}</p>
+            ${product.descuento > 0
                 ? `<p style="color: red;"><strong>Descuento:</strong> ${product.descuento}%</p>`
                 : ''
             }
-                </div>
-            `;
+        </div>
+    `;
     }
 
     container.innerHTML = html;
@@ -224,3 +233,13 @@ document.getElementById('sortSelect').addEventListener('change', async function 
         container.innerHTML = `<p>Error al ordenar productos: ${error.message}</p>`;
     }
 });
+function updateCartCount() {
+    const cart = JSON.parse(localStorage.getItem("cart")) || [];
+    const totalItems = cart.reduce((sum, item) => sum + (item.quantity || 1), 0);
+    const cartCount = document.getElementById("cartCount");
+    if (cartCount) {
+        cartCount.textContent = totalItems;
+    }
+}
+
+document.addEventListener("DOMContentLoaded", updateCartCount);

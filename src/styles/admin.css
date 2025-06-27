@@ -52,6 +52,9 @@ form {
   padding: 2rem;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    overflow-x: auto;
+  max-width: 100%;
+
 }
 
 .hidden {
@@ -66,9 +69,8 @@ form h3 {
 /* Grid responsivo */
 .form-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
-  margin-bottom: 1.5rem;
 }
 
 .form-grid input,
@@ -81,6 +83,7 @@ form h3 {
 
 /* Botones del formulario */
 .form-actions {
+  margin-top: 1.5rem;
   display: flex;
   justify-content: center;
   gap: 1rem;

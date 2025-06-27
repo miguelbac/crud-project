@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CRUD</title>
+    <link rel="stylesheet" href="../styles/base.css" />
+
+  <link rel="stylesheet" href="../styles/header.css" />
+  <link rel="stylesheet" href="../styles/productView.css" />
+  <link rel="stylesheet" href="../styles/footer.css" />
+
+
+
+  <!-- Fuentes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap"
+    rel="stylesheet" />
+</head>
+
+<body class="product-page">
+  <header>
+    <nav class="nav">
+      <div class="menu-toggle" id="menu-toggle">☰</div>
+      <!-- Logo -->
+      <div class="logo-container">
+        <a href="../../public/index.html">
+          <img class="logo" src="../img/icons/logo.png" alt="Logo">
+        </a>
+      </div>
+      <!-- Menú desplegable -->
+      <ul class="menu" id="menu">
+        <li><a href="../../public/index.html">Inicio</a></li>
+        <li><a href="#" class="link-hover" data-id="Hombre">Hombre</a></li>
+        <li><a href="#" class="link-hover" data-id="Mujer">Mujer</a></li>
+        <li><a href="#" class="link-hover" data-id="Verano">Temporada</a></li>
+        <li><a href="../pages/contact.html">Contáctanos</a></li>
+      </ul>
+      <!-- Barra de búsqueda -->
+      <div class="search-bar">
+        <input type="text" placeholder="Buscar producto" id="searchText">
+        <button id="searchButton">
+          <img src="../img/icons/search-icon.png" alt="Buscar" class="search-icon">
+        </button>
+      </div>
+      <!-- Iconos -->
+      <div class="user-buttons">
+        <a href="../pages/Loging.html"><button class="users"><img src="../img/icons/users.png"
+              alt="Perfil"></button></a>
+       
+       
+       
+              <!--button class="favs"><img src="../img/icons/favs.png" alt="Me gusta"></button-->
+
+
+<button class="favs" id="cart-icon">
+   <a href="../pages/add2Cart.html"><img src="../img/icons/favs.png" alt="Carrito" /></a>
+  <span id="cart-count" class="cart-count">0</span>
+</button>
+
+
+
+
+      </div>
+    </nav>
+  </header>
+  <main>
+    <div class="product-main-layout">
+      <section id="grid-images-layout">
+        <!-- Сюди JS додасть <img> з фото товару -->
+      </section>
+      <section id="product-detail-layout">
+        <h2 id="product-name">nombre</h2>
+        <div class="price-block">
+          <span id="precio-actual">0 €</span>
+          <span id="precio-original" class="old-price">0 €</span>
+          <span id="discount" class="discount">-0%</span>
+          <span class="price-label">Precio actual</span>
+        </div>
+        <div id="description" class="product-description">description</div>
+        <button id="add-to-cart" class="add-to-cart">
+           Agregar al carrito
+        </button>
+      </section>
+    </div>
+    <section id="product-info-block">
+      <aside>
+        <img src="../img/icons/envio.svg" alt="Envío gratuito" />
+        <h3>Envío gratuito</h3>
+        <p>En pedidos a partir de 200 €</p>
+      </aside>
+      <aside>
+        <img src="../img/icons/devoluciones.svg" alt="Devoluciones en 30 días" />
+        <h3>Devoluciones en 30 días</h3>
+        <p>Solo productos originales</p>
+      </aside>
+      <aside>
+        <img src="../img/icons/descuentos.svg" alt="Disfruta de descuentos con  ADAMY" />
+        <h3>Disfruta de descuentos con ADAMY</h3>
+        <p>Hasta -50%</p>
+      </aside>
+    </section>
+  </main>
+<footer class="site-footer">
+  <div class="footer-content">
+    <a href="../pages/contact.html">CONTACT US HERE</a>
+    <a href="https://www.instagram.com" target="_blank">INSTAGRAM</a>
+    <p>ADAMY @ 2025 TODOS LOS DERECHOS RESERVADOS</p>
+  </div>
+</footer>
+
+  <script src="../components/header-scroll.js"></script>
+  <script src="../components/Burguer-menu.js"></script>
+  <script src="../components/productView.js"></script>
+  <script src="../components/contact.js"></script>
+
+
+</body>
+</html>

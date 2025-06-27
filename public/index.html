@@ -38,7 +38,7 @@
         <li><a href="#" class="link-hover" data-id="Hombre">Hombre</a></li>
         <li><a href="#" class="link-hover" data-id="Mujer">Mujer</a></li>
         <li><a href="#" class="link-hover" data-id="Verano">Temporada</a></li>
-        <li><a href="#">Contactanos</a></li>
+        <li><a href="../src/pages/contact.html">Contáctanos</a></li>
       </ul>
 
       <!-- Barra de búsqueda -->
@@ -52,7 +52,10 @@
       <div class="user-buttons">
         <a href="../src/pages/Loging.html"><button class="users"><img src="../src/img/icons/users.png"
               alt="Perfil"></button></a>
-        <button class="favs"><img src="../src/img/icons/favs.png" alt="Me gusta"></button>
+       <button class="favs" id="cart-icon">
+   <a href="../src/pages/add2Cart.html"><img src="../src/img/icons/favs.png" alt="Carrito" /></a>
+  
+</button>
       </div>
     </nav>
   </header>
@@ -90,11 +93,12 @@
 
   <footer class="site-footer">
     <div class="footer-content">
-      <a href="mailto:contacto@adamy.com" target="_blank">CONTACT US HERE</a>
+      <a href="../src/pages/contact.html">CONTACT US HERE</a>
       <a href="https://www.instagram.com" target="_blank">INSTAGRAM</a>
       <p>ADAMY @ 2025 TODOS LOS DERECHOS RESERVADOS</p>
     </div>
   </footer>
+  <script src="../src/components/header-scroll.js"></script>
   <script src="../src/components/Burguer-menu.js"></script>
   <script src="../src/components/indexToProducts.js"></script>
 </body>

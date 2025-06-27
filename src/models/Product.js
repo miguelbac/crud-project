@@ -1,1 +1,0 @@
-// Modelo que define la estructura del objeto Producto

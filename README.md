@@ -25,6 +25,7 @@
 - 🔎Buscador de productos en todas las páginas
 - 🛒Añadir productos al carrito de compra
 - 🙍‍♂️Login del administrador para Editar, Crear y Eliminar productos
+- 🗺🚩Consumo de API externa de google maps
 
 ---
 

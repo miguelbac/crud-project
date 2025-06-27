@@ -67,6 +67,12 @@ btnCancel.addEventListener("click", () => {
   // Ocultar la vista previa de la imagen
 });
 
+btnAdd.addEventListener("click", () => {
+  form.reset(); // Limpia el formulario
+  formTitle.textContent = "Agregar prenda de ropa";
+  form.classList.remove("hidden");
+  editId.value = ""; // Asegura que no sea una edición
+});
 
 // 5. Enviar formulario para crear o editar
 /*form.addEventListener("submit", async (e) => {
@@ -114,7 +120,6 @@ form.addEventListener("submit", async (e) => {
 
   const imagenInput = document.getElementById("imageInput");
   const archivo = imagenInput.files[0];
-  const preview = document.getElementById("imagePreview");
   const id = editId.value;
 
   let base64Image = "";
@@ -157,8 +162,7 @@ form.addEventListener("submit", async (e) => {
     form.reset();
     form.classList.add("hidden");
     editId.value = "";
-    preview.src = "";
-    preview.style.display = "none";
+
   } else {
     alert("Error al guardar el producto");
   }

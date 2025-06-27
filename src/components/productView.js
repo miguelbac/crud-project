@@ -161,3 +161,4 @@ document.addEventListener("DOMContentLoaded", () => {
         cartCount.textContent = totalItems;
     }
 });
+

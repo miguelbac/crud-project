@@ -162,3 +162,20 @@ header.scrolled .logo {
   height: 2rem;
 }
 
+.cart-count {
+  position: absolute;
+  top: 10px;
+  right: 35px;
+  background: red;
+  color: white;
+  font-size: 12px;
+  padding: 2px 6px;
+  border-radius: 50%;
+  display: inline-block;
+}
+#add-to-cart{
+background: #4e4347;
+color: #fff;
+margin-top: 8px;
+  padding: 10px 28px;
+}

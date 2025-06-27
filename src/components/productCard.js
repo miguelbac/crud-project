@@ -233,3 +233,13 @@ document.getElementById('sortSelect').addEventListener('change', async function 
         container.innerHTML = `<p>Error al ordenar productos: ${error.message}</p>`;
     }
 });
+function updateCartCount() {
+    const cart = JSON.parse(localStorage.getItem("cart")) || [];
+    const totalItems = cart.reduce((sum, item) => sum + (item.quantity || 1), 0);
+    const cartCount = document.getElementById("cartCount");
+    if (cartCount) {
+        cartCount.textContent = totalItems;
+    }
+}
+
+document.addEventListener("DOMContentLoaded", updateCartCount);

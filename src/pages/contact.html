@@ -48,7 +48,11 @@
       <div class="user-buttons">
         <a href="../pages/Loging.html"><button class="users"><img src="../img/icons/users.png"
               alt="Perfil"></button></a>
-        <button class="favs"><img src="../img/icons/favs.png" alt="Me gusta"></button>
+        <!--button class="favs"><img src="../img/icons/favs.png" alt="Me gusta"></button-->
+         <button class="favs" id="cart-icon">
+   <a href="../pages/add2Cart.html"><img src="../img/icons/favs.png" alt="Carrito" /></a>
+  <span id="cart-count" class="cart-count">0</span>
+</button>
       </div>
     </nav>
   </header>
@@ -105,7 +109,7 @@
 
 
   <script src="../components/Burguer-menu.js"></script>
- 
+ <script src="../components/cartCount.js"></script>
   <script src="../../src/components/contact.js"></script>
   <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBDaeWicvigtP9xPv919E-RNoxfvC-Hqik&callback=initMap"></script> <!--Llamar al Api Key-->
 </body>

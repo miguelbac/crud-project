@@ -119,3 +119,45 @@ document.addEventListener("DOMContentLoaded", async () => {
         document.body.innerHTML = "<p>💥 Error al cargar los datos.</p>";
     }
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+    const btnAddToCart = document.getElementById("add-to-cart");
+    const cartCount = document.getElementById("cart-count");
+
+    // Inicializa contador al cargar la página
+    updateCartCount();
+
+    btnAddToCart.addEventListener("click", () => {
+        // Simula datos del producto desde el DOM
+        const product = {
+            id: Date.now(), // puedes usar el ID real si tienes
+            name: document.getElementById("product-name").textContent,
+            price: parseFloat(document.getElementById("precio-actual").textContent),
+            quantity: 1
+        };
+
+        addToCart(product);
+        updateCartCount();
+        alert("Producto añadido al carrito");
+    });
+
+    function addToCart(product) {
+        const cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+        // Verifica si ya está en el carrito
+        const existing = cart.find(p => p.name === product.name);
+        if (existing) {
+            existing.quantity += 1;
+        } else {
+            cart.push(product);
+        }
+
+        localStorage.setItem("cart", JSON.stringify(cart));
+    }
+
+    function updateCartCount() {
+        const cart = JSON.parse(localStorage.getItem("cart")) || [];
+        const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+        cartCount.textContent = totalItems;
+    }
+});

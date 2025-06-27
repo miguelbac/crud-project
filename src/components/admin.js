@@ -65,7 +65,7 @@ btnCancel.addEventListener("click", () => {
   editId.value = "";
 
   // Ocultar la vista previa de la imagen
-});  
+});
 
 
 // 5. Enviar formulario para crear o editar
@@ -127,9 +127,6 @@ form.addEventListener("submit", async (e) => {
       reader.onerror = reject;
       reader.readAsDataURL(archivo);
     });
-  } else if (preview && preview.src && preview.src.startsWith("data:image")) {
-    // Si ya hay una imagen previa mostrada en la edición
-    base64Image = preview.src;
   }
 
   const data = {
